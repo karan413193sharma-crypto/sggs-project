@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B.Sc. Fashion Designing | Course Details</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="./css/style.css">
+ <!-- BOOTSTRAP CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- BOOTSTRAP JS (for toggle + dropdown)  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+    :root {
+        --primary-900: #9a2a4c;
+        --primary-800: #7b1e3a;
+        --primary-700: #8C1007;
+        --primary-600: #8C1007;
+        --primary-500: #8C1007;
+    }
+
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+    overflow-x: hidden !important;
+}
+
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+/* Hero Section */
+        .hero {
+            position: relative;
+            padding: 120px 24px 100px;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .college-badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.375rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 48px;
+            font-weight: 500;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        /* Section Tag */
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+ /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .fade-in-delay {
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+    /* ==================== SECTION CARDS ==================== */
+    .section-card {
+        background: #fff;
+        border: 2px solid var(--primary-500);
+        border-radius: 18px;
+        padding: 28px;
+        margin-bottom: 35px;
+        position: relative;
+        transition: 0.35s ease;
+    }
+
+    .section-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 32px rgba(30,112,199,0.22);
+        border-color: var(--primary-600);
+    }
+
+    .card-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: var(--primary-500);
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    /* ==================== DESCRIPTION ==================== */
+    .desc-title {
+        font-size: 26px;
+        color: var(--primary-500);
+        font-weight: 800;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    .desc-text {
+        font-size: 17px;
+        color: #333;
+        line-height: 1.7;
+    }
+
+    /* ==================== LISTS ==================== */
+    .highlight-points li::before,
+    .outcomes-list li::before {
+        color: var(--primary-500);
+        font-weight: 700;
+        content: "✔ ";
+    }
+
+    /* ==================== CAREER BOXES ==================== */
+    .career-box {
+        background: #f0f8ff;
+        border: 1px solid var(--primary-600);
+        color: var(--primary-600);
+        padding: 12px 8px;
+        border-radius: 10px;
+        font-weight: 600;
+        text-align: center;
+        transition: .3s;
+        margin-bottom: 10px;
+    }
+
+    .career-box:hover {
+        background: var(--primary-600);
+        color: #fff;
+        transform: translateY(-4px);
+        box-shadow: 0 5px 20px rgba(30,90,168,.35);
+    }
+
+    /* ==================== FACULTY CARDS ==================== */
+    .faculty-card {
+        border: 2px solid var(--primary-500);
+        text-align: center;
+        border-radius: 16px;
+        padding: 18px;
+        transition: 0.35s ease;
+        margin-bottom: 20px;
+    }
+
+    .faculty-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(30,112,199,0.2);
+    }
+
+    .faculty-card h4 {
+        color: var(--primary-500);
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .faculty-card p {
+        color: #333;
+        font-size: 14px;
+    }
+
+    /* ==================== APPLY BUTTON ==================== */
+    .apply-btn {
+        display: inline-block;
+        background: var(--primary-600);
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 16px 35px;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: 0.3s;
+        box-shadow: 0 6px 20px rgba(30,90,168,0.3);
+    }
+
+    .apply-btn:hover {
+        background: var(--primary-500);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(30,112,199,0.35);
+    }
+
+    /* ==================== ACCORDION ==================== */
+    .accordion {
+        background-color: #f0f8ff;
+        color: var(--primary-600);
+        cursor: pointer;
+        padding: 14px 18px;
+        width: 100%;
+        text-align: left;
+        border: 1px solid var(--primary-600);
+        border-radius: 8px;
+        margin-bottom: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .accordion:hover,
+    .accordion.active {
+        background-color: var(--primary-600);
+        color: #fff;
+        box-shadow: 0 5px 15px rgba(30,90,168,0.25);
+    }
+
+    .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: #fff;
+        overflow: hidden;
+        border-left: 3px solid var(--primary-600);
+        border-radius: 0 0 10px 10px;
+    }
+
+    .panel ul li {
+        list-style: disc;
+        margin-left: 20px;
+        margin-bottom: 8px;
+    }
+
+    /* ==================== B.SC. SUMMARY ==================== */
+    .bsc-summary-section {
+        background: #f0f8ff;
+        border: 2px solid var(--primary-500);
+        border-radius: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 40px 25px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .bsc-summary-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(30,112,199,0.18);
+    }
+
+    .bsc-summary-content h2 {
+        color: var(--primary-500);
+        font-size: 32px;
+        margin-bottom: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .bsc-summary-content h3 {
+        color: var(--primary-600);
+        font-size: 22px;
+        margin-top: 20px;
+        margin-bottom: 12px;
+        font-weight: 700;
+    }
+
+    .bsc-summary-image {
+        flex: 1 1 350px;
+        max-width: 450px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        cursor: pointer;
+        box-shadow: 0 6px 20px rgba(30,112,199,0.12);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .bsc-summary-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .bsc-summary-image:hover img {
+        transform: scale(1.15);
+    }
+
+    .bsc-summary-image::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(30,112,199,0) 0%, rgba(30,112,199,0.7) 100%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        border-radius: 20px;
+    }
+
+    .bsc-summary-image:hover::after {
+        opacity: 1;
+    }
+
+    .bsc-summary-image i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 2rem;
+        color: #fff;
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+        transition: transform 0.35s ease-in-out, opacity 0.35s ease-in-out;
+    }
+
+    .bsc-summary-image:hover i {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    /* ==================== DURATION SECTION ==================== */
+    .duration-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        background: #f0f8ff;
+        padding: 50px 20px;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(30,112,199,0.12);
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    .duration-content h2 {
+        font-size: 32px;
+        font-weight: 800;
+        color: var(--primary-500);
+        margin-bottom: 20px;
+    }
+
+    .duration-content p {
+        font-size: 17px;
+        color: #333;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    .detail-box {
+        background: #fff;
+        border: 2px solid var(--primary-500);
+        border-radius: 15px;
+        padding: 20px;
+        flex: 1 1 200px;
+        text-align: center;
+        transition: 0.3s ease;
+        box-shadow: 0 4px 15px rgba(30,112,199,0.1);
+    }
+
+    .detail-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(30,112,199,0.2);
+        border-color: var(--primary-600);
+    }
+
+    .detail-box h3 {
+        font-size: 20px;
+        color: var(--primary-600);
+        margin-bottom: 12px;
+        font-weight: 700;
+    }
+
+    .detail-box p {
+        font-size: 16px;
+        color: #555;
+        font-weight: 500;
+    }
+
+    .duration-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;
+        transition: transform 0.4s ease;
+    }
+
+    .duration-image:hover img {
+        transform: scale(1.05);
+    }
+
+    /* ==================== RESPONSIVE ==================== */
+    @media(max-width:900px){
+        .duration-section, .bsc-summary-section {
+            flex-direction: column;
+            text-align: center;
+        }
+        .bsc-summary-image, .duration-image {
+            max-width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+    /* PERFECT LEFT-ALIGNED BULLETS — EXACTLY UNDER THE TEXT */
+.highlight-points,
+.outcomes-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 1.5rem 0 !important;
+    text-align: left !important;
+}
+
+/* ================================================== */
+/* --- HERO SECTION MEDIA QUERIES --- */
+/* ================================================== */
+
+/* 1. Desktop / Large Tablet Adjustments (max-width: 1200px) */
+@media (max-width: 1200px) {
+    /* Adjust container padding if necessary, but focusing on hero content */
+    .hero-content {
+        padding: 0 1.5rem; /* Ensure content is contained within padding */
+    }
+}
+
+/* 2. Tablet / Landscape Mobile Adjustments (max-width: 992px) */
+@media (max-width: 992px) {
+    .program-hero {
+        padding: 100px 24px 80px; /* Reduced vertical padding */
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem; /* Slightly smaller heading */
+    }
+
+    .hero p {
+        font-size: 1.25rem; /* Slightly smaller lead text */
+        margin-bottom: 40px;
+    }
+}
+
+/* 3. Portrait Tablet / Mobile Adjustments (max-width: 768px) */
+@media (max-width: 768px) {
+    .program-hero {
+        padding: 80px 16px 60px;
+        min-height: 450px;
+    }
+
+    .college-badge {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        /* Use clamp for fluid sizing between 2.5rem and 3rem */
+        font-size: clamp(2.5rem, 8vw, 3rem); 
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    /* Stats Bar Adjustments for stacking */
+    .stats-bar {
+        padding: 24px 20px;
+        gap: 20px; /* Reduced space between stats */
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* 4. Small Mobile Adjustments (max-width: 576px) */
+@media (max-width: 576px) {
+    /* Stack the stats bar items vertically to prevent overflow */
+    .stats-bar {
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 12px;
+        padding: 20px 15px;
+        margin: 0 10px; /* Minor horizontal margin to prevent touching screen edges */
+    }
+
+    .stat-item {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator when stacked */
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-divider {
+        display: none; /* Hide vertical divider when stacking */
+    }
+    
+    /* Ensure the existing small mobile adjustment is incorporated */
+    .program-hero h1 { 
+        font-size: 2.2rem !important; 
+    }
+}
+</style>
+
+</head>
+<body>   
+   
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles"></div>
+    <div class="hero-content">
+        <div class="college-badge">
+            <i class="fas fa-tshirt" style="font-size: 50px;"></i>
+        </div>
+        <h1 class="fade-in">B.Sc. FASHION DESIGNING</h1>
+        <p class="fade-in-delay">3 Years | 6 Semesters | NEP-2020 Based Curriculum</p>
+       <div class="stats-bar fade-in-delay-2">
+    <div class="stat-item">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Courses & <br>Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Undergraduate <br>Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Postgraduate <br> Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Diploma & <br> Add-On Courses</div>
+    </div>
+</div>
+    </div>
+</section>
+<div class="container">
+<div class="section-card">
+    <h2 class="desc-title">Why Choose B.Sc. Fashion Designing at SGGS Khalsa College Mahilpur?</h2>
+    <p class="desc-text">
+        <b>B.Sc. Fashion Designing</b> is a professional undergraduate program focusing on creativity, fashion illustration, garment construction, and textile science. The course emphasizes practical workshops, portfolio development, and industry exposure.
+    </p>
+    <ul class="highlight-points">
+        <li>Modern Fashion & Textile Labs</li>
+        <li>Hands-on Garment Designing Workshops</li>
+        <li>Portfolio Development for Professional Growth</li>
+        <li>Exposure to Fashion Industry Trends</li>
+        <li>Opportunities in Apparel, Fashion Technology, and Entrepreneurship</li>
+        <li>Highly Qualified & Experienced Faculty</li>
+    </ul>
+</div>
+
+<div class="bsc-summary-section">
+  <div class="bsc-summary-content">
+    <h2>B.Sc. Fashion Designing – Overview</h2>
+    <p>
+      This 3-year program (6 semesters) equips students with knowledge of fashion design, textile studies, garment construction, CAD, and trend forecasting. It prepares students for creative, technical, and managerial roles in fashion industry.
+    </p>
+    <h3>Why Choose B.Sc. Fashion Designing?</h3>
+    <ul>
+      <li>Hands-on experience in modern Fashion & Textile labs.</li>
+      <li>Develops skills in pattern making, garment construction, and digital designing tools.</li>
+      <li>Opportunities for internships, fashion shows, and exhibitions.</li>
+      <li>Prepares for higher studies in Fashion Technology, MBA (Fashion), or Entrepreneurship.</li>
+    </ul>
+    <h3>Career Opportunities</h3>
+    <p>
+      Graduates can work as <strong>Fashion Designers, Textile Designers, CAD Designers, Apparel Technologists, Merchandisers, Entrepreneurs, or Fashion Stylists</strong>.
+    </p>
+  </div>
+  <div class="bsc-summary-image">
+     <img src="./images/course.jpg" height="300px" alt="B.Sc. Fashion Designing Course Image">
+    <i class="bi bi-zoom-in"></i>
+  </div>
+</div>
+
+<div class="section-card" id="admission">
+    <div class="card-title">Admission</div>
+    <p class="desc-text">
+        Admissions for B.Sc. Fashion Designing are open! Eligible students (10+2 with Science/Arts or equivalent) can apply online. Secure your seat and start your creative journey in fashion and design.
+    </p>
+</div>
+<div class="section-card">
+<div class="duration-section">
+  <div class="duration-content">
+    <h2>Course Duration & Eligibility</h2>
+    <p>
+      The B.Sc. Fashion Designing program is a 3-year undergraduate course divided into 6 semesters. It focuses on practical design skills, textile studies, and fashion innovation.
+    </p>
+    <div class="duration-details">
+      <div class="detail-box">
+        <h3>Duration</h3>
+        <p>3 Years (6 Semesters)</p>
+      </div>
+      <div class="detail-box">
+        <h3>Eligibility</h3>
+        <p>10+2 in any stream (Arts / Science / Commerce) with minimum 35% marks</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</div>
+<div class="section-card">
+    <div class="card-title">Program Outcomes</div>
+    <ul class="outcomes-list">
+        <li>Master design fundamentals, garment construction, and textile science.</li>
+        <li>Hands-on experience in fashion workshops and CAD tools.</li>
+        <li>Develop creative portfolios and professional presentations.</li>
+        <li>Opportunities to participate in fashion shows, competitions, and exhibitions.</li>
+        <li>Prepare for industry roles, entrepreneurship, and higher education in fashion technology.</li>
+    </ul>
+</div>
+
+<div class="section-card">
+    <div class="card-title">Career Opportunities</div>
+    <div class="career-grid">
+        <div class="career-box">Fashion Designer</div>
+        <div class="career-box">Textile Designer</div>
+        <div class="career-box">CAD Designer</div>
+        <div class="career-box">Apparel Technologist</div>
+        <div class="career-box">Merchandiser</div>
+        <div class="career-box">Stylist / Image Consultant</div>
+        <div class="career-box">Entrepreneur / Boutique Owner</div>
+    </div>
+</div>
+
+<!-- Syllabus Accordion -->
+<div class="section-card">
+  <div class="card-title">B.Sc. Fashion Designing – Detailed Syllabus</div>
+  <p class="desc-text">The syllabus includes fundamental to advanced topics in Fashion, Textile, CAD, and Portfolio Development across 6 semesters.</p>
+
+  <div class="syllabus-wrapper">
+    <button class="accordion">First Year – Semester I & II</button>
+    <div class="panel">
+      <ul>
+        <li>Fashion Design Fundamentals</li>
+        <li>Textile Science</li>
+        <li>Garment Construction I & II</li>
+        <li>Fashion Illustration</li>
+        <li>Introduction to CAD</li>
+        <li>English / Communication Skills</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Second Year – Semester III & IV</button>
+    <div class="panel">
+      <ul>
+        <li>Advanced Garment Construction</li>
+        <li>Pattern Making & Draping</li>
+        <li>Textile & Apparel Technology</li>
+        <li>Digital Fashion Design Tools</li>
+        <li>Trend Forecasting & Styling</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Third Year – Semester V & VI</button>
+    <div class="panel">
+      <ul>
+        <li>Portfolio Development</li>
+        <li>Fashion Merchandising</li>
+        <li>Entrepreneurship & Business in Fashion</li>
+        <li>Internship / Industry Project</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Faculty Section -->
+<section class="faculty-section py-5" style="background: #fff5f5;">
+<div class="container">
+    <h2 class="text-center mb-4" style="font-size: 32px; color:#b3005a; font-weight:700;">
+        Fashion Designing Department Faculty
+    </h2>
+
+   <div class="faculty-wrapper">
+    <div class="faculty-card">
+        <h4>Dr. Priya Sharma (Head)</h4>
+        <p>M.Des Fashion, Ph.D. in Fashion Studies</p>
+        <p>Email: priya.sharma@example.com<br>Phone: 98765-43210</p>
+    </div>
+
+    <div class="faculty-card">
+        <h4>Ms. Ritu Kapoor</h4>
+        <p>B.Des Fashion, M.F.A, Textile Design Expert</p>
+        <p>Email: ritu.kapoor@example.com<br>Phone: 98765-12345</p>
+    </div>
+
+    <div class="faculty-card">
+        <h4>Mr. Anil Verma</h4>
+        <p>B.Des Fashion, CAD & Apparel Specialist</p>
+        <p>Email: anil.verma@example.com<br>Phone: 98765-67890</p>
+    </div>
+   </div>
+</div>
+</section>
+
+<div style="text-align: center; margin-top: 25px;">
+    <a href="Addimision-page.html" class="apply-btn">Apply Now</a>
+</div>
+
+<script>
+  const accordions = document.querySelectorAll(".accordion");
+  accordions.forEach((accordion) => {
+    accordion.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+
+</body>
+</html>

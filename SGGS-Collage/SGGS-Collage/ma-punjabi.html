@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MA Punjabi | Course Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="./css/style.css">
+    <style>
+    
+.highlight-points,
+.outcomes-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 1.5rem 0 !important;
+    text-align: left !important;
+}
+
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+    overflow-x: hidden !important;
+}
+
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+/* Hero Section */
+        .hero {
+            position: relative;
+            padding: 120px 24px 100px;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .college-badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.375rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 48px;
+            font-weight: 500;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        /* Section Tag */
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+ /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .fade-in-delay {
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    .section-card {
+      background: #fff;
+      border: 2px solid #eee;
+      border-radius: 18px;
+      padding: 28px;
+      margin-bottom: 35px;
+      position: relative;
+      overflow: hidden;
+      transition: 0.35s ease;
+    }
+
+    .section-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(90deg, #8C1007, #B51610);
+      transform: translateX(-50%) scaleX(0);
+      transform-origin: center;
+      transition: transform 0.35s ease;
+    }
+
+    .section-card:hover::before { transform: translateX(-50%) scaleX(1); }
+
+    .section-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(140, 16, 7, 0.35);
+      box-shadow: 0 12px 32px rgba(140, 16, 7, 0.22);
+    }
+
+    .card-title { font-size: 24px; margin-bottom: 20px; color: #8C1007; font-weight: 800; text-transform: uppercase; }
+    .desc-title { font-size: 26px; color: #8C1007; font-weight: 800; margin-bottom: 20px; text-transform: uppercase; }
+    .desc-text { font-size: 17.5px; color: #333; line-height: 1.7; margin-bottom: 12px; }
+
+    .highlight-points, .outcomes-list { font-size: 17px; list-style: none; margin-left: 15px; }
+    .highlight-points li::before { content: "✔ "; color: #8C1007; font-weight: 700; }
+    .outcomes-list li::before { content: "➤ "; color: #B30000; font-weight: 900; }
+
+    .career-box {
+      background: #fff9f9;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #b30000;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      color: #b30000;
+      margin-bottom: 12px;
+      transition: .3s;
+    }
+
+    .career-box:hover {
+      background: #b30000;
+      color: #fff;
+      transform: translateY(-4px);
+      box-shadow: 0 5px 20px rgba(179, 0, 0, .35);
+    }
+
+    .faculty-card {
+      background: #ffffff;
+      border: 2px solid #eee;
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 18px;
+      text-align: center;
+      transition: 0.35s ease;
+    }
+
+    .faculty-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(140, 16, 7, 0.35);
+      box-shadow: 0 10px 30px rgba(140, 16, 7, 0.20);
+    }
+
+    .faculty-card h4 { font-size: 18px; margin-bottom: 8px; color: #8C1007; font-weight: 700; }
+    .faculty-card p { font-size: 14px; color: #333; }
+
+    .semester-card {
+      background: #fff9f9;
+      border: 1px solid #b30000;
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin-bottom: 18px;
+    }
+
+    .semester-card h4 { color: #8C1007; font-size: 18px; margin-bottom: 10px; }
+    .semester-card ul { list-style: disc; padding-left: 18px; color: #333; font-size: 15px; line-height: 1.6; }
+      /* ==================== MA ENGLISH MOBILE PERFECTION FIX ==================== */
+@media (max-width: 768px) {
+  .highlight-points {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+  .highlight-points li {
+    position: relative;
+    padding-left: 2.2rem !important;
+    margin-bottom: 0.8rem !important;
+    font-size: 16px !important;
+  }
+  .highlight-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #8C1007;
+    font-weight: bold;
+    font-size: 1.4rem;
+    width: 2rem;
+    text-align: center;
+  }
+
+  .apply-btn {
+    display: inline-block !important;
+    width: auto !important;
+    min-width: 220px;
+    padding: 14px 30px !important;
+    margin: 0 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight-points li { padding-left: 2rem !important; }
+  .highlight-points li::before { font-size: 1.2rem !important; left: 2px !important; }
+}
+  </style>
+</head>
+
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg shadow sticky-top py-4 bg-white">
+    <div class="container">
+        <a class="navbar-brand text-white fw-semibold" href="index.html">
+            <img src="./images/Logosggs.jpg" alt="SGGS College Logo" height="70px" width="auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample"
+            aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <!-- Programs Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Programs
+                    </a>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Course-Programmes.html#ug">Undergraduate</a></li>
+                        <li><a class="dropdown-item" href="Course-Programmes.html#pg">Postgraduate</a></li>
+                       <li><a class="dropdown-item" href="Course-Programmes.html#diploma">Diploma</a></li>
+
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Course-Programmes.html">All Programs →</a></li>
+                    </ul>
+                </li>
+
+                <!-- Departments Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Departments
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="ba-department.html   ">Department of Arts</a></li>
+                        <li><a class="dropdown-item" href="bsc-department.html">Department of Science </a></li>
+                        <li><a class="dropdown-item" href="bcom-department.html">Department of Commerce</a></li>
+                        <li><a class="dropdown-item" href="compter&It-department.html">Department of IT </a></li>
+                        <li><a class="dropdown-item" href="bba-department.html">Department of Management </a></li>
+                        <li><a class="dropdown-item" href="bvoc-department.html">Department of B.Voc</a></li>
+                        <li><a class="dropdown-item" href="add-on-cources-department.html">Add on Departments</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Departments-of-SGGS-Collage.html">View All Departments →</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Facility-in SGGS-Collage.html">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CarrerGuidance.html">Placements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus copy.html">Contact</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contactus copy.html">Admissions</a>
+                </li>
+                <li class="nav-item">
+                     <a href="contactus copy.html   " class="apply-btn">
+            <i class="fas fa-graduation-cap"></i> Apply Now   </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles"></div>
+    <div class="hero-content">
+        <div class="college-badge">
+            <i class="fas fa-language" style="font-size: 50px;"></i>
+        </div>
+        <h1 class="fade-in">MA Punjabi</h1>
+        <p class="fade-in-delay">2 Years | 4 Semesters | NEP-2020 Based Curriculum</p>
+        <div class="stats-bar fade-in-delay-2">
+            <div class="stat-item">
+                <div class="stat-number">Punjabi Literature • Linguistics • Culture</div>
+                <div class="stat-label">Core Subjects</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number">Projects & Research</div>
+                <div class="stat-label">Practical Learning</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number">Skill Development</div>
+                <div class="stat-label">Career Readiness</div>
+            </div>
+        </div>
+    </div>
+</section>
+  <div class="container">
+
+    <!-- Description -->
+    <div class="section-card">
+      <h2 class="desc-title">Why Choose MA Punjabi at SGGS Khalsa College Mahilpur?</h2>
+      <p class="desc-text"><b>MA Punjabi</b> develops advanced knowledge in Punjabi literature, language, and culture, along with research, writing, and analytical skills for academic and professional growth.</p>
+      <ul class="highlight-points">
+        <li>Comprehensive study of classical and modern Punjabi literature</li>
+        <li>Research projects and literary analysis assignments</li>
+        <li>Skill development in critical thinking, communication, and writing</li>
+        <li>Opportunities for teaching, cultural, and editorial roles</li>
+      </ul>
+    </div>
+
+    <!-- Syllabus Section -->
+    <div class="section-card">
+      <div class="card-title">MA Punjabi – Syllabus</div>
+      <div class="semester-card">
+        <h4>Semester 1</h4>
+        <ul>
+          <li>Classical Punjabi Literature</li>
+          <li>Modern Punjabi Poetry</li>
+          <li>Punjabi Linguistics I</li>
+        </ul>
+      </div>
+      <div class="semester-card">
+        <h4>Semester 2</h4>
+        <ul>
+          <li>Modern Punjabi Prose</li>
+          <li>Punjabi Drama & Criticism</li>
+          <li>Research Methodology</li>
+        </ul>
+      </div>
+      <div class="semester-card">
+        <h4>Semester 3</h4>
+        <ul>
+          <li>Postcolonial Punjabi Literature</li>
+          <li>Punjabi Linguistics II</li>
+          <li>Elective Paper I</li>
+        </ul>
+      </div>
+      <div class="semester-card">
+        <h4>Semester 4</h4>
+        <ul>
+          <li>Dissertation / Project Work</li>
+          <li>Contemporary Punjabi Literature</li>
+          <li>Elective Paper II</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Program Outcomes -->
+    <div class="section-card">
+      <div class="card-title">Program Outcomes</div>
+      <ul class="outcomes-list">
+        <li>Advanced knowledge of Punjabi literature and language</li>
+        <li>Research, writing, and analytical skill development</li>
+        <li>Preparedness for teaching, editorial, and cultural roles</li>
+        <li>Foundation for higher studies – M.Phil, Ph.D.</li>
+      </ul>
+    </div>
+
+    <!-- Career Opportunities -->
+    <div class="section-card">
+      <div class="card-title">Career Opportunities</div>
+      <div class="career-box">University Lecturer / Teacher</div>
+      <div class="career-box">Researcher / Literary Analyst</div>
+      <div class="career-box">Editor / Content Writer</div>
+      <div class="career-box">Cultural Organization Roles</div>
+      <div class="career-box">Publishing Houses / Media</div>
+      <div class="career-box">Higher Studies – M.Phil, Ph.D.</div>
+    </div>
+
+    <!-- Faculty Section -->
+    <div class="section-card">
+      <div class="card-title">Faculty</div>
+      <div class="faculty-card">
+        <h4>Dr. Harpreet Singh</h4>
+        <p>Professor & Head, Department of Punjabi</p>
+      </div>
+      <div class="faculty-card">
+        <h4>Dr. Manpreet Kaur</h4>
+        <p>Assistant Professor, Department of Punjabi</p>
+      </div>
+      <div class="faculty-card">
+        <h4>Dr. Gurmeet Sharma</h4>
+        <p>Assistant Professor, Department of Punjabi</p>
+      </div>
+    </div>
+
+    <!-- Apply Now -->
+    <div style="text-align: center; margin-top: 25px;">
+      <a href="#" class="btn btn-danger apply-btn">Apply Now</a>
+    </div>
+
+  </div>
+</body>
+</html>

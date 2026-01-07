@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni-section</title>
+        <link rel="stylesheet" href="style/alumni.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/alumni.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+    overflow-x: hidden !important;
+}
+
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+/* Hero Section */
+        .hero {
+            position: relative;
+            padding: 120px 24px 100px;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .college-badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.375rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 48px;
+            font-weight: 500;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        /* Section Tag */
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+@media (max-width: 360px) {
+  .main-heading { font-size: 2.4rem !important; line-height: 1.15; }
+}
+</style>
+</head>
+<body>
+     <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg shadow sticky-top py-4 bg-white">
+    <div class="container">
+        <a class="navbar-brand text-white fw-semibold" href="index.html">
+            <img src="./images/Logosggs.jpg" alt="SGGS College Logo" height="70px" width="auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample"
+            aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <!-- Programs Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Programs
+                    </a>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Course-Programmes.html#ug">Undergraduate</a></li>
+                        <li><a class="dropdown-item" href="Course-Programmes.html#pg">Postgraduate</a></li>
+                       <li><a class="dropdown-item" href="Course-Programmes.html#diploma">Diploma</a></li>
+
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Course-Programmes.html">All Programs →</a></li>
+                    </ul>
+                </li>
+
+                <!-- Departments Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Departments
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="ba-department.html   ">Department of Arts</a></li>
+                        <li><a class="dropdown-item" href="bsc-department.html">Department of Science </a></li>
+                        <li><a class="dropdown-item" href="bcom-department.html">Department of Commerce</a></li>
+                        <li><a class="dropdown-item" href="compter&It-department.html">Department of IT </a></li>
+                        <li><a class="dropdown-item" href="bba-department.html">Department of Management </a></li>
+                        <li><a class="dropdown-item" href="bvoc-department.html">Department of B.Voc</a></li>
+                        <li><a class="dropdown-item" href="add-on-cources-department.html">Add on Departments</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Departments-of-SGGS-Collage.html">View All Departments →</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Facility-in SGGS-Collage.html">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CarrerGuidance.html">Placements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus copy.html">Contact</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contactus copy.html">Admissions</a>
+                </li>
+                <li class="nav-item">
+                     <a href="contactus copy.html   " class="apply-btn">
+            <i class="fas fa-graduation-cap"></i> Apply Now   </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- hero-content -->
+     <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <div class="college-badge">
+                <i class="fas fa-university"></i>
+            </div>
+            <h1 class="fade-in">SGGS College Alumni</h1>
+            <p class="fade-in-delay">SGGGGS Khalsa College FacilitiesS Mahilpur Alumni: The Leaders, Innovators & Achievers Shaping Tomorrow</p>
+            <div class="stats-bar fade-in-delay-2">
+                <div class="stat-item">
+                    <div class="stat-number">90+</div>
+                    <div class="stat-label">Classrooms</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">45,000+</div>
+                    <div class="stat-label">Books</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Labs</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">World-Class</div>
+                    <div class="stat-label">Infrastructure</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- form-section -->
+
+     <div class="container mt-5 heading-section">
+
+        <section class="row align-items-center animate-up">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-7 col-md-7 col-12 mb-4">
+
+                <div class="heading">
+                    <div class="icon-box gradient-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div>
+                        <h2>SGGS Alumni</h2>
+                        <p class="subtitle">Leaders • Innovators • Achievers</p>
+                    </div>
+                </div>
+
+                <p class="description">
+                    Our alumni are our pride. SGGS Khalsa College Mahilpur celebrates its former students
+                    who continue to shine across the world. Join the Alumni Association to reconnect,
+                    contribute, and celebrate.
+                </p>
+
+                <div class="d-flex gap-2 mt-3 flex-wrap">
+                    <button class="btn btn-maroon cta" >Register Now</button>
+                    <button class="btn btn-outline-secondary my-btn feature-card">See Meet Highlights</button>
+                </div>
+
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="col-lg-5 col-md-5 col-12">
+                <div class="form-card feature-card premium">
+
+                    <h5 class="mb-3" style="font-weight:700">Quick Join</h5>
+
+                    <form id="quickForm">
+
+                        <div class="mb-2">
+                            <label class="form-label small">Full Name</label>
+                            <input required class="form-control" name="name" placeholder="Your full name">
+                        </div>
+
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <label class="form-label small">Graduation Year</label>
+                                <input required type="number" min="1950" max="2030" class="form-control" name="year"
+                                    placeholder="e.g. 2014">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label small">Department</label>
+                                <input required class="form-control" name="dept" placeholder="e.g. Arts / Science">
+                            </div>
+                        </div>
+
+                        <div class="mb-2 mt-2">
+                            <label class="form-label small">Email</label>
+                            <input required type="email" class="form-control" name="email"
+                                placeholder="name@example.com">
+                        </div>
+
+                        <div class="d-flex mt-2">
+                            <button class="btn cta feature-card highlight" type="submit">Join the Association</button>
+                        </div>
+
+                        <small class="muted d-block mt-2">
+                            We will contact you on the provided email with membership details.
+                        </small>
+
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- join-section -->
+      <section class="py-5 heading-section  mb-0">
+        <div class="container animate-left">
+
+            <div class="heading">
+                <div class="icon-box gradient-icon">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+                <div>
+                    <h2>Who Can Join?</h2>
+                    <p class="subtitle">Eligibility for Alumni Membership</p>
+                </div>
+            </div>
+
+            <p class="description">
+                All former students of SGGS Khalsa College Mahilpur are eligible to become members of the Alumni
+                Association. Distinguished alumni are honoured during various college events every year.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- alumni-meet  -->
+
+     <section class="p-3 facility-section">
+        <div class="container animate-fade">
+
+            <!-- Title -->
+            <div class="heading-section justify-content-center text-center mb-2">
+                <div class="icon-box gradient-icon mx-auto">
+                    <i class="fa-solid fa-camera-retro"></i>
+                </div>
+
+                <h2>Alumni Meet Highlights</h2>
+                <p class="subtitle">Memories • Celebrations • Togetherness</p>
+
+            </div>
+
+            <!-- ROW -->
+            <div class="row g-4 justify-content-center ">
+
+                <!-- LEFT CARD -->
+                <div class="col-md-6">
+                    <div class="highlight-card feature-card premium text-center">
+
+                        <div class="highlight-card-header">
+                            Alumni Meet 2024
+                        </div>
+
+                        <p class="highlight-text">
+                            Celebrating achievements, reconnecting with friends, and inspiring the next generation.
+                        </p>
+
+                        <div id="carousel2024" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <img src="./images/alumni 2024-2.jpg" class="d-block w-100 c-img">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="./images/alumni-1 acc.jpg" class="d-block w-100 c-img">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="./images/2004-3.jpg" class="d-block w-100 c-img">
+                                </div>
+
+                            </div>
+
+                            <!-- Custom Arrows -->
+                            <button class="carousel-control-prev card-arrow" type="button"
+                                data-bs-target="#carousel2024" data-bs-slide="prev">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button class="carousel-control-next card-arrow" type="button"
+                                data-bs-target="#carousel2024" data-bs-slide="next">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT CARD -->
+                <div class="col-md-6">
+                    <div class="highlight-card feature-card premium text-center">
+
+                        <div class="highlight-card-header">
+                            Alumni Meet 2017
+                        </div>
+
+                        <p class="highlight-text">
+                            Memories and moments from one of our most engaging alumni gatherings.
+                        </p>
+
+                        <div id="carousel2017" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <img src="./images/2016-meet-1.jpg" class="d-block w-100 c-img">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/2016-meet-2.jpg" class="d-block w-100 c-img">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/2016-meet-3.jpg" class="d-block w-100 c-img">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/2016-meet-4.jpg" class="d-block w-100 c-img">
+                                </div>
+
+                            </div>
+
+                            <!-- Custom Arrows -->
+                            <button class="carousel-control-prev card-arrow" type="button"
+                                data-bs-target="#carousel2017" data-bs-slide="prev">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button class="carousel-control-next card-arrow" type="button"
+                                data-bs-target="#carousel2017" data-bs-slide="next">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- success story -->
+
+      <section class="py-5">
+        <div class="container-fluid animate-up">
+
+            <!-- HEADER -->
+            <div class="text-center mb-5-sm-0">
+                <div class="text main-header-box">
+                    <h2 class="fw-bold main-title">🎓 SGGS College Alumni Success Stories</h2>
+                    <p class="phara">
+                        From classrooms to world recognition — our alumni continue to inspire generations
+                        with their achievements in sports, literature, public service and global leadership.
+                    </p>
+                </div>
+
+                <h2 class="sub-heading fw-bold ">Our Distinguished Alumni</h2>
+
+                <!-- CARDS START -->
+                <div class="row g-4">
+
+                    <!-- SINGLE CARD -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="alumni-card-new feature-card premium">
+                            <img src="./images/jarnail-singh.jpg" alt="">
+                            <h5>S. Jarnail Singh</h5>
+                            <p class="tagline">Olympian • Arjuna Awardee (1964)</p>
+                            <p class="detail">Legendary defender-striker who represented India, captained Indian & Asian
+                                All-Star
+                                teams, and served as Director of Sports, Punjab.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="alumni-card-new feature-card premium">
+                            <img src="./images/Gurdev-Singh-Gill.jpeg" alt="">
+                            <h5>S. Gurdev Singh Gill</h5>
+                            <p class="tagline">Arjuna Awardee • Captain, Indian Football Team</p>
+                            <p class="detail">International footballer who played Asia Cup, Asian Games, Agha Khan Gold
+                                Cup, and
+                                captained Punjab for 12 years.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="alumni-card-new feature-card premium">
+                            <img src="./images/H.R.-Swan.jpeg" alt="">
+                            <h5>Sh. Hans Raj Swan, IPS (Retd.)</h5>
+                            <p class="tagline">Former DGP Haryana</p>
+                            <p class="detail">Served over 25 years in Punjab & Haryana Police, rising to Director
+                                General of Police.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="alumni-card-new feature-card premium">
+                            <img src="./images/gs-randhawa.jpg" alt="">
+                            <h5>S. Gurdip Singh Randhawa</h5>
+                            <p class="tagline">Former Vice Chancellor, GNDU</p>
+                            <p class="detail">Led GNDU for 8 years, initiated major academic programs & infrastructure
+                                development.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="alumni-card-new feature-card premium">
+                            <img src="./images/gulzar-sandhu.jpg" alt="">
+                            <h5>S. Gulzar Singh Sandhu</h5>
+                            <p class="tagline">Sahitya Akademi Awardee</p>
+                            <p class="detail">Renowned Punjabi writer with celebrated story collections.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="alumni-card-new feature-card premium">
+                            <img src="./images/Ajaib-Kamal.jpg" alt="">
+                            <h5>S. Ajaib Singh Kamal</h5>
+                            <p class="tagline">Poet • Playwright</p>
+                            <p class="detail">Modern Punjabi poet known for long poems and verse-drama.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="alumni-card-new feature-card premium">
+                            <img src="./images/ps-khabra.jpg" alt="">
+                            <h5>S. Piara Singh Khabra</h5>
+                            <p class="tagline">Member, UK Parliament</p>
+                            <p class="detail">Prominent Sikh-Briton politician, MP for Ealing Southall (1992–2007).</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="alumni-card-new feature-card premium">
+                            <img src="./images/Dr-Basi.jpg" alt="">
+                            <h5>Sh. Raghbir (Raj) S. Basi</h5>
+                            <p class="tagline">Economist • Former Provost, Alaska Pacific University</p>
+                            <p class="detail">Academician, economist & founder of VLIF, promoting entrepreneurship.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn-maroon px-4 py-2 fw-bold zoom-btn">
+                    Register for Alumni Association
+                </button>
+            </div>
+    </section>
+
+
+    <!-- memory -->
+
+      <section class="py-5" >
+        <div class="container">
+
+            <h2 class="text-center mb-4 memory-title">
+                Down The Memory Lane
+            </h2>
+
+            <div class="row g-4">
+
+                <!-- Image 1 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="memory-card">
+                        <img src="./images/memeory-1.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="memory-card">
+                        <img src="./images/pic-2.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="memory-card">
+                        <img src="./images/pic-3.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="memory-card">
+                        <img src="./images/pic-4-300x180-1.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="memory-card">
+                        <img src="./images/pic-5-300x180-1.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    
+
+
+  <footer class="main-footer">
+        <p>© 2020 | SGGS Khalsa College, Mahilpur. All Rights Reserved</p>
+        <p class="footer-sub">Website Designed & Maintained By Department Of Computer Science</p>
+        </footer>
+
+
+        
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,909 @@
+    <!doctype html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Vocational & Add-On Programs - SGGS Mahilpur</title>
+        <meta name="description"
+            content="Vocational & Add-On Programs at SGGS Mahilpur — enhancing skills, employability, and career opportunities." />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+        <style>
+            /* SAME CSS - DO NOT CHANGE ANYTHING */
+            :root {
+                --brand: #8c1007;
+                --wine-red: #8C1007;
+                --brand-light: #a8332a;
+                --white: #ffffff;
+                --light: #fdf9f8;
+                --muted: #555;
+                --gray: #f5f5f5;
+                --radius: 16px;
+                --shadow: 0 10px 30px rgba(140, 16, 7, 0.08);
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0
+            }
+
+            body {
+                font-family: 'Inter', sans-serif;
+                color: #222;
+                background: var(--white);
+                line-height: 1.6
+            }
+
+            a {
+                color: var(--brand);
+                text-decoration: none
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 1.5rem
+            }
+
+            header {
+                background: linear-gradient(135deg, var(--brand), #6f0904);
+                color: var(--white);
+                padding-bottom: 3rem
+            }
+
+            .topbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.2rem 0
+            }
+
+            .brand {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                font-weight: 800;
+                font-size: 1.4rem
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+                background: var(--white);
+                color: var(--brand);
+                border-radius: 12px;
+                display: grid;
+                place-items: center;
+                font-size: 1.8rem
+            }
+
+            .nav a {
+                color: white;
+                padding: .6rem 1rem;
+                border-radius: 10px;
+                font-weight: 600;
+                transition: .3s
+            }
+
+            .nav a:hover {
+                background: rgba(255, 255, 255, 0.15)
+            }
+
+            .hero1 {
+                display: flex;
+                grid-template-columns: 1fr 380px;
+                gap: 3rem;
+                align-items: center;
+                margin-top: 2rem;
+                color: white;
+                /* Note: Original code used flexbox here, not grid template columns */
+            }
+
+            .eyebrow {
+                background: rgba(255, 255, 255, 0.15);
+                padding: .4rem .9rem;
+                border-radius: 50px;
+                font-size: .9rem;
+                display: inline-block
+            }
+
+
+            .lead {
+                font-size: 1.15rem;
+                opacity: 0.95;
+                max-width: 65ch
+            }
+
+            .btn {
+                padding: .8rem 1.6rem;
+                border-radius: 12px;
+                font-weight: 700;
+                display: inline-flex;
+                align-items: center;
+                gap: .6rem;
+                transition: .3s
+            }
+
+            .btn-primary {
+                background: var(--white);
+                color: var(--brand)
+            }
+
+            .btn-outline {
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                background: transparent;
+                color: white
+            }
+
+            .btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15)
+            }
+
+            .card {
+                background: var(--white);
+                border-radius: var(--radius);
+                padding: 1.8rem;
+                box-shadow: var(--shadow);
+                border: 1px solid #f0e6e6;
+                transition: .3s
+            }
+
+            .card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(140, 16, 7, 0.12)
+            }
+
+            .icon-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 1.5rem;
+                margin: 2rem 0
+            }
+
+            .icon-card {
+                text-align: center;
+                padding: 2rem;
+                border-radius: var(--radius);
+                color: white;
+                transition: .4s
+            }
+
+            .icon-card i {
+                font-size: 3.5rem;
+                margin-bottom: 1rem;
+                opacity: 0.9
+            }
+
+            .icon-card h4 {
+                font-size: 1.4rem;
+                margin: 1rem 0 .6rem;
+                font-weight: 700
+            }
+
+            .icon-card:hover {
+                transform: translateY(-10px)
+            }
+
+            .career-card {
+                background: var(--white);
+                border: 3px solid var(--brand);
+                color: var(--brand);
+                text-align: center;
+                padding: 2rem;
+                border-radius: var(--radius)
+            }
+
+            .career-card i {
+                color: var(--brand)
+            }
+
+            section {
+                padding: 4rem 0
+            }
+
+            h2 {
+                font-size: 2.4rem;
+                text-align: center;
+                margin-bottom: 1rem;
+                color: var(--brand)
+            }
+
+            .section-subtitle {
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto 3rem;
+                color: var(--muted);
+                font-size: 1.1rem
+            }
+
+            .faculty-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 1.8rem
+            }
+
+            .faculty-card {
+                text-align: center
+            }
+
+            .faculty-card img {
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin: 0 auto 1rem;
+                border: 5px solid var(--light)
+            }
+
+            table {
+                min-width: 100%;
+                border-collapse: collapse;
+
+            }
+
+            /* Original media query kept */
+            @media (max-width: 400px) {
+                table {
+                    font-size: 10px;
+                }
+
+                .card {
+                    padding: 10px;
+                }
+            }
+
+            th {
+                background: var(--brand);
+                color: white;
+                padding: 1rem
+            }
+
+            td,
+            th {
+                border: 1px solid #eee;
+                padding: .9rem;
+                text-align: left
+            }
+
+
+            tr:nth-child(even) {
+                background: #fdf9f8
+            }
+
+            .faq-item {
+                background: var(--white);
+                border-radius: var(--radius);
+                margin-bottom: 1rem;
+                overflow: hidden;
+                box-shadow: var(--shadow)
+            }
+
+            .faq-q {
+                background: var(--brand);
+                color: white;
+                padding: 1.2rem 1.5rem;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 600
+            }
+
+            .faq-a {
+                padding: 1.5rem;
+                background: var(--light);
+                display: none
+            }
+
+            .faq-a.show {
+                display: block
+            }
+
+            footer {
+                background: var(--gray);
+                padding: 3rem 0 1.5rem;
+                text-align: center;
+                color: var(--muted)
+            }
+
+            /* Original media query kept */
+            @media(max-width:900px) {
+                .hero {
+                    grid-template-columns: 1fr
+                }
+
+                .hero-right {
+                    width: 100%
+                }
+            }
+
+            /* Hero Section */
+            .hero {
+                position: relative;
+                overflow: hidden;
+                min-height: 600px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hero::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+                opacity: 1;
+            }
+
+            .hero-overlay {
+                position: absolute;
+                inset: 0;
+                background:
+                    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+                    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+            }
+
+            .hero-particles {
+                position: absolute;
+                inset: 0;
+                background-image:
+                    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+                background-size: 100px 100px, 150px 150px, 200px 200px;
+                opacity: 0.5;
+            }
+
+            .hero-content {
+                position: relative;
+                z-index: 10;
+                text-align: center;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .college-badge {
+                width: 80px;
+                height: 80px;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 24px;
+                font-size: 2.5rem;
+                color: white;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                animation: float 3s ease-in-out infinite;
+            }
+
+            .hero h1 {
+                font-weight: 800;
+                color: white;
+                margin-bottom: 20px;
+                letter-spacing: -0.03em;
+                line-height: 1.1;
+                text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                font-size: clamp(28px, 6vw, 80px);
+                /* super responsive */
+                margin-top: 20px;
+            }
+
+            /* For tablets */
+            @media (max-width: 768px) {
+                .hero h1 {
+                    font-size: clamp(24px, 8vw, 60px);
+                }
+            }
+
+            /* For small phones */
+            @media (max-width: 480px) {
+                .hero h1 {
+                    font-size: clamp(20px, 10vw, 45px);
+                }
+            }
+
+
+            .hero p {
+                font-size: 1.375rem;
+                color: rgba(255, 255, 255, 0.95);
+                max-width: 800px;
+                margin: 0 auto 48px;
+                font-weight: 500;
+            }
+
+            /* Stats Bar */
+            .stats-bar {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 32px;
+                flex-wrap: wrap;
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(12px);
+                padding: 32px 48px;
+                border-radius: 20px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                max-width: 900px;
+                margin: 0 auto;
+            }
+
+            @media (max-width: 350px) {
+                .stats-bar {
+                    margin: 20px;
+                }
+
+
+            }
+
+            .stat-item {
+                text-align: center;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+                font-weight: 800;
+                color: white;
+                margin-bottom: 4px;
+            }
+
+            .stat-label {
+                font-size: 0.875rem;
+                color: rgba(255, 255, 255, 0.9);
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .stat-divider {
+                width: 1px;
+                height: 40px;
+                background: rgba(255, 255, 255, 0.3);
+            }
+
+            /* Original media query kept */
+            @media(max-width:900px) {
+                .hero {
+                    grid-template-columns: 1fr;
+                }
+
+                .hero-right {
+                    width: 100%;
+                }
+            }
+
+            /* Animations */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes float {
+
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+
+            @keyframes shimmer {
+                0% {
+                    background-position: -1000px 0;
+                }
+
+                100% {
+                    background-position: 1000px 0;
+                }
+            }
+
+            .fade-in {
+                animation: fadeIn 0.8s ease-out;
+            }
+
+            .fade-in-delay {
+                animation: fadeIn 0.8s ease-out 0.2s both;
+            }
+
+            .fade-in-delay-2 {
+                animation: fadeIn 0.8s ease-out 0.4s both;
+            }
+
+            .dropdown-menu {
+                color: #8C1007;
+                overflow: hidden !important;
+            }
+
+            .dropdown-item {
+                color: #8C1007;
+            }
+
+            .dropdown-item:hover {
+                background-color: #8C1007;
+                color: white;
+                overflow: hidden !important;
+            }
+
+            /* APPLY BUTTON */
+            .apply-btn {
+                padding: 12px 28px;
+                background: linear-gradient(135deg, #8c1007, #b01414);
+                color: white;
+                border: none;
+                border-radius: 10px;
+                font-weight: 600;
+                font-size: 1rem;
+                text-decoration: none;
+                box-shadow: 0 6px 18px rgba(140, 16, 7, 0.3);
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                white-space: nowrap;
+            }
+
+            .apply-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 28px rgba(140, 16, 7, 0.4);
+                background: linear-gradient(135deg, #9a1108, #c41a1a);
+
+            }
+
+            .apply-btn i {
+                font-size: 1.1rem;
+            }
+
+
+            /* ======================================= */
+            /* --- ADDED MEDIA QUERIES ---*/
+            /* ======================================= */
+
+            /* Tablet Layout (max-width: 992px) */
+            @media (max-width: 992px) {
+                /* Adjust section padding */
+                section {
+                    padding: 3rem 0;
+                }
+
+                /* Adjust heading sizes */
+                h2 {
+                    font-size: 2rem;
+                }
+                .section-subtitle {
+                    font-size: 1rem;
+                    margin-bottom: 2.5rem;
+                }
+
+                /* Adjust cards for better use of space */
+                .card {
+                    padding: 1.5rem;
+                }
+
+                /* Hero adjustments */
+                .hero {
+                    min-height: 500px;
+                }
+                .hero h1 {
+                    font-size: clamp(2.5rem, 6vw, 4rem);
+                }
+                .hero p {
+                    font-size: 1.15rem;
+                    margin-bottom: 30px;
+                }
+                .college-badge {
+                    width: 70px;
+                    height: 70px;
+                    font-size: 2rem;
+                }
+            }
+
+            /* Mobile Layout (max-width: 768px) */
+            @media (max-width: 768px) {
+                .container {
+                    padding: 0 1rem;
+                }
+
+                /* Force icon-grids and faculty-grids into a single vertical column */
+                .icon-grid,
+                .faculty-grid {
+                    grid-template-columns: 1fr;
+                    gap: 1rem;
+                }
+
+                /* Stats Bar on smaller screens */
+                .stats-bar {
+                    gap: 20px;
+                    padding: 20px;
+                    /* Allow stats to wrap vertically if necessary */
+                }
+
+                .stat-divider {
+                    display: none;
+                    /* Remove vertical dividers for a clean stacked look */
+                }
+                
+                /* Table responsiveness: Implement horizontal scroll */
+                .table-wrapper {
+                    overflow-x: auto;
+                    -webkit-overflow-scrolling: touch;
+                    margin: 0 -1rem; /* Extend to container edges if needed */
+                }
+                table {
+                    min-width: 600px; /* Ensure table is wide enough to scroll */
+                }
+                td, th {
+                    padding: 0.8rem;
+                    font-size: 0.95rem;
+                }
+            }
+
+            /* Small Mobile Devices (max-width: 480px) */
+            @media (max-width: 480px) {
+                .hero {
+                    min-height: 400px;
+                }
+
+                .hero h1 {
+                    font-size: 2rem;
+                }
+
+                .hero p {
+                    font-size: 1rem;
+                    margin-bottom: 20px;
+                }
+
+                .stats-bar {
+                    flex-direction: column; /* Stack stats vertically */
+                    align-items: stretch;
+                    padding: 20px 10px;
+                    max-width: 95%;
+                }
+
+                .stat-item {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    padding: 10px 0;
+                }
+
+                .stat-item:last-child {
+                    border-bottom: none;
+                }
+
+                .stat-number {
+                    font-size: 1.5rem;
+                }
+
+                .stat-label {
+                    font-size: 0.8rem;
+                }
+                
+                .faq-q {
+                    padding: 1rem;
+                    font-size: 1rem;
+                }
+                
+                .faq-a {
+                    padding: 1rem;
+                    font-size: 0.9rem;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <section class="hero">
+
+            <div class="hero-content">
+                <div class="college-badge">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="container hero1">
+                    <div>
+                        <span class="eyebrow">Skill-Oriented • Varies • Full-Time</span>
+                        <h1>Vocational & Add-On Programs</h1>
+                        <p class="lead">Enhancing employability and practical skills through specialized vocational and
+                            add-on programs.</p>
+                    </div>
+
+
+                </div>
+               <div class="stats-bar fade-in-delay-2">
+    <div class="stat-item">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Courses & <br>Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Undergraduate <br>Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Postgraduate <br> Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Diploma & <br> Add-On Courses</div>
+    </div>
+</div>
+
+            </div>
+        </section>
+        <main class="container">
+
+            <section style="background:var(--light);padding:5rem 0">
+                <h2>Why Choose Vocational & Add-On Programs?</h2>
+                <p class="section-subtitle">Develop practical skills and industry readiness</p>
+                <div class="icon-grid">
+                    <div class="icon-card card" style="background:var(--brand)">
+                        <i class="fas fa-tools"></i>
+                        <h4>Hands-on Training</h4>
+                        <p>Real-world projects and skill-based workshops.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand-light)">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h4>Expert Mentors</h4>
+                        <p>Industry professionals guiding students.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand)">
+                        <i class="fas fa-certificate"></i>
+                        <h4>Certification</h4>
+                        <p>Recognized certifications enhancing employability.</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand-light)">
+                        <i class="fas fa-briefcase"></i>
+                        <h4>Industry Exposure</h4>
+                        <p>Internships and real-world experience.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="programs">
+                <h2>Our Programs</h2>
+                <p class="section-subtitle">Skill-oriented courses for career advancement</p>
+                <div class="icon-grid">
+                    <div class="icon-card card" style="background:var(--brand)">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Computer Applications</h4>
+                        <p>BCA, PGDCA and other add-on courses</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand-light)">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Management Skills</h4>
+                        <p>BBA, MBA add-on modules</p>
+                    </div>
+                    <div class="icon-card card" style="background:var(--brand)">
+                        <i class="fas fa-paint-brush"></i>
+                        <h4>Creative Skills</h4>
+                        <p>Design, multimedia and vocational workshops</p>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="syllabus">
+                <h2>Program Structure</h2>
+                <div class="card">
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Program</th>
+                                    <th>Duration</th>
+                                    <th>Modules / Focus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PGDCA</td>
+                                    <td>6 months</td>
+                                    <td>Computer fundamentals, programming, database, networking</td>
+                                </tr>
+                                <tr>
+                                    <td>BCA</td>
+                                    <td>3 years</td>
+                                    <td>Programming, web development, software engineering, projects</td>
+                                </tr>
+                                <tr>
+                                    <td>Add-On Courses</td>
+                                    <td>Varies</td>
+                                    <td>Skill-based short-term programs aligned to industry</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="careers" style="background:var(--light)">
+                <h2>Career Opportunities</h2>
+                <p class="section-subtitle">Prepare for industry-oriented roles</p>
+                <div class="icon-grid">
+                    <div class="career-card card"><i class="fas fa-laptop-code"></i>
+                        <h4>Software & IT Roles</h4>
+                        <p>Web development, programming, IT support</p>
+                    </div>
+                    <div class="career-card card"><i class="fas fa-briefcase"></i>
+                        <h4>Management & Administration</h4>
+                        <p>Office administration, project management, business analytics</p>
+                    </div>
+                    <div class="career-card card"><i class="fas fa-chalkboard-teacher"></i>
+                        <h4>Training & Workshops</h4>
+                        <p>Skill development and corporate training roles</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+                    <div class="faq-item">
+                        <div class="faq-q">Who can enroll? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-a">Students of SGGS Mahilpur and others meeting program eligibility can enroll.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">Are programs certified? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-a">Yes — recognized certifications are provided upon completion.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">Can I pursue multiple programs? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-a">Yes — vocational and add-on programs can be combined based on schedule
+                            availability.</div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; SGGS Mahilpur — Vocational & Add-On Programs. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            document.querySelectorAll('.faq-q').forEach(q => {
+                q.addEventListener('click', () => {
+                    const a = q.nextElementSibling;
+                    const i = q.querySelector('i');
+                    a.classList.toggle('show');
+                    i.classList.toggle('fa-chevron-down');
+                    i.classList.toggle('fa-chevron-up');
+                });
+            });
+        </script>
+
+    </body>
+
+    </html>

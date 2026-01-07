@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.G.G.S College</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+         :root {
+            --brand: #8c1007;
+            --wine-red: #8C1007;
+            --brand-light: #a8332a;
+            --white: #ffffff;
+            --light: #fdf9f8;
+            --muted: #555;
+            --gray: #f5f5f5;
+            --radius: 16px;
+            --shadow: 0 10px 30px rgba(140, 16, 7, 0.08);
+        }
+
+        .dropdown-item {
+            color: #8C1007;
+        }
+
+        .dropdown-item:hover {
+            background-color: #8C1007;
+            color: white;
+            overflow: hidden !important;
+        }
+
+        /* APPLY BUTTON */
+        .apply-btn {
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #8c1007, #b01414);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 6px 18px rgba(140, 16, 7, 0.3);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(140, 16, 7, 0.4);
+            background: linear-gradient(135deg, #9a1108, #c41a1a);
+
+        }
+
+        .apply-btn i {
+            font-size: 1.1rem;
+        }
+
+        /* navbar css code */
+
+        .navbar {
+            max-width: 100% !important;
+        }
+
+        .navbar-nav .nav-item {
+            white-space: nowrap;
+        }
+
+        .navbar-toggler {
+            padding: 5px 8px;
+            border: none;
+            outline: none;
+        }
+
+        .navbar-brand img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .dropdown-menu {
+            color: #8C1007;
+            overflow: hidden !important;
+        }
+
+        .dropdown-item {
+            color: #8C1007;
+        }
+
+        .dropdown-item:hover {
+            background-color: #8C1007 !important;
+            color: white;
+            overflow: hidden !important;
+        }
+
+        .nav-link {
+            color: var(--brand) !important;
+            font-weight: bold;
+        }
+
+        .navbar-collapse {
+            overflow: visible !important;
+            /* allow collapse to expand */
+            transition: height 0.3s ease;
+            /* smooth animation */
+        }
+
+        .navbar-nav .nav-item {
+            white-space: nowrap;
+            /* prevent wrapping */
+        }
+
+        @media (min-width: 992px) {
+            .navbar .dropdown:hover>.dropdown-menu {
+                display: block;
+            }
+
+            .navbar .dropdown>.dropdown-toggle:active {
+                pointer-events: none;
+            }
+        }
+
+        /* navbar css code end here */
+       </style>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top  py-4 mt-3">
+        <div class="container">
+
+            <a class="navbar-brand fw-semibold" href="index.html">
+                <img src="./images/Logosggs.jpg" alt="SGGS College Logo" height="45px">
+            </a>
+
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Programs</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Course-Programmes.html#ug">Undergraduate</a></li>
+                            <li><a class="dropdown-item" href="Course-Programmes.html#pg">Postgraduate</a></li>
+                            <li><a class="dropdown-item" href="Course-Programmes.html#diploma">Diploma</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="Course-Programmes.html">All Programs →</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Departments</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="ba-department.html">Department of Arts</a></li>
+                            <li><a class="dropdown-item" href="bsc-department.html">Department of Science</a></li>
+                            <li><a class="dropdown-item" href="bcom-department.html">Department of Commerce</a></li>
+                            <li><a class="dropdown-item" href="compter&It-department.html">Department of IT</a></li>
+                            <li><a class="dropdown-item" href="bba-department.html">Department of Management</a></li>
+                            <li><a class="dropdown-item" href="bvoc-department.html">Department of B.Voc</a></li>
+                            <li><a class="dropdown-item" href="add-on-cources-department.html">Add on Departments</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="Departments-of-SGGS-Collage.html">View All Departments
+                                    →</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="Facility-in SGGS-Collage.html">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="CarrerGuidance.html">Placements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus copy.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Addimision-page.html">Admissions</a></li>
+                    <li class="nav-item">
+                        <a href="contactus copy.html" class="apply-btn">
+                            <i class="fas fa-graduation-cap"></i> Apply Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<body>
+   
+
+</body>
+</html>

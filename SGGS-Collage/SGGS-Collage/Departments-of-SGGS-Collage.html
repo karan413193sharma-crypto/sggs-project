@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Departments - SGGS College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  
+  <!-- 1️⃣ Include AOS  -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- BOOTSTRAP CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- BOOTSTRAP JS (for toggle + dropdown)  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+
+  <style>
+    
+
+    :root {
+      --wine-900: #8c1007;
+      --wine-800: #8c1007;
+      --wine-700: #8c1007;
+      --wine-600: #7b1e3a;
+      --wine-500: #9a2a4c;
+      --wine-100: #f8e9ef;
+      --gold-400: #f4c430;
+      --text-on-wine: #fff8fb;
+      --muted: #bfa7b0;
+         --brand: #8c1007;
+            --wine-red: #8C1007;
+            --brand-light: #a8332a;
+    }
+
+   
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+     .dropdown-item {
+            color: #8C1007;
+        }
+
+        .dropdown-item:hover {
+            background-color: #8C1007;
+            color: white;
+            overflow: hidden !important;
+        }
+
+        /* APPLY BUTTON */
+        .apply-btn {
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #8c1007, #b01414);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 6px 18px rgba(140, 16, 7, 0.3);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(140, 16, 7, 0.4);
+            background: linear-gradient(135deg, #9a1108, #c41a1a);
+
+        }
+
+        .apply-btn i {
+            font-size: 1.1rem;
+        }
+
+     
+    
+  
+
+
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -1000px 0;
+      }
+
+      100% {
+        background-position: 1000px 0;
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .fade-in-delay {
+      animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .fade-in-delay-2 {
+      animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .college-badge-sign {
+      width: 80px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 2.5rem;
+      color: white;
+      animation: float 3s ease-in-out infinite;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+
+    }
+
+    /* Header section */
+    .dept-hero {
+      content: "";
+      background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+      opacity: 1;
+      color: var(--text-on-wine);
+      padding: 13rem 0;
+      margin-bottom: 3rem;
+      inset: 0;
+    }
+
+    .dept-hero h1 {
+      font-weight: 700;
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .dept-hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .departments-container {
+      max-width: 1500px;
+      margin: 0 auto 4rem;
+      padding: 0 1rem;
+    }
+ /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+            margin-top: 3%;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        /* Section Tag */
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+    /* Departments Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 24px;
+      margin: 0 3% 3% 3%;
+    }
+
+    /* Department Card */
+    .feature-card {
+      background: #ffffff;
+      border: 2px solid #f0f0f0;
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #8c1007 0%, #b51610 100%);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    .feature-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .feature-card:hover {
+      border-color: rgba(140, 16, 7, 0.3);
+      box-shadow: 0 12px 40px rgba(140, 16, 7, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .feature-card.premium {
+      background: linear-gradient(135deg, #fff 0%, #fef9f8 100%);
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(140, 16, 7, 0.1);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover .feature-icon {
+      background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .feature-card p {
+      font-size: 0.9375rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .feature-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-weight: 600;
+      color: #8c1007;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .feature-link:hover {
+      color: #b51610;
+    }
+
+
+    /* FACULTY SECTION */
+    /* GENERAL */
+    .section-gap {
+      padding: 3rem 0;
+    }
+
+    .bg-soft-wine {
+      background: rgba(140, 16, 7, 0.06);
+    }
+
+    .section-heading {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #24161b;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: #5b4550;
+    }
+
+    .dept-label-pill {
+      background-color: #ffc9de;
+      color: #6c1a5b;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 0.85rem;
+    }
+
+    /* -------------- RESPONSIVE SLIDER FIX -------------- */
+
+    .carousel-wrapper {
+      overflow: hidden;
+      width: 100%;
+
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: 0.6s ease;
+    }
+
+    /* REMOVE ALL PREVIOUS FACULTY CARD DEFINITIONS */
+
+    /* ==================== FACULTY CARD (with dept-card style hover) ==================== */
+    .faculty-card {
+      flex: 0 0 calc(100% / 3);
+      box-sizing: border-box;
+      padding: 1.5rem;
+      background: white;
+      border: 2px solid #f0f0f0;
+      border-radius: 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transform: scale(0.9);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* The top gradient bar */
+    .faculty-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #8c1007 0%, #b51610 100%);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    /* Hover top line expands */
+    .faculty-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* Card hover */
+    .faculty-card:hover {
+      border-color: rgba(140, 16, 7, 0.6);
+      transform: translateY(-4px) scale(0.95);
+      border-top: none;
+    }
+
+    /* Avatar hover */
+    .faculty-card:hover .faculty-avatar {
+      background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+      color: #fff;
+      transform: scale(1.1);
+      transition: all 0.3s ease;
+    }
+
+    /* Tablet - 2 cards */
+    @media (max-width: 992px) {
+      .faculty-card {
+        flex: 0 0 40%;
+      }
+    }
+
+    /* Mobile - 1 card */
+    @media (max-width: 600px) {
+      .faculty-card {
+        flex: 0 0 100%;
+        padding: 1.2rem;
+      }
+    }
+
+    /* Avatar */
+    .faculty-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 1rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      background: rgba(140, 16, 7, 0.1);
+      transition: all 0.3s ease;
+    }
+
+
+    .faculty-name {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .faculty-meta {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+
+    .faculty-desc {
+      font-size: 0.85rem;
+      color: #495057;
+    }
+
+    .faculty-card.active {
+      transform: scale(1);
+      /* REAL zoom */
+      opacity: 1;
+      /* fully visible */
+      z-index: 10;
+      border-radius: 2rem;
+    }
+
+    /* -------- Research Card (Not Touched) -------- */
+
+    /* ==================== FACULTY CARD HOVER EFFECT ==================== */
+    .faculty-style-card {
+      background: #fff;
+      padding: 22px;
+      border: 2px solid #f0f0f0;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(140, 16, 7, 0.1);
+      position: relative;
+      /* required for ::before */
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Top gradient line */
+    .faculty-style-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #8c1007 0%, #b51610 100%);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    /* Card hover */
+    .faculty-style-card:hover::before {
+      transform: scaleX(1);
+      /* slide in top gradient */
+    }
+
+    .faculty-style-card:hover {
+      border-color: rgba(140, 16, 7, 0.9);
+      box-shadow: 0 12px 40px rgba(140, 16, 7, 0.15);
+      transform: translateY(-4px) scale(0.95);
+      /* lift effect */
+      border-top: none;
+    }
+
+    /* Badge hover effect */
+    .faculty-badge {
+      background: #8c1007;
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 25px;
+      font-size: 13px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    /* Optionally, badge pop on card hover */
+    .faculty-style-card:hover .faculty-badge {
+      transform: scale(1.05);
+    }
+
+    /* Text & link styling (keep as is) */
+    .faculty-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .faculty-meta {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    .faculty-desc {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 16px;
+    }
+
+    .faculty-tag {
+      background: #e9f3ff;
+      color: #8c1007;
+      padding: 5px 12px;
+      border-radius: 25px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    /* Optionally, pop tags on hover */
+    .faculty-style-card:hover .faculty-tag {
+      transform: scale(1.05);
+    }
+
+    .faculty-link {
+      color: #8c1007;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .faculty-link:hover {
+      color: #b51610;
+      text-decoration: underline;
+    }
+
+
+
+    /*research css end here*/
+
+
+    /*achivement css start from here*/
+    #achievements {
+      padding: 0.5rem 0;
+      background: linear-gradient(90deg, #8c1007, #9a2a4c);
+      color: white;
+      border-radius: 0 0 2rem 2rem;
+    }
+
+    #achievements h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+
+    #achievements ul {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .ach-card {
+      background: #fff;
+      border-radius: 1.5rem;
+      border: 2px solid #f0f0f0;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+
+      box-shadow: 0 8px 20px rgba(140, 16, 7, 0.1);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .ach-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #8c1007 0%, #b51610 100%);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    .ach-card:hover::before {
+      transform: scaleX(1);
+    }
+
+
+    .ach-card:hover {
+
+      border-color: rgba(140, 16, 7, 0.6);
+      box-shadow: 0 12px 40px rgba(140, 16, 7, 0.15);
+      transform: translateY(-4px);
+
+    }
+
+    .ach-img {
+      border-radius: 1rem;
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.ach-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-top: 1rem;
+    }
+
+    .ach-role {
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    .ach-tag {
+      background: #eef2ff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .success-btn {
+      display: inline-block;
+      background: #8c1007;
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border-radius: 0.6rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.25s;
+    }
+
+    .success-btn:hover {
+      background: #5f0a03;
+    }
+
+    .achive {
+      height: 200px;
+    }
+
+    /*achivement css end  here*/
+
+    /* Button style */
+    #openGrid {
+      padding: 10px 20px;
+      background: #8c1007;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 3%;
+    }
+
+    /* The grid/modal overlay */
+    #gridOverlay {
+      display: flex;
+      /* always flex for transition */
+      opacity: 0;
+      pointer-events: none;
+      /* prevent clicks when hidden */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      transition: opacity 0.4s ease;
+    }
+
+    /* Active state */
+    #gridOverlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* The grid box */
+    #gridBox {
+      width: 80%;
+      height: 80%;
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      position: relative;
+      transform: scale(0.8);
+      transition: transform 0.4s ease;
+    }
+
+    /* Active state */
+    #gridOverlay.active #gridBox {
+      transform: scale(1);
+    }
+
+    /* Close button */
+    #closeGrid {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    /* iframe styling */
+    #gridBox iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 10px;
+    }
+
+
+    .grid-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .grid-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 60%;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .grid-box button.close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: red;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .grid-options button {
+      margin: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .space {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    /*gpt help*/
+    /* Fix department grid for small screens */
+@media (max-width: 500px) {
+  .features-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* Fix faculty cards overflowing on mobile */
+@media (max-width: 992px) {
+  .faculty-card {
+    flex: 0 0 48% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .faculty-card {
+    flex: 0 0 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  .dept-hero {
+    padding: 7rem 0 !important;
+  }
+  .dept-hero h1 {
+    font-size: 2.2rem !important;
+  }
+}
+/* FINAL MOBILE POLISH — ADD THIS */
+@media (max-width: 480px) {
+  .dept-hero h1 {
+    font-size: 2.4rem !important;
+    line-height: 1.1;
+  }
+  .dept-hero p {
+    font-size: 1rem !important;
+  }
+  .faculty-card {
+    padding: 1.8rem 1rem !important;
+  }
+  .faculty-avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 1.4rem;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+   
+
+
+
+
+  <!-- HERO BANNER -->
+  <div class="backimage dept-hero">
+    <section class="text-center">
+      <div class="college-badge-sign">
+        <i class="fas fa-university"></i>
+      </div>
+      <h1>Departments at SGGS College</h1>
+      <p class="fronttext">Each department is committed to academic excellence, student support and continuous
+        upgradation of teaching learning methods.</p>
+           <div class="stats-bar fade-in-delay-2">
+                <div class="stat-item">
+                    <div class="stat-number">90+</div>
+                    <div class="stat-label">Classrooms</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">45,000+</div>
+                    <div class="stat-label">Books</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Labs</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">World-Class</div>
+                    <div class="stat-label">Infrastructure</div>
+                </div>
+            </div>
+    </section>
+  </div>
+
+  <!-- Departments Section -->
+  <section class="facility-section" id="departments">
+
+    <!-- Departments Grid -->
+    <div class="features-grid">
+      <!-- Department 1 -->
+      <div class="feature-card premium">
+        <div class="feature-icon">🎨</div>
+        <h3>Department of Arts</h3>
+        <p>Languages, humanities and social sciences.</p>
+        <a href="ba-department.html" class="feature-link">Learn More +</a>
+      </div>
+
+      <!-- Department 2 -->
+      <div class="feature-card premium">
+        <div class="feature-icon">🔬</div>
+        <h3>Department of Science</h3>
+        <p>Physical and biological sciences with modern laboratories.</p>
+        <a href="bsc-department.html" class="feature-link">Learn More +</a>
+      </div>
+
+      <!-- Department 3 -->
+      <div class="feature-card premium">
+        <div class="feature-icon">💰</div>
+        <h3>Department of Commerce</h3>
+        <p>Commerce, accounting, finance and business studies with industry-oriented curriculum.</p>
+        <a href="bcom-department.html" class="feature-link">Learn More +</a>
+      </div>
+
+      <!-- Department 4 -->
+      <div class="feature-card premium">
+        <div class="feature-icon">💻</div>
+        <h3>Department of IT / Computer Science</h3>
+        <p>Programming, web technologies, databases & hands-on lab.</p>
+        <a href="compter&It-department.html" class="feature-link">Learn More +</a>
+      </div>
+
+      <!-- Department 5 -->
+      <div class="feature-card premium">
+        <div class="feature-icon">🖥️</div>
+        <h3>Department of Management</h3>
+        <p>Management studies with focus on leadership & entrepreneurship.</p>
+        <a href="bba-department.html" class="feature-link">Learn More +</a>
+      </div>
+
+      <!-- Department 6 -->
+      <div class="feature-card premium">
+        <div class="feature-icon">🏅</div>
+        <h3>Physical Education / Sports</h3>
+        <p>Building strength, discipline, and teamwork through structured sports training.</p>
+        <a href="mped-department.html" class="feature-link">Learn More +</a>
+      </div>
+
+      <!-- Department 7 -->
+      <div class="feature-card premium">
+        <div class="feature-icon">📚</div>
+        <h3>Library & Information Services</h3>
+        <p>Reliable access to books, research tools, and digital resources.</p>
+        <a href="library-and-information-services-department.html" class="feature-link">Learn More +</a>
+      </div>
+
+      <!-- Department 8 -->
+      <div class="feature-card premium">
+        <div class="feature-icon">💼</div>
+        <h3>B.Voc Department</h3>
+        <p>Skill-focused programs that turn knowledge into real-world opportunities.</p>
+        <a href="bvoc-department.html" class="feature-link">Learn More +</a>
+      </div>
+
+      <!-- Department 9 -->
+      <div class="feature-card premium">
+        <div class="feature-icon">🛠️</div>
+        <h3>Vocational / Add-on Departments</h3>
+        <p>Career-ready practical training for job-focused skills.</p>
+        <a href="add-on-cources-department.html" class="feature-link">Learn More +</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- FACULTY SECTION -->
+  <section id="faculty" class="section-gap bg-soft-wine">
+    <div class="container mb-5 text-center">
+      <h2 class="section-heading mb-2">Faculty Highlights</h2>
+      <p class="section-subtitle mb-4">
+        Highly qualified, dedicated, and student-friendly faculty across departments, actively involved in teaching,
+        mentoring, and research.
+      </p>
+      <span class="dept-label-pill">Faculty Details • Check Yourself Real Data</span>
+    </div>
+
+
+
+    <div class="container">
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="track">
+
+          <!-- CARD 1 -->
+          <div class="faculty-card">
+            <div class="faculty-avatar" style="background: linear-gradient(135deg,#ff6b81,#ff9a8b)">👩‍🔬</div>
+            <h5 class="faculty-name">Dr. Aarti Sharma</h5>
+            <p class="faculty-meta">Associate Professor, Dept. of Science<br>M.Sc.(Hons.School), M.Phil., B.Ed.,
+              Certificate in Vivekananda Studies, M.A.(Philosophy), Ph.D.(Physics)</p>
+            <p class="faculty-desc">Research interest in condensed matter physics & materials science.</p>
+            <div class="faculty-tags">
+              <span class="faculty-tag">Research Guides</span>
+              <span class="faculty-tag">Publications</span>
+              <span class="faculty-tag">Conferences</span>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="faculty-card">
+            <div class="faculty-avatar" style="background: linear-gradient(135deg,#6a11cb,#2575fc)">👤</div>
+            <h5 class="faculty-name">Dr. Rakesh Kumar</h5>
+            <p class="faculty-meta">Professor, Dept. of Commerce<br>M.Com., UGC NET, M.Phil., Ph.D.(BASEL Banking NORMS)
+            </p>
+            <p class="faculty-desc">Expert in Accounting, Financial Management & Taxation. Conducts GST & financial
+              literacy workshops.</p>
+            <div class="faculty-tags">
+              <span class="faculty-tag">Finance</span>
+              <span class="faculty-tag">GST</span>
+              <span class="faculty-tag">Workshops</span>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="faculty-card">
+            <div class="faculty-avatar" style="background: linear-gradient(135deg,#ff512f,#f09819)">👩‍💻</div>
+            <h5 class="faculty-name">Mrs. Rajwinder Kaur</h5>
+            <p class="faculty-meta">Assistant Professor, Dept. of IT<br>MCA, 5+ years teaching & industry experience</p>
+            <p class="faculty-desc">Teaches programming, web technologies & guides major/minor projects & coding
+              competitions.</p>
+            <div class="faculty-tags">
+              <span class="faculty-tag">Programming</span>
+              <span class="faculty-tag">Web Dev</span>
+              <span class="faculty-tag">Projects</span>
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="faculty-card">
+            <div class="faculty-avatar" style="background: linear-gradient(135deg,#ff6b81,#ff9a8b)">👩‍🔬</div>
+            <h5 class="faculty-name">Dr. Virender Kumar</h5>
+            <p class="faculty-meta">M.Sc. Electronics, M.Phil.<br>CSIR NET, Ph.D.(Material Science)</p>
+            <p class="faculty-desc">Condensed matter physics specialist.</p>
+          </div>
+
+          <!-- CARD 5 -->
+          <div class="faculty-card">
+            <div class="faculty-avatar" style="background: linear-gradient(135deg,#6a11cb,#2575fc)">👤</div>
+            <h5 class="faculty-name">Dr. Bimla Jaswal (H.O.D.)</h5>
+            <p class="faculty-meta">B.Com. (Hons.), M.Com., P.G. Diploma in Personnel Management and<br> Labour Welfare,
+              JPT, M.Phil, Ph.D.</p>
+            <p class="faculty-desc">Finance & taxation expert.</p>
+          </div>
+
+          <!-- CARD 6 -->
+          <div class="faculty-card">
+            <div class="faculty-avatar" style="background: linear-gradient(135deg,#ff512f,#f09819)">👩‍💻</div>
+            <h5 class="faculty-name">Dr. Pratibha Chauhan</h5>
+            <p class="faculty-meta">(H.D.O) M.Sc. Agriculture<br>Ph.d (Plant Breeding and Genetics)</p>
+            <p class="faculty-desc">Guides Agriculture students & major projects.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="space">
+      <!-- button of open a grid -->
+      <button id="openGrid">All Faculty</button>
+    </div>
+
+    <div id="gridOverlay">
+      <div id="gridBox">
+        <button id="closeGrid">X</button>
+        <iframe src="faculty-data.html"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const track = document.getElementById("track");
+    let originalCards = Array.from(track.children);
+
+    function getVisibleCount() {
+      if (window.innerWidth <= 600) return 1;
+      if (window.innerWidth <= 992) return 2;
+      return 3;
+    }
+
+    let visible = getVisibleCount();
+    let index = visible;
+
+    function setupCarousel() {
+      track.innerHTML = "";
+      visible = getVisibleCount();
+      index = visible;
+
+      let clonesStart = originalCards.slice(0, visible).map(c => c.cloneNode(true));
+      let clonesEnd = originalCards.slice(-visible).map(c => c.cloneNode(true));
+
+      clonesEnd.forEach(c => track.appendChild(c));
+      originalCards.forEach(c => track.appendChild(c));
+      clonesStart.forEach(c => track.appendChild(c));
+
+      cards = Array.from(track.children);
+      updateWidths();
+      jumpToIndex();
+      updateActiveCard();
+    }
+
+    function updateWidths() {
+      const widthPercent = 100 / visible;
+      cards.forEach(card => {
+        card.style.flex = `0 0 ${widthPercent}%`;
+      });
+    }
+
+    function jumpToIndex() {
+      const widthPercent = 100 / visible;
+      track.style.transform = `translateX(-${index * widthPercent}%)`;
+    }
+
+    function updateActiveCard() {
+      cards.forEach(c => c.classList.remove("active"));
+      const mid = index + 1;
+      if (cards[mid]) cards[mid].classList.add("active");
+    }
+
+    function moveCarousel() {
+      const widthPercent = 100 / visible;
+      index++;
+      track.style.transition = "0.6s ease";
+      track.style.transform = `translateX(-${index * widthPercent}%)`;
+      updateActiveCard();
+
+      track.addEventListener("transitionend", function handler() {
+        track.removeEventListener("transitionend", handler);
+
+        if (index >= originalCards.length + visible) {
+          track.style.transition = "none";
+          index = visible;
+          jumpToIndex();
+
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              track.style.transition = "0.6s ease";
+            });
+          });
+        }
+      });
+    }
+
+    setupCarousel();
+    setInterval(moveCarousel, 2500);
+
+    window.addEventListener("resize", () => {
+      setupCarousel();
+    });
+  </script>
+
+
+
+  <script>
+    const openBtn = document.getElementById('openGrid');
+    const closeBtn = document.getElementById('closeGrid');
+    const overlay = document.getElementById('gridOverlay');
+
+    openBtn.addEventListener('click', () => {
+      overlay.classList.add('active'); // smooth open
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('active'); // smooth close
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.remove('active');
+      }
+    });
+  </script>
+
+
+
+
+
+  <!-- ============== RESEARCH & PUBLICATIONS ============== -->
+  <section class="section-gap" id="research">
+
+    <div class="container mb-4">
+      <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+        <div>
+          <h2 class="section-heading mb-2">Research & Publications</h2>
+          <p class="section-subtitle mb-0">
+            Departments at SGGS College actively engage in research, paper presentations, publications and minor
+            projects. Use this area to highlight major achievements.
+          </p>
+        </div>
+
+        <div>
+          <div class="research-pill">
+            <span></span> Journals • Conferences • Projects
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- Research 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="research-card faculty-style-card h-100">
+            <div class="faculty-badge">Science • Physics</div>
+            <h3 class="faculty-title">Study on Nanomaterials for Energy Applications</h3>
+            <div class="faculty-meta">
+              Dr. A. Kumar, Department of Science<br>
+              Published in <em>[Journal Name]</em>, 20XX
+            </div>
+            <p class="faculty-desc">
+              Experimental work on nanostructured materials with potential use in solar cells and energy storage
+              devices.
+            </p>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="faculty-tag">Research Project</span>
+              <a href="#" class="faculty-link">View abstract →</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Research 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="research-card faculty-style-card h-100">
+            <div class="faculty-badge">Commerce</div>
+            <h3 class="faculty-title">Impact of Digital Payments on Rural Economy</h3>
+            <div class="faculty-meta">
+              Prof. S. Joshi, Department of Commerce<br>
+              Presented at <em>[Conference Name]</em>
+            </div>
+            <p class="faculty-desc">
+              Analytical study of adoption of digital payment systems and its influence on small businesses and rural
+              consumers.
+            </p>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="faculty-tag">Paper Presentation</span>
+              <a href="#" class="faculty-link">View proceedings →</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Research 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="research-card faculty-style-card h-100">
+            <div class="faculty-badge">IT / Computer Science</div>
+            <h3 class="faculty-title">Student Projects in Web & App Development</h3>
+            <div class="faculty-meta">
+              Department of IT • UG / Diploma projects
+            </div>
+            <p class="faculty-desc">
+              Students develop real-world projects in web development, MIS, basic apps, and automation tools.
+            </p>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="faculty-tag">Student Projects</span>
+              <a href="#" class="faculty-link">View gallery →</a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+  <!-- STUDENT ACHIEVEMENTS -->
+  <section id="achievements">
+
+    <div class="container mb-5">
+      <h2>Student Achievements</h2>
+      <p class="mt-3">Every great college website showcases:</p>
+      <ul>
+        <li>Gold medalists</li>
+        <li>Competition winners</li>
+        <li>Students placed with good companies</li>
+        <li>Social proof with photos</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section class="container my-5">
+
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="ach-card h-100">
+          <img src="./images/kabadi.team.jpeg" class="ach-img w-100" />
+          <div class="ach-name">S.G.G.S. Kabaddi Team</div>
+          <div class="ach-role">
+            The Kabaddi Team of S.G.G.S. Khalsa College clinched Bronze at the PU Championship 2025.
+          </div>
+          <a class="ach-tag mt-2">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="ach-card h-100">
+          <img src="./images/image.png" class="ach-img w-100" />
+          <div class="ach-name">Vishavjit Singh</div>
+          <div class="ach-role">
+            Won a Bronze Medal at the University Khelo India Games.
+          </div>
+          <a class="ach-tag mt-2">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="ach-card h-100">
+          <img src="./images/fencing.team.jpeg" class="ach-img w-100" />
+          <div class="ach-name">S.G.G.S. Fencing Team</div>
+          <div class="ach-role">
+            Third place with 12 points in the PU Inter-College Fencing Championship.
+          </div>
+          <a class="ach-tag mt-2">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="ach-card h-100">
+          <img src="./images/Gymnastic-PU-Tournament1.jpeg" class="ach-img w-100" />
+          <div class="ach-name">S.G.G.S. Gymnastics Students</div>
+          <div class="ach-role">
+            Won 18 medals (3 Gold, 10 Silver, 5 Bronze) at the PU Tournament.
+          </div>
+          <a class="ach-tag mt-2">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="ach-card h-100">
+          <img src="./images/theatrical team.jpeg" class="ach-img w-100" />
+          <div class="ach-name">S.G.G.S. Theatrical Team</div>
+          <div class="ach-role">
+            Six students awarded Roll of Honor & University Colour by Panjab University.
+          </div>
+          <a class="ach-tag mt-2">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="ach-card h-100">
+          <img src="./images/volleyball team.jpeg" class="ach-img w-100" />
+          <div class="ach-name">S.G.G.S. Volleyball Team</div>
+          <div class="ach-role">
+            Earned Bronze in the PU Inter-College Volleyball Tournament.
+          </div>
+          <a class="ach-tag mt-2">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="#" class="success-btn">View Student Success Stories</a>
+    </div>
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGDCA | Course Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="./css/style.css">
+    <style>
+     
+.highlight-points,
+.outcomes-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 1.5rem 0 !important;
+    text-align: left !important;
+}
+
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+    overflow-x: hidden !important;
+}
+
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+/* Hero Section */
+        .hero {
+            position: relative;
+            padding: 120px 24px 100px;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .college-badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.375rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 48px;
+            font-weight: 500;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        /* Section Tag */
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+ /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .fade-in-delay {
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border: 2px solid #eee;
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.35s ease;
+        }
+
+        .section-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 4px;
+            width: 100%;
+            background: linear-gradient(90deg, #B51610, #B51610);
+            transform: translateX(-50%) scaleX(0);
+            transform-origin: center;
+            transition: transform 0.35s ease;
+        }
+
+        .section-card:hover::before {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        .section-card:hover {
+            transform: translateY(-6px);
+            border-color: #B51610;
+            box-shadow: 0 12px 32px #B51610;
+        }
+
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #B51610;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        /* Table */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .table thead tr {
+            background: #B51610!important;
+            color: #fff !important;
+            font-size: 17px;
+            text-transform: uppercase;
+        }
+
+        .table td, .table th {
+            padding: 14px;
+            text-align: center;
+            border: 1px solid #c5cae9;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background: #e8eaf6;
+        }
+
+        .table tbody tr:hover {
+            background: #c5cae9;
+            transition: .2s ease;
+        }
+
+        /* Accordion */
+        .accordion {
+            background-color: #e8eaf6;
+            color: #B51610;
+            cursor: pointer;
+            padding: 14px 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #B51610;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .accordion:hover {
+            background-color: #B51610;
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(26, 35, 126, 0.25);
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: #fff;
+            overflow: hidden;
+            border-left: 3px solid #B51610;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .panel ul {
+            list-style: disc;
+            margin-left: 20px;
+            padding: 10px 0;
+            color: #333;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Faculty Cards */
+        .faculty-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        .faculty-card {
+            width: 300px;
+            background: #ffffff;
+            border: 2px solid #eee;
+            border-radius: 16px;
+            padding: 18px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            transition: 0.35s ease;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .faculty-card h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #B51610;
+            font-weight: 700;
+        }
+
+        .faculty-card p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-6px);
+            border-color: #B51610;
+            box-shadow: 0 10px 30px #B51610;
+        }
+
+        /* Apply Now */
+        .apply-btn {
+            display: inline-block;
+            background: #B51610;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 16px 35px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 6px 20px #B51610;
+        }
+
+        .apply-btn:hover {
+            background: #B51610;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px #B51610;
+        }
+
+        /* Summary & Duration */
+        .bcom-summary-section, .duration-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+            padding: 40px 25px;
+            border-radius: 20px;
+            border: 2px solid #eee;
+            position: relative;
+            overflow: hidden;
+            transition: 0.35s ease;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+
+        .bcom-summary-section::before, .duration-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 4px;
+            width: 100%;
+            background: linear-gradient(90deg, #B51610, #B51610);
+            transform: translateX(-50%) scaleX(0);
+            transform-origin: center;
+            transition: transform 0.35s ease;
+        }
+
+        .bcom-summary-section:hover::before, .duration-section:hover::before {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        .bcom-summary-section:hover, .duration-section:hover {
+            transform: translateY(-6px);
+            border-color: #B51610;
+            box-shadow: 0 12px 32px #B51610;
+        }
+
+        .bcom-summary-content, .duration-content {
+            flex: 1 1 500px;
+            padding-right: 20px;
+        }
+
+        .bcom-summary-content h2, .duration-content h2 {
+            color: #B51610;
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .bcom-summary-content p, .duration-content p, .bcom-summary-content ul {
+            font-size: 17px;
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .bcom-summary-image {
+            flex: 1 1 300px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 18px;
+            cursor: pointer;
+            height: 100%;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .bcom-summary-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .55s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .bcom-summary-image:hover img {
+            transform: scale(1.15);
+        }
+
+        .bcom-summary-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #B51610, #B51610);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .bcom-summary-image:hover::after {
+            opacity: 1;
+        }
+
+        .bcom-summary-image i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 2.2rem;
+            color: #fff;
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 0;
+            transition: 0.35s ease-in-out;
+        }
+
+        .bcom-summary-image:hover i {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+
+        @media(max-width:900px) {
+            .bcom-summary-section, .duration-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .bcom-summary-content, .duration-content {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+     <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg shadow sticky-top py-4 bg-white">
+    <div class="container">
+        <a class="navbar-brand text-white fw-semibold" href="index.html">
+            <img src="./images/Logosggs.jpg" alt="SGGS College Logo" height="70px" width="auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample"
+            aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <!-- Programs Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Programs
+                    </a>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Course-Programmes.html#ug">Undergraduate</a></li>
+                        <li><a class="dropdown-item" href="Course-Programmes.html#pg">Postgraduate</a></li>
+                       <li><a class="dropdown-item" href="Course-Programmes.html#diploma">Diploma</a></li>
+
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Course-Programmes.html">All Programs →</a></li>
+                    </ul>
+                </li>
+
+                <!-- Departments Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Departments
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="ba-department.html   ">Department of Arts</a></li>
+                        <li><a class="dropdown-item" href="bsc-department.html">Department of Science </a></li>
+                        <li><a class="dropdown-item" href="bcom-department.html">Department of Commerce</a></li>
+                        <li><a class="dropdown-item" href="compter&It-department.html">Department of IT </a></li>
+                        <li><a class="dropdown-item" href="bba-department.html">Department of Management </a></li>
+                        <li><a class="dropdown-item" href="bvoc-department.html">Department of B.Voc</a></li>
+                        <li><a class="dropdown-item" href="add-on-cources-department.html">Add on Departments</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Departments-of-SGGS-Collage.html">View All Departments →</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Facility-in SGGS-Collage.html">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CarrerGuidance.html">Placements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus copy.html">Contact</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contactus copy.html">Admissions</a>
+                </li>
+                <li class="nav-item">
+                     <a href="contactus copy.html   " class="apply-btn">
+            <i class="fas fa-graduation-cap"></i> Apply Now   </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        <!-- Hero Section -->
+       <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles"></div>
+    <div class="hero-content">
+        <div class="college-badge">
+            <i class="fas fa-laptop-code" style="font-size: 50px;"></i>
+        </div>
+        <h1 class="fade-in">PGDCA</h1>
+        <p class="fade-in-delay">1 Year | 2 Semesters | Skill-Oriented Curriculum</p>
+        <div class="stats-bar fade-in-delay-2">
+            <div class="stat-item">
+                <div class="stat-number">Programming • Database • Web • Networking</div>
+                <div class="stat-label">Core Subjects</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number">Projects & Assignments</div>
+                <div class="stat-label">Practical Exposure</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number">Workshops & Seminars</div>
+                <div class="stat-label">Skill Development</div>
+            </div>
+        </div>
+    </div>
+</section>
+    <div class="container">
+
+        <!-- Description -->
+        <div class="section-card">
+            <h2 class="desc-title">Why Choose PGDCA at SGGS Khalsa College Mahilpur?</h2>
+            <p><b>PGDCA at SGGS Khalsa College Mahilpur</b> is a one-year postgraduate diploma that equips students with 
+                comprehensive knowledge in computer applications, programming, networking, and software development. 
+                The program emphasizes hands-on projects, skill development, and industry-oriented training.</p>
+            <ul class="highlight-points">
+                <li>Comprehensive Computer Applications Curriculum</li>
+                <li>Practical Projects & Assignments</li>
+                <li>Workshops, Seminars & Industry Exposure</li>
+                <li>Skill Development & Career Readiness</li>
+                <li>Experienced Faculty Guidance</li>
+                <li>Preparation for IT Certifications & Higher Studies</li>
+            </ul>
+        </div>
+
+        <!-- Overview Section -->
+        <div class="bcom-summary-section">
+            <div class="bcom-summary-content">
+                <h2>PGDCA – Overview</h2>
+                <p><strong>PGDCA</strong> is a 1-year program (2 semesters) designed for students seeking to develop skills in computer applications, programming, web technologies, and networking.</p>
+                <h3>Why Choose PGDCA?</h3>
+                <ul>
+                    <li>Hands-on experience in programming, databases, and web development</li>
+                    <li>Industry-oriented projects and practical assignments</li>
+                    <li>Prepares students for IT jobs and software careers</li>
+                    <li>Skill enhancement for higher studies or certifications in IT</li>
+                </ul>
+                <h3>Career Opportunities</h3>
+                <p>Graduates can work as Software Developers, Database Administrators, Network Administrators, Web Developers, IT Support Specialists, or pursue further certifications in technologies like Java, Python, .NET, Networking, and Cybersecurity.</p>
+            </div>
+            <div class="bcom-summary-image">
+               <img src="./images/course.jpg" height="300px" alt="PGDCA Course Image">
+                <i class="fas fa-search-plus"></i>
+            </div>
+        </div>
+
+        <!-- Admission -->
+        <div class="section-card">
+            <div class="card-title">Admission</div>
+            <p class="desc-text">Admissions for PGDCA are open! Eligible students (Graduates in any discipline) can apply online.</p>
+        </div>
+
+        <!-- Duration & Eligibility -->
+        <div class="duration-section">
+            <div class="duration-content">
+                <h2>Course Duration & Eligibility</h2>
+                <p>The PGDCA program is a 1-year diploma divided into 2 semesters.</p>
+                <div class="duration-details">
+                    <div class="detail-box">
+                        <h3>Duration</h3>
+                        <p>1 Year (2 Semesters)</p>
+                    </div>
+                    <div class="detail-box">
+                        <h3>Eligibility</h3>
+                        <p>Graduation in any discipline</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Program Outcomes -->
+        <div class="section-card">
+            <div class="card-title">Program Outcomes</div>
+            <ul class="outcomes-list">
+                <li>Proficiency in computer applications and programming languages</li>
+                <li>Hands-on experience with projects and software development</li>
+                <li>Ability to develop websites, applications, and databases</li>
+                <li>Preparedness for IT industry and professional certifications</li>
+                <li>Enhanced problem-solving, analytical, and technical skills</li>
+            </ul>
+        </div>
+
+        <!-- Career Opportunities -->
+        <div class="section-card">
+            <div class="card-title">Career Opportunities</div>
+            <div class="career-grid">
+                <div class="career-box">Software Developer</div>
+                <div class="career-box">Web Developer</div>
+                <div class="career-box">Database Administrator</div>
+                <div class="career-box">Network Administrator</div>
+                <div class="career-box">IT Support Specialist</div>
+                <div class="career-box">System Analyst</div>
+                <div class="career-box">Cybersecurity Specialist</div>
+                <div class="career-box">Higher Studies & IT Certifications</div>
+            </div>
+        </div>
+
+        <!-- Semester Tables -->
+        <div class="section-card">
+            <div class="card-title">First Semester</div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Semester</th>
+                        <th>Subjects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Semester I</td>
+                        <td>Introduction to Computers, Programming in C, Database Management, Office Automation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section-card">
+            <div class="card-title">Second Semester</div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Semester</th>
+                        <th>Subjects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Semester II</td>
+                        <td>Web Technologies, Java Programming, Networking, Project Work & Dissertation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Syllabus Accordion -->
+        <div class="section-card">
+            <div class="card-title">PGDCA – Detailed Syllabus</div>
+            <button class="accordion">Semester I</button>
+            <div class="panel">
+                <ul>
+                    <li>Introduction to Computers</li>
+                    <li>Programming in C</li>
+                    <li>Database Management Systems</li>
+                    <li>Office Automation</li>
+                </ul>
+            </div>
+            <button class="accordion">Semester II</button>
+            <div class="panel">
+                <ul>
+                    <li>Web Technologies (HTML, CSS, JS)</li>
+                    <li>Java Programming</li>
+                    <li>Computer Networking</li>
+                    <li>Project Work & Dissertation</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Faculty Section -->
+        <section class="faculty-section py-5" style="background: #f0f8ff;">
+            <div class="container">
+                <h2 class="text-center mb-4" style="font-size: 32px; color:#B51610; font-weight:700;">Computer Applications Department Faculty</h2>
+                <div class="faculty-wrapper">
+                    <div class="faculty-card">
+                        <h4>Dr. Rohit Verma</h4>
+                        <p>MCA, Ph.D.</p>
+                        <p>Email: rohit@example.com<br>Phone: 98765-43221</p>
+                    </div>
+                    <div class="faculty-card">
+                        <h4>Mrs. Sunita Kapoor</h4>
+                        <p>MCA, NET</p>
+                        <p>Email: sunita@example.com<br>Phone: 98765-43222</p>
+                    </div>
+                    <div class="faculty-card">
+                        <h4>Mr. Ajay Singh</h4>
+                        <p>MCA, Software Developer</p>
+                        <p>Email: ajay@example.com<br>Phone: 98765-43223</p>
+                    </div>
+                    <div class="faculty-card">
+                        <h4>Ms. Priya Sharma</h4>
+                        <p>MCA, MBA</p>
+                        <p>Email: priya@example.com<br>Phone: 98765-43224</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apply Now Button -->
+        <div style="text-align: center; margin: 50px 0;">
+            <a href="apply.html" class="apply-btn">Apply Now</a>
+        </div>
+
+    </div> <!-- End container -->
+
+    <!-- Accordion Script -->
+    <script>
+        const accordions = document.querySelectorAll(".accordion");
+        accordions.forEach((acc) => {
+            acc.addEventListener("click", function () {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

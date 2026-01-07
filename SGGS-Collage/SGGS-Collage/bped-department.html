@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bachelor of Physical Education (BPED) - SGGS Mahilpur</title>
+    <meta name="description"
+        content="Bachelor of Physical Education (BPED) program at SGGS Mahilpur — courses, faculty, syllabus, admissions and careers." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- BOOTSTRAP CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- BOOTSTRAP JS (for toggle + dropdown)  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <style>
+        /* SAME CSS AS OTHER PAGES */
+        :root {
+            --brand: #8c1007;
+            --brand-light: #a8332a;
+            --white: #ffffff;
+            --light: #fdf9f8;
+            --muted: #555;
+            --gray: #f5f5f5;
+            --radius: 16px;
+            --shadow: 0 10px 30px rgba(140, 16, 7, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #222;
+            background: var(--white);
+            line-height: 1.6
+        }
+
+        a {
+            color: var(--brand);
+            text-decoration: none
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--brand), #6f0904);
+            color: var(--white);
+            padding-bottom: 3rem
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 800;
+            font-size: 1.4rem
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: var(--white);
+            color: var(--brand);
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            font-size: 1.8rem
+        }
+
+        .nav a {
+            color: white;
+            padding: .6rem 1rem;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: .3s
+        }
+
+        .nav a:hover {
+            background: rgba(255, 255, 255, 0.15)
+        }
+
+        .hero1 {
+            display: flex;
+            grid-template-columns: 1fr 380px;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem
+        }
+
+        .eyebrow {
+            background: rgba(255, 255, 255, 0.15);
+            padding: .4rem .9rem;
+            border-radius: 50px;
+            font-size: .9rem;
+            display: inline-block
+        }
+
+
+        .lead {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 65ch
+        }
+
+        .btn {
+            padding: .8rem 1.6rem;
+            border-radius: 12px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: .6rem;
+            transition: .3s
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--brand)
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: transparent;
+            color: white
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15)
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.8rem;
+            box-shadow: var(--shadow);
+            border: 1px solid #f0e6e6;
+            transition: .3s
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(140, 16, 7, 0.12)
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0
+        }
+
+        .icon-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--radius);
+            color: white;
+            transition: .4s
+        }
+
+        .icon-card i {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9
+        }
+
+        .icon-card h4 {
+            font-size: 1.4rem;
+            margin: 1rem 0 .6rem;
+            font-weight: 700
+        }
+
+        .icon-card:hover {
+            transform: translateY(-10px)
+        }
+
+        .career-card {
+            background: var(--white);
+            border: 3px solid var(--brand);
+            color: var(--brand);
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--radius)
+        }
+
+        .career-card i {
+            color: var(--brand)
+        }
+
+        section {
+            padding: 4rem 0
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--brand)
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--muted);
+            font-size: 1.1rem
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.8rem
+        }
+
+        .faculty-card {
+            text-align: center
+        }
+
+        .faculty-card img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 5px solid var(--light)
+        }
+
+         table {
+            min-width: 100%;
+            border-collapse: collapse;
+         
+       }
+       @media (max-width: 400px){
+        table{font-size: 10px;}.card{padding: 10px;}
+       }
+
+        th {
+            background: var(--brand);
+            color: white;
+            padding: 1rem
+        }
+
+        td,
+        th {
+            border: 1px solid #eee;
+            padding: .9rem;
+            text-align: left
+        }
+
+        tr:nth-child(even) {
+            background: #fdf9f8
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow)
+        }
+
+        .faq-q {
+            background: var(--brand);
+            color: white;
+            padding: 1.2rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600
+        }
+
+        .faq-a {
+            padding: 1.5rem;
+            background: var(--light);
+            display: none
+        }
+
+        .faq-a.show {
+            display: block
+        }
+
+        footer {
+            background: var(--gray);
+            padding: 3rem 0 1.5rem;
+            text-align: center;
+            color: var(--muted)
+        }
+
+        @media(max-width:900px) {
+            .hero {
+                grid-template-columns: 1fr
+            }
+
+            .hero-right {
+                width: 100%
+            }
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .fade-in-delay {
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+        /* Hero Section */
+        .hero {
+            position: relative;
+           padding: 120px 24px 100px;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .college-badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+.hero h1 {
+    font-weight: 800;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    font-size: clamp(28px, 6vw, 80px); /* super responsive */
+    margin-top: 20px;
+}
+
+.aply{border-color: #8c1007;}
+.aply:hover{background-color: #6f0904;}
+
+/* For tablets */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: clamp(24px, 8vw, 60px);
+    }
+}
+
+/* For small phones */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: clamp(20px, 10vw, 45px);
+    }
+}
+
+
+        .hero p {
+            font-size: 1.375rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 48px;
+            font-weight: 500;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ================================================== */
+/* --- HERO SECTION MEDIA QUERIES --- */
+/* ================================================== */
+
+/* 1. Desktop / Large Tablet Adjustments (max-width: 1200px) */
+@media (max-width: 1200px) {
+    /* Adjust container padding if necessary, but focusing on hero content */
+    .hero-content {
+        padding: 0 1.5rem; /* Ensure content is contained within padding */
+    }
+}
+
+/* 2. Tablet / Landscape Mobile Adjustments (max-width: 992px) */
+@media (max-width: 992px) {
+    .program-hero {
+        padding: 100px 24px 80px; /* Reduced vertical padding */
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem; /* Slightly smaller heading */
+    }
+
+    .hero p {
+        font-size: 1.25rem; /* Slightly smaller lead text */
+        margin-bottom: 40px;
+    }
+}
+
+/* 3. Portrait Tablet / Mobile Adjustments (max-width: 768px) */
+@media (max-width: 768px) {
+    .program-hero {
+        padding: 80px 16px 60px;
+        min-height: 450px;
+    }
+
+    .college-badge {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        /* Use clamp for fluid sizing between 2.5rem and 3rem */
+        font-size: clamp(2.5rem, 8vw, 3rem); 
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    /* Stats Bar Adjustments for stacking */
+    .stats-bar {
+        padding: 24px 20px;
+        gap: 20px; /* Reduced space between stats */
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* 4. Small Mobile Adjustments (max-width: 576px) */
+@media (max-width: 576px) {
+    /* Stack the stats bar items vertically to prevent overflow */
+    .stats-bar {
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 12px;
+        padding: 20px 15px;
+        margin: 0 10px; /* Minor horizontal margin to prevent touching screen edges */
+    }
+
+    .stat-item {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator when stacked */
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-divider {
+        display: none; /* Hide vertical divider when stacking */
+    }
+    
+    /* Ensure the existing small mobile adjustment is incorporated */
+    .program-hero h1 { 
+        font-size: 2.2rem !important; 
+    }
+}
+    </style>
+</head>
+
+<body>
+  
+<section class="hero">
+    
+        <div class="hero-content">
+            <div class="college-badge">
+                <i class="fas fa-university"></i>
+            </div>
+            <div class="container hero1">
+                <div>
+                    <span class="eyebrow" style="color: white;">Undergraduate • 3 Years • Full-Time</span>
+                    <h1 >Bachelor of Physical Education (BPED)</h1>
+                    <p class="lead">A comprehensive program to develop professional competence in physical education, fitness, sports coaching, and pedagogy.</p>
+                </div>
+
+
+            </div>
+           <div class="stats-bar fade-in-delay-2">
+    <div class="stat-item">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Courses & <br>Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Undergraduate <br>Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Postgraduate <br> Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Diploma & <br> Add-On Courses</div>
+    </div>
+</div>
+
+        </div>
+    </section>
+    <!-- HEADER -->
+   
+    <main class="container">
+
+        <!-- WHY SECTION -->
+        <section style="background:var(--light);padding:5rem 0">
+            <h2>Why Choose BPED at SGGS Mahilpur?</h2>
+            <p class="section-subtitle">Professional development in physical education, sports, and health sciences</p>
+            <div class="icon-grid">
+                <div class="icon-card card" style="background:var(--brand)">
+                    <i class="fas fa-dumbbell"></i>
+                    <h4>Fitness & Wellness</h4>
+                    <p>Comprehensive health, fitness, and athletic programs.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand-light)">
+                    <i class="fas fa-user-graduate"></i>
+                    <h4>Qualified Faculty</h4>
+                    <p>Experts in sports science and physical education pedagogy.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand)">
+                    <i class="fas fa-medal"></i>
+                    <h4>Sports Training</h4>
+                    <p>Hands-on coaching and competitive event participation.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand-light)">
+                    <i class="fas fa-heartbeat"></i>
+                    <h4>Health Education</h4>
+                    <p>Focus on fitness, nutrition, and injury prevention.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand)">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h4>Career Guidance</h4>
+                    <p>Teaching, coaching, and research career opportunities.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand-light)">
+                    <i class="fas fa-users"></i>
+                    <h4>Collaborative Learning</h4>
+                    <p>Peer learning, team sports, and practical workshops.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPECIALIZATIONS -->
+        <section id="courses">
+            <h2>Specializations</h2>
+            <p class="section-subtitle">Focus areas to enhance your professional competence</p>
+            <div class="icon-grid">
+                <div class="icon-card card" style="background:var(--brand)">
+                    <i class="fas fa-running"></i>
+                    <h4>Sports Science</h4>
+                    <p>Performance, biomechanics, and coaching methodologies.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand-light)">
+                    <i class="fas fa-heart"></i>
+                    <h4>Health & Fitness</h4>
+                    <p>Physiology, nutrition, and wellness programs.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand)">
+                    <i class="fas fa-users"></i>
+                    <h4>Physical Education Teaching</h4>
+                    <p>Pedagogy and curriculum design for schools and colleges.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand-light)">
+                    <i class="fas fa-medal"></i>
+                    <h4>Sports Management</h4>
+                    <p>Organizing, planning, and managing sports events.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FACULTY -->
+        <section id="faculty" style="background:var(--light)">
+            <h2>Our Faculty</h2>
+            <p class="section-subtitle">Experienced mentors in sports and physical education</p>
+            <div class="faculty-grid">
+                <div class="faculty-card card">
+                    <h4>Dr. Raj Kumar (H.O.D.)</h4>
+                </div>
+                <div class="faculty-card card">
+                    <h4>Dr. Jatinder Kumar</h4>
+                </div>
+                <div class="faculty-card card">
+                    <h4>Mr. Rishab</h4>
+                </div>
+                <div class="faculty-card card">
+                    <h4>Mr.Harinder Singh {Coach}</h4>
+                </div>
+                <div class="faculty-card card">
+                    <h4>Mr. Simranjit Singh</h4>
+                </div>
+                <div class="faculty-card card">
+                    <h4>Mrs. Priya</h4>
+                </div>
+                <div class="faculty-card card">
+                    <h4>Mr. Manpreet Sethi</h4>
+                </div>
+                <div class="faculty-card card">
+                    <h4>Ms. Sheetal</h4>
+                </div>
+                <div class="faculty-card card">
+                    <h4>Mr. Charanjit Kumar</h4>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SYLLABUS -->
+        <section id="syllabus">
+            <h2>Program Structure</h2>
+            <div class="card" style="overflow:hidden">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Semester</th>
+                            <th>Core Papers</th>
+                            <th>Practical / Labs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sem 1</td>
+                            <td>Introduction to Physical Education, Human Anatomy</td>
+                            <td>Fitness Assessment I</td>
+                        </tr>
+                        <tr>
+                            <td>Sem 2</td>
+                            <td>Exercise Physiology, Health Education</td>
+                            <td>Fitness Assessment II</td>
+                        </tr>
+                        <tr>
+                            <td>Sem 3</td>
+                            <td>Sports Coaching, Biomechanics</td>
+                            <td>Practical Coaching</td>
+                        </tr>
+                        <tr>
+                            <td>Sem 4</td>
+                            <td>Sports Psychology, Nutrition</td>
+                            <td>Sports Performance Lab</td>
+                        </tr>
+                        <tr>
+                            <td>Sem 5</td>
+                            <td>Curriculum Design, Sports Management</td>
+                            <td>Internship / Field Work</td>
+                        </tr>
+                        <tr>
+                            <td>Sem 6</td>
+                            <td>Research Methods, Electives</td>
+                            <td>Major Project & Coaching Practicum</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- CAREERS -->
+        <section id="careers" style="background:var(--light)">
+            <h2>Career Opportunities</h2>
+            <p class="section-subtitle">Open pathways in sports, fitness, and education</p>
+            <div class="icon-grid">
+                <div class="career-card card"><i class="fas fa-chalkboard-teacher"></i>
+                    <h4>Physical Education Teacher</h4>
+                    <p>Schools, colleges, and training institutes</p>
+                </div>
+                <div class="career-card card"><i class="fas fa-running"></i>
+                    <h4>Sports Coach / Trainer</h4>
+                    <p>Professional sports teams, academies, and personal training</p>
+                </div>
+                <div class="career-card card"><i class="fas fa-heartbeat"></i>
+                    <h4>Fitness & Wellness Consultant</h4>
+                    <p>Health clubs, wellness centers, corporate fitness</p>
+                </div>
+                <div class="career-card card"><i class="fas fa-medal"></i>
+                    <h4>Event & Sports Management</h4>
+                    <p>Sports organizations, tournaments, and recreational management</p>
+                </div>
+                <div class="career-card card"><i class="fas fa-user-graduate"></i>
+                    <h4>Research & Academics</h4>
+                    <p>Higher studies, research, and faculty positions</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-q">What is the eligibility criteria?</div>
+                <div class="faq-a">10+2 / Intermediate from a recognized board with physical fitness clearance.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">How long is the BPED program?</div>
+                <div class="faq-a">The program is 3 years, divided into 6 semesters.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Are there internships included?</div>
+                <div class="faq-a">Yes, internships and practical coaching sessions are included in semesters 5 & 6.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can I pursue higher studies after BPED?</div>
+                <div class="faq-a">Yes, you can pursue MPEd, MBA in Sports Management, or research roles in physical education.</div>
+            </div>
+        </section>
+
+        <!-- ADMISSIONS -->
+        <section id="admissions">
+            <h2>Admissions</h2>
+            <p class="section-subtitle">Join SGGS Mahilpur BPED program</p>
+            <div class="card " style="text-align:center;">
+                <p><strong>Application Process:</strong> Online registration on the official website, submission of academic
+                    credentials, and physical fitness certificate.</p>
+                <a href="Addimision-page.html" class="btn btn-primary aply">Apply Now</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2025 SGGS Mahilpur. All Rights Reserved.
+    </footer>
+
+    <script>
+        // FAQ toggle
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                const a = q.nextElementSibling;
+                a.classList.toggle('show');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

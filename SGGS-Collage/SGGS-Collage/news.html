@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Announcements</title>
+    <link rel="stylesheet" href="style/news.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/news.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+    overflow-x: hidden !important;
+}
+
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+      /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        /* Section Tag */
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+</style>
+</head>
+
+<body>
+     <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg shadow sticky-top py-4 bg-white">
+    <div class="container">
+        <a class="navbar-brand text-white fw-semibold" href="index.html">
+            <img src="./images/Logosggs.jpg" alt="SGGS College Logo" height="70px" width="auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample"
+            aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <!-- Programs Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Programs
+                    </a>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Course-Programmes.html#ug">Undergraduate</a></li>
+                        <li><a class="dropdown-item" href="Course-Programmes.html#pg">Postgraduate</a></li>
+                       <li><a class="dropdown-item" href="Course-Programmes.html#diploma">Diploma</a></li>
+
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Course-Programmes.html">All Programs →</a></li>
+                    </ul>
+                </li>
+
+                <!-- Departments Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Departments
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="ba-department.html   ">Department of Arts</a></li>
+                        <li><a class="dropdown-item" href="bsc-department.html">Department of Science </a></li>
+                        <li><a class="dropdown-item" href="bcom-department.html">Department of Commerce</a></li>
+                        <li><a class="dropdown-item" href="compter&It-department.html">Department of IT </a></li>
+                        <li><a class="dropdown-item" href="bba-department.html">Department of Management </a></li>
+                        <li><a class="dropdown-item" href="bvoc-department.html">Department of B.Voc</a></li>
+                        <li><a class="dropdown-item" href="add-on-cources-department.html">Add on Departments</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Departments-of-SGGS-Collage.html">View All Departments →</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Facility-in SGGS-Collage.html">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CarrerGuidance.html">Placements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus copy.html">Contact</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contactus copy.html">Admissions</a>
+                </li>
+                <li class="nav-item">
+                     <a href="contactus copy.html   " class="apply-btn">
+            <i class="fas fa-graduation-cap"></i> Apply Now   </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="news-header text-center fade-in">
+    <h1>📢 Latest News & Announcements</h1>
+    <p>Official notices, updates, circulars & achievements from SGGS Khalsa College Mahilpur</p>
+     <div class="stats-bar fade-in-delay-2">
+                <div class="stat-item">
+                    <div class="stat-number">90+</div>
+                    <div class="stat-label">Classrooms</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">45,000+</div>
+                    <div class="stat-label">Books</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Labs</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">World-Class</div>
+                    <div class="stat-label">Infrastructure</div>
+                </div>
+            </div>
+</header>
+
+
+<!-- =============== FEATURED NEWS SECTION =============== -->
+<section class="featured-section container">
+    <h2 class="section-title"><i class="fa-solid fa-star"></i> Featured Update</h2>
+
+    <div class="featured-card shadow-lg">
+        <img src="./images/DSC_0182-1.jpg" class="featured-img">
+
+        <div class="featured-content">
+            <span class="featured-badge mb-5">Top Story</span>
+            <h3>SGGS College Ranked Among Top Institutions in Punjab</h3>
+            <p>Our college has received recognition for excellence in academics, sports and research.</p>
+            <a href="#" class="btn-read">Read Full Story →</a>
+        </div>
+    </div>
+</section>
+
+<br>
+
+<!-- =============== NEW HOVER IMAGE BOX SECTION =============== -->
+<section class="container">
+    <h2 class="section-title"><i class="fa-solid fa-image"></i> Interactive Highlight Boxes</h2>
+
+    <div class="d-flex flex-wrap gap-4">
+
+        <!-- Box 1 -->
+        <div class="simple-box">
+            <img src="./images/DSC_0047.jpg" alt="">
+            <div class="box-overlay">
+                <!-- <i class="fa-solid fa-eye"></i> -->
+                <!-- <span>View Details</span> -->
+            </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="simple-box">
+            <img src="./images/conference-group-photo.jpg" alt="">
+            <div class="box-overlay">
+                <!-- <i class="fa-solid fa-newspaper"></i> -->
+                <!-- <span>Read Notice</span> -->
+            </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="simple-box">
+            <img src="./images/convocation_address.jpg" alt="">
+            <div class="box-overlay">
+                <!-- <i class="fa-solid fa-link"></i> -->
+                <!-- <span>Open Link</span> -->
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- =============== MAIN CONTENT =============== -->
+<section class="news-layout container mt-5">
+    <div class="row">
+
+        <!-- LEFT CONTENT -->
+        <div class="col-lg-8">
+            <h2 class="section-title"><i class="fa-solid fa-newspaper"></i> All Announcements</h2>
+
+            <div class="news-card">
+                <div class="news-date">12 Jan 2025</div>
+                <h4>Admissions Open for 2025–26</h4>
+                <p>Online applications for UG & PG courses have started.</p>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+
+            <div class="news-card">
+                <div class="news-date">08 Jan 2025</div>
+                <h4>Annual Sports Meet 2025 Announced</h4>
+                <p>Registration has begun for various sports events.</p>
+                <a href="#" class="read-more">View Details →</a>
+            </div>
+
+            <div class="news-card">
+                <div class="news-date">02 Jan 2025</div>
+                <h4>Infosys Campus Placement Drive</h4>
+                <p>Final-year students can register for the placement drive.</p>
+                <a href="#" class="read-more">Apply Now →</a>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="col-lg-4">
+
+            <div class="sidebar shadow-sm">
+                <h4><i class="fa-solid fa-filter"></i> Categories</h4>
+                <ul>
+                    <li><a href="#">📘 Academic Notices</a></li>
+                    <li><a href="#">🎓 Admissions & Exams</a></li>
+                    <li><a href="#">🎉 Events & Celebrations</a></li>
+                    <li><a href="#">🏆 Sports Achievements</a></li>
+                    <li><a href="#">💼 Placements</a></li>
+                    <li><a href="#">📄 Circulars & Forms</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar shadow-sm mt-4">
+                <h4><i class="fa-solid fa-link"></i> Quick Links</h4>
+                <ul>
+                    <li><a href="#">Admission Portal</a></li>
+                    <li><a href="#">Examination Branch</a></li>
+                    <li><a href="#">NCC / NSS Activities</a></li>
+                    <li><a href="#">Download Forms</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer text-center">
+    © 2025 | SGGS Khalsa College, Mahilpur. All Rights Reserved
+    <br>Website Designed & Maintained by Department of Computer Science
+</footer>
+
+</body>
+</html>

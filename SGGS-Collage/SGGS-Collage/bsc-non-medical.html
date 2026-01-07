@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B.Sc. Non-Medical | Course Details</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="./css/style.css">
+     <!-- BOOTSTRAP CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- BOOTSTRAP JS (for toggle + dropdown)  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+<style>
+
+
+.highlight-points,
+.outcomes-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 1.5rem 0 !important;
+    text-align: left !important;
+}
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+    overflow-x: hidden !important;
+}
+
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+/* Hero Section */
+        .hero {
+            position: relative;
+            padding: 120px 24px 100px;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .college-badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.375rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 48px;
+            font-weight: 500;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        /* Section Tag */
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+ /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .fade-in-delay {
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+
+/* ==================== PAGE HEADER ==================== */
+.program-header {
+    background: #8C1007;
+    color: white;
+    padding: 55px 20px;
+    border-radius: 0 0 25px 25px;
+    text-align: center;
+    margin: -25px -25px 40px -25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.program-header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.sub-heading {
+    font-size: 18px;
+    font-weight: 500;
+    opacity: .95;
+}
+
+/* ==================== SECTION CARDS ==================== */
+/* Section Card Hover (Matching Feature/Program Cards Style) */
+.section-card {
+    background: #fff;
+    border: 2px solid #eee;
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 35px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+/* Center Expanding Top Bar */
+.section-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #8C1007, #B51610);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+}
+
+.section-card:hover::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Hover Effect */
+.section-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(140,16,7,0.35);
+    box-shadow: 0 12px 32px rgba(140,16,7,0.22);
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #8C1007;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* ==================== TABLE STYLING ==================== */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+}
+
+.table thead tr {
+    background: #8C1007 !important;
+    color: #fff !important;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.table td, .table th {
+    padding: 14px;
+    text-align: center;
+    border: 1px solid #ecd3d3;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #fff3f3;
+}
+
+.table tbody tr:hover {
+    background: #f5e1e1;
+    transition: .2s ease;
+}
+
+@media(max-width: 768px) {
+    .table thead { display: none; }
+
+    .table tr {
+        display: block;
+        margin-bottom: 12px;
+        border-left: 5px solid #8C1007;
+        padding: 6px;
+        border-radius: 10px;
+        background: #fff;
+    }
+
+    .table td {
+        display: flex;
+        justify-content: space-between;
+        border: none !important;
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: #8C1007;
+    }
+}
+
+/* ==================== DESCRIPTION STYLES ==================== */
+.desc-title {
+    font-size: 26px;
+    color: #8C1007;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.desc-text {
+    font-size: 17.5px;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* ==================== LISTS ==================== */
+.highlight-points,
+.outcomes-list {
+    font-size: 17px;
+    list-style: none;
+    margin-left: 15px;
+}
+
+.highlight-points li::before {
+    content: "✔ ";
+    color: #8C1007;
+    font-weight: 700;
+}
+
+.outcomes-list li::before {
+    content: "➤ ";
+    color: #B30000;
+    font-weight: 900;
+}
+
+/* ==================== CAREER CARDS ==================== */
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 15px;
+    margin: 18px 0;
+}
+
+.career-box {
+    background: #fff9f9;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #b30000;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: #b30000;
+    transition: .3s;
+}
+
+.career-box:hover {
+    background: #b30000;
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 20px rgba(179,0,0,.35);
+}
+
+.career-footer {
+    font-size: 17px;
+    color: #444;
+}
+
+/* ==================== FACULTY SECTION ==================== */
+.faculty-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+/* Faculty Card */
+.faculty-card {
+    width: 300px;
+    background: #ffffff;
+    border: 2px solid #eee;
+    border-radius: 16px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.35s ease;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+}
+
+/* Top Center Expanding Red Line */
+.faculty-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #8C1007, #B51610);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+}
+
+/* Hover Effects */
+.faculty-card:hover::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.faculty-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(140,16,7,0.35);
+    box-shadow: 0 10px 30px rgba(140, 16, 7, 0.20);
+}
+
+/* Optional: Smooth image glow on hover */
+.faculty-card img {
+    border-radius: 10px;
+    transition: 0.35s ease;
+}
+
+.faculty-card:hover img {
+    transform: scale(1.05);
+}
+
+
+.faculty-card h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #8C1007;
+    font-weight: 700;
+}
+
+.faculty-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* B.Sc. Non-Medical Summary Section Styles */
+/* B.Sc. Summary Section Hover Style */
+.bsc-summary-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 40px 25px;
+    border-radius: 20px;
+    border: 2px solid #eee;
+    position: relative;
+    overflow: hidden;
+    transition: 0.35s ease;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+}
+
+/* Center Expanding Top Bar */
+.bsc-summary-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #8C1007, #B51610);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+}
+
+/* Hover Effects */
+.bsc-summary-section:hover::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.bsc-summary-section:hover {
+    transform: translateY(-6px);
+    border-color: rgba(140,16,7,0.35);
+    box-shadow: 0 12px 32px rgba(140,16,7,0.18);
+}
+
+
+.bsc-summary-content {
+    flex: 1 1 500px;
+    padding-right: 20px;
+}
+
+.bsc-summary-content h2 {
+    color: #8C1007;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.bsc-summary-content h3 {
+    color: #B30000;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.bsc-summary-content p, .bsc-summary-content ul {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.bsc-summary-content ul {
+    padding-left: 20px;
+}
+
+.bsc-summary-content ul li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.bsc-summary-content ul li::before {
+    content: "✔";
+    color: #8C1007;
+    margin-right: 8px;
+}
+
+.bsc-summary-image {
+    flex: 1 1 300px;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.bsc-summary-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media(max-width: 900px){
+    .bsc-summary-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .bsc-summary-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    .bsc-summary-image {
+        padding-left: 0;
+    }
+   .section-card{
+    padding: 10px;
+   }
+
+
+}
+/* Duration & Eligibility Section */
+.duration-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff9f9;
+    padding: 50px 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+    min-height: 50vh;
+}
+
+.duration-content {
+    flex: 1 1 500px;
+    padding-right: 25px;
+}
+
+.duration-content h2 {
+    font-size: 32px;
+    color: #8C1007;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.duration-content p {
+    font-size: 17.5px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.duration-details {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.detail-box {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 15px;
+    border: 1px solid #b30000;
+    flex: 1 1 200px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.detail-box h3 {
+    color: #b30000;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.detail-box p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Default Style */
+.detail-box {
+    background: #fff;
+    border-radius: 16px;
+    border: 2px solid #eee;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+/* Center Expanding Top Bar */
+.detail-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #8C1007, #B51610);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+}
+
+/* Hover Effects */
+.detail-box:hover::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.detail-box:hover {
+    background: #b30000;
+    color: #fff;
+    transform: translateY(-6px);
+    border-color: rgba(140,16,7,0.35);
+    box-shadow: 0 10px 32px rgba(179,0,0,0.28);
+}
+
+/* Text color change on hover */
+.detail-box:hover h3,
+.detail-box:hover p {
+    color: #fff !important;
+}
+
+
+.duration-image {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.duration-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Responsive */
+@media(max-width: 900px){
+    .duration-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .duration-content {
+        padding-right: 0;
+        margin-bottom: 25px;
+    }
+    .duration-details {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* Apply Now Button */
+.apply-btn {
+    display: inline-block;
+    background: #b30000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 16px 35px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 6px 20px rgba(179,0,0,0.3);
+}
+
+.apply-btn:hover {
+    background: #8C1007;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(140,16,7,0.35);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .apply-btn {
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+}
+/* Accordion Style for Syllabus */
+.accordion {
+  background-color: #fff9f9;
+  color: #b30000;
+  cursor: pointer;
+  padding: 14px 18px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #b30000;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.accordion:hover {
+  background-color: #b30000;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(179,0,0,0.25);
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: #fff;
+  overflow: hidden;
+  border-left: 3px solid #b30000;
+  border-radius: 0 0 10px 10px;
+}
+
+.panel ul {
+  list-style: disc;
+  margin-left: 20px;
+  padding: 10px 0;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}
+/* Wrapper */
+.bsc-summary-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    cursor: pointer;
+    height: 100%;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+/* Image Zoom */
+.bsc-summary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bsc-summary-image:hover img {
+    transform: scale(1.15);
+}
+
+/* Red Gradient Overlay */
+.bsc-summary-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(140,16,7,0) 0%, rgba(140,16,7,0.85) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.bsc-summary-image:hover::after {
+    opacity: 1;
+}
+
+/* Optional: Zoom Icon */
+.bsc-summary-image i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2.2rem;
+    color: #fff;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    transition: 0.35s ease-in-out;
+}
+
+.bsc-summary-image:hover i {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.bsc-summary-content ul {
+    list-style: none !important;
+    padding-left: 0 !important;     /* kills the 20px gap */
+    margin: 1.5rem 0 !important;
+    text-align: left !important;
+}
+
+.bsc-summary-content ul li {
+    position: relative;
+    padding-left: 2.6rem !important;   /* only space needed for the checkmark */
+    margin-bottom: 0.9rem !important;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.bsc-summary-content ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #8C1007;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Extra safety – force everything left on mobile too */
+@media (max-width: 768px) {
+    .bsc-summary-content,
+    .bsc-summary-content ul,
+    .bsc-summary-content ul li {
+        text-align: left !important;
+        padding-left: 0 !important;
+    }
+    .bsc-summary-content ul li {
+        padding-left: 2.6rem !important;
+    }
+}
+
+
+
+/* ================================================== */
+/* --- HERO SECTION MEDIA QUERIES --- */
+/* ================================================== */
+
+/* 1. Desktop / Large Tablet Adjustments (max-width: 1200px) */
+@media (max-width: 1200px) {
+    /* Adjust container padding if necessary, but focusing on hero content */
+    .hero-content {
+        padding: 0 1.5rem; /* Ensure content is contained within padding */
+    }
+}
+
+/* 2. Tablet / Landscape Mobile Adjustments (max-width: 992px) */
+@media (max-width: 992px) {
+    .program-hero {
+        padding: 100px 24px 80px; /* Reduced vertical padding */
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem; /* Slightly smaller heading */
+    }
+
+    .hero p {
+        font-size: 1.25rem; /* Slightly smaller lead text */
+        margin-bottom: 40px;
+    }
+}
+
+/* 3. Portrait Tablet / Mobile Adjustments (max-width: 768px) */
+@media (max-width: 768px) {
+    .program-hero {
+        padding: 80px 16px 60px;
+        min-height: 450px;
+    }
+
+    .college-badge {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        /* Use clamp for fluid sizing between 2.5rem and 3rem */
+        font-size: clamp(2.5rem, 8vw, 3rem); 
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    /* Stats Bar Adjustments for stacking */
+    .stats-bar {
+        padding: 24px 20px;
+        gap: 20px; /* Reduced space between stats */
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* 4. Small Mobile Adjustments (max-width: 576px) */
+@media (max-width: 576px) {
+    /* Stack the stats bar items vertically to prevent overflow */
+    .stats-bar {
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 12px;
+        padding: 20px 15px;
+        margin: 0 10px; /* Minor horizontal margin to prevent touching screen edges */
+    }
+
+    .stat-item {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator when stacked */
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-divider {
+        display: none; /* Hide vertical divider when stacking */
+    }
+    
+    /* Ensure the existing small mobile adjustment is incorporated */
+    .program-hero h1 { 
+        font-size: 2.2rem !important; 
+    }
+}
+
+
+
+</style>
+
+</head>
+
+<body>   
+     
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles"></div>
+    <div class="hero-content">
+        <div class="college-badge">
+            <i class="fas fa-atom" style="font-size: 50px;"></i>
+        </div>
+        <h1 class="fade-in">B.Sc. NON-MEDICAL</h1>
+        <p class="fade-in-delay">3 Years | 6 Semesters | NEP-2020 Based Curriculum</p>
+       <div class="stats-bar fade-in-delay-2">
+    <div class="stat-item">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Courses & <br>Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Undergraduate <br>Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Postgraduate <br> Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Diploma & <br> Add-On Courses</div>
+    </div>
+</div>
+    </div>
+</section>
+
+<div class="container">
+
+<!-- description -->
+<div class="section-card">
+    <h2 class="desc-title">Why Choose B.Sc. Non-Medical at SGGS Khalsa College Mahilpur?</h2>
+
+    <p class="desc-text">
+        <b>B.Sc. Non-Medical at SGGS Khalsa College Mahilpur</b> is one of the 
+        <b>best science degree programs in Punjab</b>, known for academic excellence, 
+        modern laboratories, experienced faculty and promising career opportunities. 
+        This <b>3-year undergraduate program</b> is based on the latest 
+        <b>NEP-2020 curriculum</b> focusing on <b>Physics, Chemistry / Computer Science, and Mathematics</b>.
+    </p>
+
+    <p class="desc-text">
+        Designed for students with passion for <b>technology, engineering, defence, and research</b>, 
+        this course builds a strong scientific foundation necessary for growth in 
+        <b>top industries and government sectors</b>.
+    </p>
+
+    <ul class="highlight-points">
+        <li>Top Non-Medical Program in Punjab</li>
+        <li>Modern Physics, Chemistry & Computer Labs</li>
+        <li>Competitive Exam Coaching: NDA, IIT-JAM, SSC</li>
+        <li>Research Projects & Skill Enhancement Courses</li>
+        <li>Highly Qualified & Supportive Faculty</li>
+        <li>Strong Career & Higher Study Opportunities</li>
+    </ul>
+</div>
+<!-- B.Sc. Non-Medical Summary Section -->
+<div class="bsc-summary-section">
+  <div class="bsc-summary-content">
+    <h2>B.Sc. Non-Medical – Overview</h2>
+    <p>
+      <strong>B.Sc. Non-Medical</strong> is a 3-year undergraduate program (6 semesters) designed 
+      for students passionate about <strong>Physics, Chemistry, Mathematics</strong>, and 
+      <strong>Computer Science</strong>. This course prepares students for a wide range of careers in 
+      science, technology, and research.
+    </p>
+
+    <h3>Why Choose B.Sc. Non-Medical?</h3>
+    <ul>
+      <li>Hands-on experience in <strong>modern labs</strong> for Physics, Chemistry, and Computer Science.</li>
+      <li>Develops <strong>analytical, computational, and problem-solving skills</strong> for modern industries.</li>
+      <li>Opportunities for <strong>research projects</strong> and competitive exams: NDA, IIT-JAM, SSC.</li>
+      <li>Prepares for <strong>higher studies</strong> such as M.Sc., MCA, MBA, B.Ed., and more.</li>
+    </ul>
+
+    <h3>Career Opportunities</h3>
+    <p>
+      Graduates can pursue careers as <strong>Scientists, Research Assistants, IT Developers, Data Analysts, 
+      Lecturers, Defence Officers, or Quality Control Analysts</strong>.
+    </p>
+  </div>
+
+  <div class="bsc-summary-image">
+    <img src="./images/course.jpg" height="300px" alt="B.Sc. Non-Medical Course Image">
+    <i class="bi bi-zoom-in"></i> <!-- Icon will appear on hover -->
+</div>
+
+</div>
+ <div id="admission" class="section-card">
+    <div class="card-title">Admission</div>
+    <p class="desc-text">
+        Admissions for B.Sc. Non-Medical are open! Eligible students (10+2 Science, min 35% marks) can apply online. Secure your seat and start your journey in science and technology.
+    </p>
+
+  
+<!-- Duration & Eligibility Section -->
+<div class="duration-section">
+  <div class="duration-content">
+    <h2>Course Duration & Eligibility</h2>
+    <p>
+      The <strong>B.Sc. Non-Medical</strong> program is a <strong>3-year undergraduate course</strong> 
+      divided into <strong>6 semesters</strong>. It is designed to provide a strong foundation in 
+      <strong>Physics, Chemistry, Mathematics</strong>, and <strong>Computer Science</strong>.
+    </p>
+
+    <div class="duration-details">
+      <div class="detail-box">
+        <h3>Duration</h3>
+        <p>3 Years (6 Semesters)</p>
+      </div>
+      <div class="detail-box">
+        <h3>Eligibility</h3>
+        <p>10+2 with Science stream (Physics, Chemistry, Mathematics) and minimum 35% marks</p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<!-- Program Outcomes & Career Opportunities -->
+<div class="section-card">
+    <div class="card-title">Program Outcomes</div>
+    
+    <ul class="outcomes-list">
+        <li>Develop strong analytical and problem-solving skills through advanced Science & Mathematics.</li>
+        <li>Gain hands-on experience in Physics, Chemistry & Computer-based tools.</li>
+        <li>Build scientific thinking, innovation ability and practical lab expertise.</li>
+        <li>Encouragement for research projects, scientific surveys & presentations.</li>
+        <li>Prepare for competitive, government & higher-education entrance exams.</li>
+        <li>Enhance communication, teamwork & technology-driven skills.</li>
+    </ul>
+</div>
+
+<div class="section-card">
+    <div class="card-title">Career Opportunities</div>
+
+    <p class="career-intro">
+        B.Sc. Non-Medical opens doors to multiple **high-growth career paths** in India & abroad:
+    </p>
+
+    <div class="career-grid">
+        <div class="career-box">Scientist / Research Assistant</div>
+        <div class="career-box">IT & Software Developer</div>
+        <div class="career-box">Engineering & Technical Fields</div>
+        <div class="career-box">Data Science / Cyber Security</div>
+        <div class="career-box">Banking & Government Sector</div>
+        <div class="career-box">Defence Services (NDA/AF)</div>
+        <div class="career-box">Education / Lecturer</div>
+        <div class="career-box">Quality Control Analyst</div>
+    </div>
+
+    <p class="career-footer"><b>Higher Studies Options:</b> M.Sc., MCA, MBA, B.Ed., Data Analytics, Computer Applications, Robotics, etc.</p>
+</div>
+
+    <!-- First Year -->
+<div class="section-card">
+    <div class="card-title">First Year</div>
+
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Semester</th>
+                <th>Subjects</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>First Semester</td>
+                <td>Punjabi-I / HCP-I</td>
+            </tr>
+            <tr>
+                <td>Second Semester</td>
+                <td>Punjabi-II / HCP-II</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Second Year Section -->
+<div class="section-card">
+    <div class="card-title">Second Year (Ongoing)</div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Semester</th>
+                <th>Subjects</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Semester">Third Semester</td>
+                <td data-label="Subjects">Physics, Mathematics, Chemistry / Comp. Science, English (Compulsory)</td>
+            </tr>
+            <tr>
+                <td data-label="Semester">Fourth Semester</td>
+                <td data-label="Subjects">Physics, Mathematics, Chemistry / Comp. Science, English (Compulsory)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Third Year Section -->
+<div class="section-card">
+    <div class="card-title">Third Year (Ongoing)</div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Semester</th>
+                <th>Subjects</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Semester">Fifth Semester</td>
+                <td data-label="Subjects">Physics, Mathematics, Chemistry / Comp. Science</td>
+            </tr>
+            <tr>
+                <td data-label="Semester">Sixth Semester</td>
+                <td data-label="Subjects">Physics, Mathematics, Chemistry / Comp. Science</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- ================= SYLLABUS SECTION ================= -->
+<div class="section-card">
+  <div class="card-title">B.Sc. Non-Medical – Detailed Syllabus</div>
+
+  <p class="desc-text">The B.Sc. Non-Medical program is a 3-year undergraduate course (6 semesters) designed for students interested in Physics, Chemistry, Mathematics, and Computer Science. Below is the detailed syllabus for each semester.</p>
+
+  <div class="syllabus-wrapper">
+
+    <button class="accordion">First Year – Semester I</button>
+    <div class="panel">
+      <ul>
+        <li>DSC-1: Physics</li>
+        <li>DSC-2: Mathematics</li>
+        <li>DSC-3: Chemistry or Computer Science & Applications</li>
+        <li>MDC/IDC: Geography & Environment</li>
+        <li>SEC: Physics Practicals-I or Hands-on Chemistry Lab Skills-I</li>
+        <li>VAC: Health & Wellness</li>
+        <li>AEC: English-I</li>
+        <li>PBI/HCP: Punjabi-I / History & Culture of Punjab-I</li>
+      </ul>
+    </div>
+
+    <button class="accordion">First Year – Semester II</button>
+    <div class="panel">
+      <ul>
+        <li>DSC-1: Physics</li>
+        <li>DSC-2: Mathematics</li>
+        <li>DSC-3: Chemistry or Computer Science & Applications</li>
+        <li>MDC/IDC: Fundamentals of Disaster Management</li>
+        <li>SEC: Physics Practicals-II or Hands-on Chemistry Lab Skills-II</li>
+        <li>VAC: Yoga</li>
+        <li>AEC: English-II</li>
+        <li>PBI/HCP: Punjabi-II / History & Culture of Punjab-II</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Second Year – Semester III & IV</button>
+    <div class="panel">
+      <ul>
+        <li>Physics</li>
+        <li>Mathematics</li>
+        <li>Chemistry or Computer Science</li>
+        <li>English (Compulsory)</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Third Year – Semester V & VI</button>
+    <div class="panel">
+      <ul>
+        <li>Physics</li>
+        <li>Mathematics</li>
+        <li>Chemistry or Computer Science</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    </div>
+    <section class="faculty-section py-5" style="background: #fff5f5;">
+    <div class="container">
+        <h2 class="text-center mb-4" style="font-size: 32px; color:#b30000; font-weight:700;">
+            Mathematics Department Faculty
+        </h2>
+
+       <div class="faculty-wrapper">
+
+    <div class="faculty-card">
+        <h4>Dr. Parvinder Singh (Principal)</h4>
+        <p>M.Sc. Mathematics (Gold Medalist), UGC CSIR NET, M.A. Education, Ph.D.</p>
+        <p>Email: parvinder070@gmail.com<br>Phone: 94636-75767</p>
+    </div>
+
+    <div class="faculty-card">
+        <h4>Mrs. Aradhna Duggal</h4>
+        <p>M.Sc. Mathematics, M.Ed., UGC CSIR NET, Diploma in Statistics, Ph.D. (Pursuing)</p>
+        <p>Email: aradhnauppal@gmail.com<br>Phone: 75891-29602</p>
+    </div>
+
+    <div class="faculty-card">
+        <h4>Mr. Sukhwinder Singh</h4>
+        <p>M.Sc. Mathematics, UGC CSIR NET</p>
+        <p>Email: ssahota71@gmail.com<br>Phone: 81463-60563</p>
+    </div>
+
+    <div class="faculty-card">
+        <h4>Mr. Pankaj Kumar Chandel</h4>
+        <p>M.Sc. Mathematics, B.Ed. (Pursuing)</p>
+        <p>Email: pankajkumarchandel9@gmail.com<br>Phone: 99142-75989</p>
+    </div>
+
+    <div class="faculty-card">
+        <h4>Ms. Rajni Bala</h4>
+        <p>M.Sc. Mathematics, B.Ed. (Pursuing)</p>
+        <p>Email: rajnidhiman856@gmail.com<br>Phone: 76268-23098</p>
+    </div>
+
+    <div class="faculty-card">
+        <h4>Dr. Meenakshi Sharma</h4>
+        <p>M.Sc. Mathematics, CSIR NET JRF, Ph.D.</p>
+        <p>Email: meenakshisharma0723@gmail.com<br>Phone: 88729-92221</p>
+    </div>
+
+    <div class="faculty-card">
+        <h4>Ms. Sanjna</h4>
+        <p>M.Sc. Mathematics</p>
+        <p>Email: sanjnakapoor47@gmail.com<br>Phone: 98773-95921</p>
+    </div>
+
+</div>
+
+        </div>
+    </div>
+</section>
+
+
+</div>
+  <!-- Apply Now Button -->
+    <div style="text-align: center; margin-top: 25px;">
+        <a href="Addimision-page.html" class="apply-btn">Apply Now</a>
+    </div>
+</div>
+<script>
+  // Select all accordion buttons
+  const accordions = document.querySelectorAll(".accordion");
+
+  accordions.forEach((accordion) => {
+    accordion.addEventListener("click", function () {
+      // Toggle "active" class (optional)
+      this.classList.toggle("active");
+
+      // Toggle the panel display
+      const panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

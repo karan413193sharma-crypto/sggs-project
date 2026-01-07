@@ -1,0 +1,1067 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SGGS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+</head>
+<style>
+    :root {
+        --wine-color: #8C1007;
+        --wine-color-hover: #c41a1a;
+        --wine-800: #8C1007;
+        /* Defined for nav-link color */
+    }
+
+    /* Additional custom styles defined in the prompt for context */
+    .header {
+        background-color: var(--wine-color);
+        color: white;
+        padding: 8px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+    }
+
+    .header .icons a {
+        color: white;
+        text-decoration: none;
+        margin-left: 15px;
+    }
+
+    /* --- Your Custom CSS from the <style> block --- */
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    @media (max-width: 380px) {
+        .hero .display-5 {
+            font-size: 2.5rem !important;
+            line-height: 1.1;
+        }
+
+        .stats .display-6 {
+            font-size: 2.8rem !important;
+        }
+
+        .hero .lead {
+            font-size: 1rem;
+        }
+    }
+
+
+    /* apply button css code */
+    .apply-btn {
+        display: inline-block;
+        white-space: nowrap;
+        padding: 8px 16px;
+        max-width: 100%;
+        background-color: var(--wine-color);
+        color: white !important;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    }
+
+    .apply-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 28px rgba(140, 16, 7, 0.4);
+        background: linear-gradient(135deg, #9a1108, #c41a1a) !important;
+    }
+
+    .apply-btn i {
+        font-size: 1.1rem;
+    }
+
+    /* apply button css code end here */
+
+
+
+    .pro-btn {
+        background-color: #8C1007 !important;
+        color: white !important;
+    }
+
+    .pro-btn:hover {
+        background-color: white !important;
+        color: #8C1007 !important;
+        border-color: #8C1007 !important;
+    }
+
+
+    /* navbar css code */
+
+    .navbar {
+        max-width: 100% !important;
+    }
+    
+    /* FIX: Added missing color for default Bootstrap toggler icon */
+    .navbar-toggler {
+        padding: 5px 8px;
+        border: 1px solid var(--wine-color);
+        outline: none;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%238C1007' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+    
+    .navbar-brand img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .dropdown-menu {
+        color: #8C1007;
+        overflow: hidden !important;
+        /* FIX: Added small shadow for visual pop */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .dropdown-item {
+        color: #8C1007;
+    }
+
+    .dropdown-item:hover {
+        background-color: #8C1007 !important;
+        color: white;
+        overflow: hidden !important;
+    }
+
+    .nav-link {
+        color: var(--wine-800) !important;
+        font-weight: bold;
+    }
+
+    .nav-link:hover {
+        color: var(--wine-color-hover) !important;
+    }
+
+    .navbar-collapse {
+        overflow: visible !important;
+        transition: height 0.3s ease;
+    }
+
+    .navbar-nav .nav-item {
+        white-space: nowrap;
+    }
+
+
+    /* Desktop Dropdown Hover Logic */
+    @media (min-width: 992px) {
+        /* FIX: Removed :hover > .dropdown-menu and replaced with the class version
+           to make the dropdowns stay open on hover */
+        .navbar .dropdown:hover>.dropdown-menu {
+            display: block;
+            margin-top: 0;
+            /* Remove Bootstrap's default margin */
+        }
+
+        .navbar .dropdown>.dropdown-toggle:active {
+            /* This line prevents the dropdown from collapsing when clicked */
+            pointer-events: none;
+        }
+    }
+    
+    /* Mobile Dropdown Fix */
+    @media (max-width: 991.98px) {
+        .navbar-nav {
+            padding-top: 10px;
+        }
+        .nav-item {
+            text-align: left;
+            padding-left: 15px;
+        }
+        .apply-btn {
+            margin: 10px 15px 15px 15px;
+            display: block;
+            text-align: center;
+        }
+        /* Ensure dropdowns take full width on mobile */
+        .dropdown-menu {
+            width: 100%;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+        }
+        .dropdown-item {
+            padding-left: 30px; /* Indent sub-items */
+        }
+    }
+
+    /* navbar css code end here */
+
+    /* --- Action Panel CSS --- */
+
+    .action-panel-container {
+        position: fixed;
+        top: 50%;
+        /* Adjusted from 36% to 50% for better centering before transform */
+        right: 0;
+        /* Changed from 70px to 0 for consistent positioning when closed */
+        transform: translateY(-50%);
+        /* Changed from -60% to -50% for vertical centering */
+        z-index: 1050;
+        transition: transform 0.3s ease;
+        /* FIX: Start position is completely hidden to the right */
+        transform: translateX(150px) translateY(-50%);
+    }
+
+    .action-panel-container.open {
+        /* FIX: When open, move to the right: 0 */
+        transform: translateX(0) translateY(-50%);
+    }
+
+    .action-toggle {
+        position: absolute;
+        top: 50%;
+        /* Center the toggle vertically */
+        transform: translateY(-50%);
+        left: -40px;
+        width: 40px;
+        height: 40px;
+        background-color: #8C1007;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 5px 0 0 5px;
+        transition: transform 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .action-panel-container.open .action-toggle i {
+        /* FIX: Added rotation for icon to indicate open/close state */
+        transform: rotate(180deg);
+    }
+
+
+    .action-panel {
+        width: 150px;
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+
+    .panel-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: white !important;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin: 0 10px;
+        transition: width 0.3s ease, border-radius 0.3s ease, margin 0.3s ease, opacity 0.3s ease;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .action-panel-container.open .panel-btn {
+        width: 130px;
+        border-radius: 5px;
+        justify-content: flex-start;
+        padding: 0 10px;
+        margin: 0 10px;
+    }
+
+    .action-panel-container.open .panel-btn i {
+        margin-right: 8px;
+    }
+
+    .action-panel-container.open .panel-btn span {
+        display: block;
+        white-space: nowrap;
+        opacity: 1;
+    }
+
+    .panel-btn span {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .panel-btn.red-bg {
+        background-color: #8C1007;
+    }
+
+    .panel-btn.whatsapp-bg {
+        background-color: #25D366;
+    }
+
+    /* FIX: Added styles for the missing round-alert-btn/popup */
+    .round-alert-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: orange;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin: 0 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .action-panel-container.open .round-alert-btn {
+        width: 130px;
+        border-radius: 5px;
+        justify-content: center;
+        margin: 0 10px;
+        background-color: #ff6600;
+        /* Brighter orange when open */
+    }
+
+    .alert-popup {
+        position: absolute;
+        right: 170px;
+        /* Positioned to the left of the panel container */
+        top: 20px;
+        width: 200px;
+        background: white;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        display: none;
+        z-index: 10;
+        text-align: center;
+    }
+
+    .alert-popup h4 {
+        color: #8C1007;
+        font-size: 1.1rem;
+    }
+    
+    .alert-popup #countdown {
+        font-weight: bold;
+        color: #e31f1a;
+    }
+    
+    /* FIX: Corrected missing CSS for topBtn when it's outside the panel */
+    #topBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+        border: none;
+        outline: none;
+        background-color: var(--wine-color);
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 50%;
+        font-size: 18px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    /* --- End Action Panel CSS --- */
+
+
+    /* --- Hero/Layout Context Styles (Added for completeness based on classes used) --- */
+
+    .cta-btn {
+        background-color: var(--wine-color);
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+        background-color: var(--wine-color-hover);
+        color: white;
+    }
+    
+    .hero {
+        background-color: #9a1108; 
+        color: white;
+    }
+    
+    .hero .badge {
+        background-color: white;
+        color: #8C1007;
+        font-weight: bold;
+    }
+    
+    .feature-card {
+        border: none;
+    }
+
+    .brand-accent {
+        color: #ffc107; /* Or another accent color */
+    }
+    
+    /* Missing style for the topBtn in the HTML */
+    #topBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: var(--wine-color);
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 50%;
+        font-size: 18px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+
+</style>
+
+
+<body>
+
+    <header class="header fw-bold">
+        <div class="contact" style="padding: 10px;">
+            <i class="fas fa-phone"></i> Contact:
+            <a href="tel:+911884292036" style="text-decoration: none; color: white;">01884-292036</a>,
+            <a href="tel:+911884245236" style="text-decoration: none; color: white;">+91 1884 245236</a>
+        </div>
+        <div class="icons">
+            <a href="https://www.facebook.com/sggskcm.org/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/channel/UCQxBQ7mNFo62R3t8Va7x54w" target="_blank"><i
+                    class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top py-4">
+        <div class="container">
+
+            <a class="navbar-brand fw-semibold" href="index.html">
+                <img src="./images/Logosggs.jpg" alt="SGGS College Logo" height="70px">
+            </a>
+
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Programs</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Course-Programmes.html#ug">Undergraduate</a></li>
+                            <li><a class="dropdown-item" href="Course-Programmes.html#pg">Postgraduate</a></li>
+                            <li><a class="dropdown-item" href="Course-Programmes.html#diploma">Diploma</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="Course-Programmes.html">All Programs →</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Departments</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="ba-department.html">Department of Arts</a></li>
+                            <li><a class="dropdown-item" href="bsc-department.html">Department of Science</a></li>
+                            <li><a class="dropdown-item" href="bcom-department.html">Department of Commerce</a></li>
+                            <li><a class="dropdown-item" href="compter&It-department.html">Department of IT</a></li>
+                            <li><a class="dropdown-item" href="bba-department.html">Department of Management</a></li>
+                            <li><a class="dropdown-item" href="bvoc-department.html">Department of B.Voc</a></li>
+                            <li><a class="dropdown-item" href="add-on-cources-department.html">Add on Departments</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="Departments-of-SGGS-Collage.html">View All Departments
+                                    →</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="Facility-in SGGS-Collage.html">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="CarrerGuidance.html">Placements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus copy.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Addimision-page.html">Admissions</a></li>
+                    <li class="nav-item">
+                        <a href="contactus copy.html" class="apply-btn">
+                            <i class="fas fa-graduation-cap"></i> Apply Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <button id="topBtn"><i class="fa fa-arrow-up"></i> </button>
+    
+    <div id="myCustomCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+
+        <div class="carousel-inner custom-carousel-inner">
+            <div class="carousel-item custom-carousel-item active">
+                <img src="./images/khalsa.jpg" alt="..." class="d-block w-100">
+                <div class="carousel-caption custom-carousel-caption">
+                    <h5>S.G.G.S KHALSA COLLEGE MAHILPUR</h5>
+                </div>
+            </div>
+
+            <div class="carousel-item custom-carousel-item">
+                <img src="./images/khalsa2.jpeg" alt="..." class="d-block w-100">
+                <div class="carousel-caption custom-carousel-caption">
+                    <h5>College Campus</h5>
+                </div>
+            </div>
+
+            <div class="carousel-item custom-carousel-item">
+                <img src="./images/khalsa3.jpg" alt="..." class="d-block w-100">
+                <div class="carousel-caption custom-carousel-caption">
+                    <h5>Campus View</h5>
+                </div>
+            </div>
+
+
+            <div class="carousel-item custom-carousel-item">
+                <img src="./images/add1.jpg" alt="..." class="d-block w-100">
+                <div class="carousel-caption custom-carousel-caption">
+                    <h5>College Events</h5>
+                </div>
+            </div>
+
+
+            <div class="carousel-item custom-carousel-item">
+                <img src="./images/add2.jpg" alt="..." class="d-block w-100">
+                <div class="carousel-caption custom-carousel-caption">
+                    <h5>College Events</h5>
+                </div>
+            </div>
+
+
+            <div class="carousel-item custom-carousel-item">
+                <img src="./images/add3.jpeg" alt="..." class="d-block w-100">
+                <div class="carousel-caption custom-carousel-caption">
+                    <h5>College Hall</h5>
+                </div>
+            </div>
+
+
+            <div class="carousel-item custom-carousel-item">
+                <img src="./images/add4.jpg" alt="..." class="d-block w-100">
+                <div class="carousel-caption custom-carousel-caption">
+                    <h5>College Annual Convocation</h5>
+                </div>
+            </div>
+
+
+            <div class="carousel-item custom-carousel-item">
+                <img src="./images/add5.jpg" alt="..." class="d-block w-100">
+                <div class="carousel-caption custom-carousel-caption">
+                    <h5>Graduation Ceremony</h5>
+                </div>
+            </div>
+
+
+            <div class="carousel-item custom-carousel-item">
+                <img src="./images/add6.jpg" alt="..." class="d-block w-100">
+                <div class="carousel-caption custom-carousel-caption">
+                    <h5>Graduation Day</h5>
+                </div>
+            </div>
+
+
+            <div class="carousel-item custom-carousel-item">
+                <img src="./images/add7.jpg" alt="..." class="d-block w-100">
+                <div class="carousel-caption custom-carousel-caption">
+                    <h5></h5>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCustomCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#myCustomCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <header class="hero py-5 py-lg-6">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <span class="badge rounded-pill mb-3">NAAC "A" Grade</span>
+                    <h1 class="display-5 fw-bold">Discover Excellence at <span class="brand-accent">S.G.G.S.</span></h1>
+                    <p class="lead mt-3 opacity-90">Located in Mahilpur, S.G.G.S. Khalsa Collage Mahilpur offers a
+                        supportive and
+                        progressive learning environment to help you build a successful career. Learn through
+                        industry-relevant programs, guided by experienced faculty, and grow with strong academic and
+                        cultural values. Join a community where your ambitions are encouraged and your potential is
+                        truly recognized.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="Addimision-page.html" class="btn cta-btn btn-lg px-4"><i
+                                class="bi bi-box-arrow-in-right me-2 "></i>Apply Now</a>
+                        <a href="Course-Programmes.html" class="btn btn-outline-light btn-lg px-4"><i
+                                class="bi bi-journal-text me-2"></i>View Programs</a>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 mt-4 small text-white-50">
+                        <i class="bi bi-shield-check"></i>
+                        <span>NAAC‑style quality presentation · Responsive · Fast</span>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card feature-card p-3 p-md-4 rounded-4">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="feature-emoji">🎓</div>
+                            <div>
+                                <h5 class="mb-1">Admissions Open</h5>
+                                <p class="mb-0 text-muted">Fill the enquiry form to receive a call back within 24 hours.
+                                </p>
+                            </div>
+                        </div>
+                        <form class="mt-3" id="leadForm">
+                            <div class="row g-2">
+                                <div class="col-md-6">
+                                    <label class="form-label small">Name</label>
+                                    <input type="text" class="form-control" placeholder="Your name" required />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small">Phone</label>
+                                    <input type="tel" class="form-control" placeholder="98765 43210" required />
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small">Email</label>
+                                    <input type="email" class="form-control" placeholder="you@example.com" />
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small">Program Interest</label>
+                                    <select class="form-select">
+                                        <option>— Select —</option>
+                                        <option>B.Sc. (CS/IT)</option>
+                                        <option>BCA</option>
+                                        <option>B.Com</option>
+                                        <option>BA</option>
+                                        <option>PG Programs</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn cta-btn w-100 ">Request Callback</button>
+                                </div>
+                            </div>
+                            <div class="form-text mt-2">By submitting, you agree to our terms & privacy policy.</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="action-panel-container" id="actionPanelContainer">
+
+        <div class="action-toggle" id="actionToggle" title="Toggle Panel">
+            <i class="fa fa-angle-double-left"></i>
+        </div>
+
+        <div class="action-panel" id="actionPanel">
+
+            <a href="Addimision-page.html" class="panel-btn red-bg" title="Apply Now / Admissions">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Apply Now</span>
+            </a>
+
+            <a href="Prospect-2025.pdf" target="_blank" class="panel-btn red-bg" title="Download Prospectus">
+                <i class="fas fa-download"></i>
+                <span>Prospectus</span>
+            </a>
+
+            <a class="panel-btn round-alert-btn" id="alertBtn" title="Alerts & Notifications">
+                🔔
+            </a>
+            <audio id="notifySound" src="bell-notification-337658.mp3" preload="auto"></audio>
+
+            <div class="alert-popup" id="alertPopup">
+                <h4>Admissions Closing Soon!</h4>
+                <p>Time Left: <span id="countdown"></span></p>
+            </div>
+
+            <a href="https://wa.me/9876543210" target="_blank" class="panel-btn whatsapp-bg" title="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+
+            <div class="panel-btn red-bg" id="panelTopBtn" title="Scroll to Top">
+                <i class="fa fa-arrow-up"></i>
+                <span>Top</span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <section class="py-5" id="about">
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-lg-6">
+                    <h2 class="section-title fw-bold">A Legacy of Learning</h2>
+                    <p class="lead text-muted">S.G.G.S. Khalsa Collage Mahilpur offers quality education with modern
+                        facilities,
+                        expert faculty, and strong values. We focus on academic excellence, skill development, and a
+                        vibrant campus life to prepare students for success.</p>
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded-3">
+                                <div class="d-flex align-items-center gap-2 mb-1"><i
+                                        class="bi bi-buildings"></i><strong>Modern Campus</strong></div>
+                                <p class="mb-0 text-muted small">Smart classrooms, labs, and library access for
+                                    research‑driven growth.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded-3">
+                                <div class="d-flex align-items-center gap-2 mb-1"><i
+                                        class="bi bi-people"></i><strong>Expert Faculty</strong></div>
+                                <p class="mb-0 text-muted small">Experienced mentors focused on outcomes and industry
+                                    relevance.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded-3">
+                                <div class="d-flex align-items-center gap-2 mb-1"><i
+                                        class="bi bi-people"></i><strong>Strong Placement Support</strong></div>
+                                <p class="mb-0 text-muted small">Career guidance, internships, and dedicated placement
+                                    cell ensuring brighter opportunities.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded-3">
+                                <div class="d-flex align-items-center gap-2 mb-1"><i
+                                        class="bi bi-people"></i><strong>Skill-Focused Education</strong></div>
+                                <p class="mb-0 text-muted small">Workshops, projects, and hands-on training to match
+                                    industry expectations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contactus copy.html" class="btn bta-btn mt-3 p-2"><i
+                            class="bi bi-telephone me-2 get-in"></i>Get in
+                        Touch</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="photo-card2 position-relative rounded-4 overflow-hidden shadow-sm">
+                        <img src="./images/khalsa2.jpeg" alt="Campus" class="bg" />
+                        <div class="photo-overlay2"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <section class="py-5 bg-light" id="programs">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-title fw-bold mb-2">Popular Programs</h2>
+                    <p class="text-muted">Well‑structured courses with an emphasis on practical skills.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="p-4 rounded-4 program-card h-100">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="mb-1">Bachelor of Arts(B.A)</h5>
+                                <span class="badge pill">Undergraduate</span>
+                            </div>
+                            <br>
+                            <p class="text-muted small">The BA program at SGGS College builds a strong foundation in
+                                arts
+                                and humanities, developing critical thinking, communication skills and cultural
+                                awareness
+                                for future careers and higher studies.</p>
+
+                            <a href="ba.html" class="btn btn-sm btn-outline-dark pro-btn">Know More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="p-4 rounded-4 program-card h-100">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="mb-1">B.Sc. Non-Medical</h5>
+                                <span class="badge pill">Undergraduate</span>
+                            </div>
+                            <br>
+                            <p class="text-muted small">B.Sc. Non-Medical at SGGS College builds strong fundamentals in
+                                Physics, Chemistry, and Mathematics with practical labs and analytical learning,
+                                preparing
+                                students for careers in science, research, and technical fields.</p>
+
+                            <a href="bsc-non-medical.html" class="btn btn-sm btn-outline-dark pro-btn">Know More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="p-4 rounded-4 program-card h-100">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="mb-1">B.Sc. Medical</h5>
+                                <span class="badge pill">Undergraduate</span>
+                            </div>
+                            <br>
+                            <p class="text-muted small">B.Sc. Medical focuses on Biology, Chemistry, and related life
+                                sciences with hands-on lab experience. Students gain scientific understanding and skills
+                                for
+                                future roles in healthcare, biotechnology, and higher studies.</p>
+
+                            <a href="bsc-medical.html" class="btn btn-sm btn-outline-dark pro-btn">Know More</a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-4 mt-5">
+                        <div class="p-4 rounded-4 program-card h-100">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="mb-1">M.A. Economics</h5>
+                                <span class="badge pill">Postgraduate</span>
+                            </div>
+                            <br>
+                            <p class="text-muted small">
+                                M.A. Economics equips students with advanced economic concepts and analytical skills,
+                                leading to careers in finance, public policy, data research and education.
+                            </p>
+                            <a href="ma-economics.html" class="btn btn-sm btn-outline-dark pro-btn">Know More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mt-5">
+                        <div class="p-4 rounded-4 program-card h-100">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="mb-1">M.A. Punjabi</h5>
+                                <span class="badge pill">Postgraduate</span>
+                            </div>
+                            <br>
+                            <p class="text-muted small">
+                                M.A. Punjabi enhances language expertise and understanding of rich literature and
+                                culture,
+                                preparing students for careers in teaching, media and research.
+                            </p>
+                            <a href="ma-punjabi.html" class="btn btn-sm btn-outline-dark pro-btn">Know More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mt-5">
+                        <div class="p-4 rounded-4 program-card h-100">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="mb-1">M.Sc. Physics</h5>
+                                <span class="badge pill">Postgraduate</span>
+                            </div>
+                            <br>
+                            <p class="text-muted small">
+                                M.Sc. Physics focuses on advanced scientific concepts, research skills and
+                                problem-solving
+                                for careers in technology, laboratories and higher research.
+                            </p>
+                            <a href="msc-physics.html" class="btn btn-sm btn-outline-dark pro-btn">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="row gy-4 mt-0 mb-5">
+                <div class="col-md-4">
+                    <div class="info-card p-4 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge-stream">Computer</span>
+                            <span class="small text-muted">6–12 Months</span>
+                        </div>
+                        <h5 class="fw-semibold mb-1">Diploma in Computer Applications (DCA)</h5>
+                        <p class="small text-muted mb-2">
+                            Fundamental program for students seeking basic computer literacy and office application
+                            skills.
+                        </p>
+                        <ul class="check-list small mb-3">
+                            <li>Computer fundamentals</li>
+                            <li>MS Office / productivity tools</li>
+                            <li>Internet &amp; basic IT skills</li>
+                        </ul>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="small text-muted">Code: DP-DCA</span>
+                            <a href="dca.html" class="btn btn-sm btn-outline-wine pro-btn">View Syllabus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="info-card p-4 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge-stream">Skill</span>
+                            <span class="small text-muted">6–12 Months</span>
+                        </div>
+                        <h5 class="fw-semibold mb-1">Certificate in Web Design</h5>
+                        <p class="small text-muted mb-2">
+                            Introductory course for students interested in web designing and front-end technologies.
+                        </p>
+                        <ul class="check-list small mb-3">
+                            <li>HTML, CSS, basic JavaScript</li>
+                            <li>Responsive page design</li>
+                            <li>Portfolio project</li>
+                        </ul>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="small text-muted">Code: CT-WD</span>
+                            <a href="certificate-in-web-design.html" class="btn btn-sm btn-outline-wine pro-btn">View
+                                Syllabus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="info-card p-4 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge-stream">Add-on</span>
+                            <span class="small text-muted">1 Year</span>
+                        </div>
+                        <h5 class="fw-semibold mb-1">Advanced Diploma in Computer Applications (ADCA)</h5>
+                        <p class="small text-muted mb-2">
+                            Comprehensive program covering advanced IT concepts for career readiness in administrative
+                            roles.
+                        </p>
+                        <ul class="check-list small mb-3">
+                            <li>Advanced MS Office suite</li>
+                            <li>Basic accounting software</li>
+                            <li>Database fundamentals</li>
+                        </ul>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="small text-muted">Code: AD-DCA</span>
+                            <a href="adca.html" class="btn btn-sm btn-outline-wine pro-btn">View Syllabus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- 1. Navbar Dropdown Fix (Closes on mobile link click) ---
+            const navbarCollapse = document.getElementById('navbarsExample');
+            if (navbarCollapse) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+
+                // Listen for clicks on any link *inside* the collapsed menu
+                navbarCollapse.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item').forEach(link => {
+                    link.addEventListener('click', () => {
+                        // Check if the menu is currently expanded (i.e., on mobile)
+                        if (navbarCollapse.classList.contains('show')) {
+                            // Collapse the menu
+                            bsCollapse.hide();
+                        }
+                    });
+                });
+            }
+
+            // --- 2. Side Action Panel Toggle Logic ---
+            const actionToggle = document.getElementById('actionToggle');
+            const actionPanelContainer = document.getElementById('actionPanelContainer');
+            if (actionToggle && actionPanelContainer) {
+                actionToggle.addEventListener('click', () => {
+                    actionPanelContainer.classList.toggle('open');
+                });
+            }
+
+            // --- 3. Scroll-to-Top Button Logic ---
+            const topBtn = document.getElementById('topBtn');
+            const panelTopBtn = document.getElementById('panelTopBtn');
+
+            const scrollFunction = () => {
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    if (topBtn) topBtn.style.display = "block";
+                } else {
+                    if (topBtn) topBtn.style.display = "none";
+                }
+            };
+
+            const scrollToTop = () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            };
+
+            window.onscroll = scrollFunction;
+            if (topBtn) topBtn.addEventListener('click', scrollToTop);
+            if (panelTopBtn) panelTopBtn.addEventListener('click', scrollToTop);
+
+            // --- 4. Alert Pop-up and Countdown Logic ---
+            const alertBtn = document.getElementById('alertBtn');
+            const alertPopup = document.getElementById('alertPopup');
+            const notifySound = document.getElementById('notifySound');
+            const countdownEl = document.getElementById('countdown');
+
+            if (alertBtn && alertPopup && countdownEl) {
+                alertBtn.addEventListener('click', () => {
+                    // Toggle the alert pop-up visibility
+                    const isVisible = alertPopup.style.display === 'block';
+                    alertPopup.style.display = isVisible ? 'none' : 'block';
+
+                    // Play sound only when opening
+                    if (!isVisible && notifySound) {
+                        // Attempt to play the sound
+                        notifySound.play().catch(error => {
+                            // Console warning if auto-play fails due to browser policy
+                            console.warn("Autoplay was prevented. User interaction required to play audio.", error);
+                        });
+                    }
+                });
+
+                // Set a placeholder date for the countdown (e.g., end of next month)
+                const endDate = new Date();
+                endDate.setMonth(endDate.getMonth() + 1);
+                endDate.setDate(15);
+                endDate.setHours(0, 0, 0, 0);
+
+                const updateCountdown = () => {
+                    const now = new Date().getTime();
+                    const distance = endDate.getTime() - now;
+
+                    // Time calculations for days, hours, minutes and seconds
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    if (distance < 0) {
+                        clearInterval(countdownInterval);
+                        countdownEl.innerHTML = "EXPIRED";
+                    } else {
+                        countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                    }
+                }
+
+                updateCountdown();
+                const countdownInterval = setInterval(updateCountdown, 1000);
+            }
+        });
+    </script>
+</body>
+
+</html>

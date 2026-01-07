@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>M.Sc. Computer & IT - Department | SGGS Mahilpur</title>
+    <meta name="description"
+        content="M.Sc. Computer & IT program at SGGS Mahilpur — advanced courses, faculty, syllabus, career opportunities, and admissions." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* SAME CSS AS OTHER PAGES */
+        :root {
+            --brand: #8c1007;
+            --brand-light: #a8332a;
+            --white: #ffffff;
+            --light: #fdf9f8;
+            --muted: #555;
+            --gray: #f5f5f5;
+            --radius: 16px;
+            --shadow: 0 10px 30px rgba(140, 16, 7, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #222;
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--brand);
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--brand), #6f0904);
+            color: var(--white);
+            padding-bottom: 3rem;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 800;
+            font-size: 1.4rem;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: var(--white);
+            color: var(--brand);
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            font-size: 1.8rem;
+        }
+
+        .nav a {
+            color: white;
+            padding: .6rem 1rem;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .nav a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .hero1 {
+            display: flex;
+            grid-template-columns: 1fr 380px;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+            color: white;
+        }
+
+        .eyebrow {
+            background: rgba(255, 255, 255, 0.15);
+            padding: .4rem .9rem;
+            border-radius: 50px;
+            font-size: .9rem;
+            display: inline-block;
+        }
+
+
+        .lead {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 65ch;
+        }
+
+        .btn {
+            padding: .8rem 1.6rem;
+            border-radius: 12px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: .6rem;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--brand);
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: transparent;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.8rem;
+            box-shadow: var(--shadow);
+            border: 1px solid #f0e6e6;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(140, 16, 7, 0.12);
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .icon-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--radius);
+            color: white;
+            transition: .4s;
+        }
+
+        .icon-card i {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .icon-card h4 {
+            font-size: 1.4rem;
+            margin: 1rem 0 .6rem;
+            font-weight: 700;
+        }
+
+        .icon-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .career-card {
+            background: var(--white);
+            border: 3px solid var(--brand);
+            color: var(--brand);
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--radius);
+        }
+
+        .career-card i {
+            color: var(--brand);
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--brand);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .faculty-card {
+            text-align: center;
+        }
+
+        .faculty-card img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 5px solid var(--light);
+        }
+
+        table {
+            min-width: 100%;
+            border-collapse: collapse;
+         
+       }
+       @media (max-width: 400px){
+        table{font-size: 10px;}.card{padding: 10px;}
+       }
+        th {
+            background: var(--brand);
+            color: white;
+            padding: 1rem;
+        }
+
+        td,
+        th {
+            border: 1px solid #eee;
+            padding: .9rem;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background: #fdf9f8;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-q {
+            background: var(--brand);
+            color: white;
+            padding: 1.2rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-a {
+            padding: 1.5rem;
+            background: var(--light);
+            display: none;
+        }
+
+        .faq-a.show {
+            display: block;
+        }
+
+        footer {
+            background: var(--gray);
+            padding: 3rem 0 1.5rem;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 120px 24px 100px;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .college-badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+.hero h1 {
+    font-weight: 800;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    font-size: clamp(28px, 6vw, 80px); /* super responsive */
+    margin-top: 20px;
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: clamp(24px, 8vw, 60px);
+    }
+}
+
+/* For small phones */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: clamp(20px, 10vw, 45px);
+    }
+}
+
+        .hero p {
+            font-size: 1.375rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 48px;
+            font-weight: 500;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        @media (max-width: 350px) {
+            .stats-bar{margin: 20px;}
+            
+            
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media(max-width:900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-right {
+                width: 100%;
+            }
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .fade-in-delay {
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+    </style>
+</head>
+
+<body>
+ <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg shadow sticky-top py-4 bg-white">
+    <div class="container">
+        <a class="navbar-brand text-white fw-semibold" href="index.html">
+            <img src="./images/Logosggs.jpg" alt="SGGS College Logo" height="70px" width="auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample"
+            aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <!-- Programs Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Programs
+                    </a>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Course-Programmes.html#ug">Undergraduate</a></li>
+                        <li><a class="dropdown-item" href="Course-Programmes.html#pg">Postgraduate</a></li>
+                       <li><a class="dropdown-item" href="Course-Programmes.html#diploma">Diploma</a></li>
+
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Course-Programmes.html">All Programs →</a></li>
+                    </ul>
+                </li>
+
+                <!-- Departments Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Departments
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="ba-department.html   ">Department of Arts</a></li>
+                        <li><a class="dropdown-item" href="bsc-department.html">Department of Science </a></li>
+                        <li><a class="dropdown-item" href="bcom-department.html">Department of Commerce</a></li>
+                        <li><a class="dropdown-item" href="compter&It-department.html">Department of IT </a></li>
+                        <li><a class="dropdown-item" href="bba-department.html">Department of Management </a></li>
+                        <li><a class="dropdown-item" href="bvoc-department.html">Department of B.Voc</a></li>
+                        <li><a class="dropdown-item" href="add-on-cources-department.html">Add on Departments</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Departments-of-SGGS-Collage.html">View All Departments →</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Facility-in SGGS-Collage.html">Facilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CarrerGuidance.html">Placements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus copy.html">Contact</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contactus copy.html">Admissions</a>
+                </li>
+                <li class="nav-item">
+                     <a href="contactus copy.html   " class="apply-btn">
+            <i class="fas fa-graduation-cap"></i> Apply Now   </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+    
+        <div class="hero-content">
+            <div class="college-badge">
+                <i class="fas fa-university"></i>
+            </div>
+            <div class="container hero1">
+                <div>
+                    <span class="eyebrow">Postgraduate • 2 Years • Full-Time</span>
+                    <h1 >M.Sc. Computer & IT</h1>
+                    <p class="lead">An advanced program for IT professionals, focusing on programming, networking, and
+                        modern technologies.</p>
+                </div>
+
+
+            </div>
+            <div class="stats-bar fade-in-delay-2">
+                <div class="stat-item">
+                    <div class="stat-number">90+</div>
+                    <div class="stat-label">Classrooms</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">45,000+</div>
+                    <div class="stat-label">Books</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Labs</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">World-Class</div>
+                    <div class="stat-label">Infrastructure</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <main class="container">
+
+        <section style="background:var(--light);padding:5rem 0">
+            <h2>Why Choose M.Sc. Computer & IT at SGGS Mahilpur?</h2>
+            <p class="section-subtitle">Enhance your IT expertise with advanced technology skills</p>
+            <div class="icon-grid">
+                <div class="icon-card card" style="background:var(--brand)">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4>Advanced Programming</h4>
+                    <p>Deep knowledge of Java, Python, C++, and modern frameworks.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand-light)">
+                    <i class="fas fa-network-wired"></i>
+                    <h4>Networking & Security</h4>
+                    <p>Focus on network design, cybersecurity, and cloud solutions.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand)">
+                    <i class="fas fa-database"></i>
+                    <h4>Database & Cloud</h4>
+                    <p>Master advanced databases, cloud computing, and big data.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand-light)">
+                    <i class="fas fa-robot"></i>
+                    <h4>AI & ML</h4>
+                    <p>Explore artificial intelligence and machine learning in depth.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand)">
+                    <i class="fas fa-award"></i>
+                    <h4>Career Guidance</h4>
+                    <p>Support for IT certifications and advanced placements.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand-light)">
+                    <i class="fas fa-users"></i>
+                    <h4>Collaborative Learning</h4>
+                    <p>Team projects, seminars, and tech club activities.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses">
+            <h2>Specializations</h2>
+            <p class="section-subtitle">Advanced fields in IT & Computer Science</p>
+            <div class="icon-grid">
+                <div class="icon-card card" style="background:var(--brand)">
+                    <i class="fas fa-code"></i>
+                    <h4>Software Development</h4>
+                    <p>Web, desktop, and mobile applications.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand-light)">
+                    <i class="fas fa-network-wired"></i>
+                    <h4>Networking & Security</h4>
+                    <p>Network architecture, security, cloud fundamentals.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand)">
+                    <i class="fas fa-database"></i>
+                    <h4>Database & Cloud</h4>
+                    <p>Database optimization and cloud solutions.</p>
+                </div>
+                <div class="icon-card card" style="background:var(--brand-light)">
+                    <i class="fas fa-robot"></i>
+                    <h4>AI & ML</h4>
+                    <p>Artificial intelligence, data analysis, and ML algorithms.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faculty" style="background:var(--light)">
+            <h2>Our Faculty</h2>
+            <p class="section-subtitle">Experienced faculty in Computer & IT</p>
+            <div class="faculty-grid">
+                <div class="faculty-card card">
+                    <h4>Ms. Gurpreet Kaur (H.O.D.)</h4>
+                    <p style="color:var(--brand);font-weight:600">H.O.D.</p>
+                </div>
+                <div class="faculty-card card">
+                    <h4>Mr. Manpreet Singh</h4>
+
+                </div>
+                <div class="faculty-card card">
+                    <h4>Ms. Neha</h4>
+
+                </div>
+                <div class="faculty-card card">
+                    <h4>Mrs. Deepti Verma</h4>
+
+                </div>
+                <div class="faculty-card card">
+                    <h4>Mrs. Nandika Salwan</h4>
+
+                </div>
+                <div class="faculty-card card">
+                    <h4>Ms. Gurjot Kaur</h4>
+
+                </div>
+                <div class="faculty-card card">
+                    <h4>Mr. Varinder Singh</h4>
+
+                </div>
+                <div class="faculty-card card">
+                    <h4>Mrs. Navjot Kaur</h4>
+
+                </div>
+                <div class="faculty-card card">
+                    <h4>Mrs. Rajwinder Kaur</h4>
+
+                </div>
+                <div class="faculty-card card">
+                    <h4>Mrs. Harminder Kaur</h4>
+
+                </div>
+                <div class="faculty-card card">
+                    <h4>Mr. Sarbjit Singh
+                        (Computer Lab Technician)</h4>
+
+                </div>
+                <div class="faculty-card card">
+                    <h4>Ms. Shaveta</h4>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="syllabus">
+            <h2>Program Structure</h2>
+            <div class="card" style="overflow:hidden">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Semester</th>
+                            <th>Core Papers</th>
+                            <th>Labs / Projects</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sem 1</td>
+                            <td>Advanced Programming, Data Structures</td>
+                            <td>Lab I</td>
+                        </tr>
+                        <tr>
+                            <td>Sem 2</td>
+                            <td>Database Management, Networking</td>
+                            <td>Lab II</td>
+                        </tr>
+                        <tr>
+                            <td>Sem 3</td>
+                            <td>Operating Systems, Web Development</td>
+                            <td>Lab III</td>
+                        </tr>
+                        <tr>
+                            <td>Sem 4</td>
+                            <td>AI & ML, Cloud Computing</td>
+                            <td>Major Project + Viva</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="careers" style="background:var(--light)">
+            <h2>Career Opportunities</h2>
+            <p class="section-subtitle">Opportunities after M.Sc. Computer & IT</p>
+            <div class="icon-grid">
+                <div class="career-card card"><i class="fas fa-laptop-code fa-2x"></i>
+                    <h4>Software Developer</h4>
+                </div>
+                <div class="career-card card"><i class="fas fa-network-wired fa-2x"></i>
+                    <h4>Network Engineer</h4>
+                </div>
+                <div class="career-card card"><i class="fas fa-database fa-2x"></i>
+                    <h4>Database Administrator</h4>
+                </div>
+                <div class="career-card card"><i class="fas fa-robot fa-2x"></i>
+                    <h4>AI / ML Specialist</h4>
+                </div>
+                <div class="career-card card"><i class="fas fa-briefcase fa-2x"></i>
+                    <h4>IT Consultant</h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-q">Eligibility for M.Sc. Computer & IT? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">B.Sc. Computer & IT or equivalent degree from a recognized university.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Is research project mandatory? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Yes — dissertation and viva are compulsory for all students.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can I pursue certifications along with degree? <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">Yes — AWS, Cisco, Microsoft, AI/ML certifications are encouraged.</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; SGGS Mahilpur — Department of Computer & IT. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                const a = q.nextElementSibling; const i = q.querySelector('i');
+                a.classList.toggle('show');
+                i.classList.toggle('fa-chevron-down');
+                i.classList.toggle('fa-chevron-up');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

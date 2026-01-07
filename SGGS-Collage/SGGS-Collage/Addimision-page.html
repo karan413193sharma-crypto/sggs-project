@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGGS Khalsa College - Admissions 2024-25</title>
+    <meta name="description"
+        content="Apply for admission at SGGS Khalsa College Mahilpur. Complete information about eligibility criteria, application process, and prospectus download.">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP JS (for toggle + dropdown)  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <style>
+         /* SAME CSS - DO NOT CHANGE ANYTHING */
+        :root {
+            --brand: #8c1007;
+            --wine-red: #8C1007;
+            --brand-light: #a8332a;
+            --white: #ffffff;
+            --light: #fdf9f8;
+            --muted: #555;
+            --gray: #f5f5f5;
+            --radius: 16px;
+            --shadow: 0 10px 30px rgba(140, 16, 7, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            overflow-x: hidden !important;
+        }
+
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif !important;
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ===========================================
+   CUSTOM SCROLLBAR
+   =========================================== */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #8c1007;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6d0c05;
+        }
+
+        /* ===========================================
+   LAYOUT CONTAINERS
+   =========================================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-gray {
+            background: #f9fafb;
+        }
+
+
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .fade-in-delay {
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+
+
+
+        /* ===========================================
+   BUTTONS
+   =========================================== */
+        .btn {
+            padding: 16px 32px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: #8c1007;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(140, 16, 7, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1f1f1f;
+        }
+
+        .btn-secondary:hover {
+            background: #f5f5f5;
+        }
+
+        /* ===========================================
+   CARDS
+   =========================================== */
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .card-grid>* {
+            flex: 1 1 300px;
+            /* behaves like minmax(300px, 1fr) */
+        }
+
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #8c1007;
+            border-top: 4px solid #8c1007;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            border-bottom: 4px solid #8c1007;
+            border-right: 4px solid #8c1007;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: #8c1007;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8c1007;
+            margin-bottom: 12px;
+        }
+
+        .card-description {
+            color: #4b5563;
+            margin-bottom: 16px;
+        }
+
+        .card-list {
+            list-style: none;
+        }
+
+        .card-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
+            color: #6b7280;
+        }
+
+        .card-list li:before {
+            content: "✓";
+            color: #8c1007;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* ===========================================
+   TIMELINE (How to Apply)
+   =========================================== */
+        .timeline-item {
+            position: relative;
+            margin-bottom: 64px;
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            border-left: 4px solid #8c1007;
+            border-right: 4px solid #f0f0f0;
+            border-top: 4px solid #f0f0f0;
+            border-bottom: 4px solid #f0f0f0;
+            overflow: hidden;
+            background: white;
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Top border shine effect */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #8c1007 0%, #b51610 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        /* Hover effect */
+        .timeline-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(140, 16, 7, 0.15);
+            border-color: rgba(140, 16, 7, 0.3);
+            /* optional subtle border color change */
+        }
+
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-step {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8c1007;
+            margin-bottom: 12px;
+        }
+
+        .timeline-description {
+            color: #4b5563;
+            margin-bottom: 16px;
+        }
+
+        .timeline-meta {
+            display: flex;
+            gap: 32px;
+            padding-top: 16px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .timeline-meta-item h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #8c1007;
+            margin-bottom: 4px;
+        }
+
+        .timeline-meta-item p {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        /* ===========================================
+   PROSPECTUS SECTION
+   =========================================== */
+        .prospectus-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .prospectus-image {
+            position: relative;
+        }
+
+        .prospectus-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .prospectus-price {
+            position: absolute;
+            bottom: -24px;
+            right: -24px;
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #8c1007;
+        }
+
+        .price-label {
+            color: #6b7280;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: #8c1007;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #8c1007;
+            margin-bottom: 8px;
+        }
+
+        .feature-description {
+            color: #4b5563;
+        }
+
+        .download-box {
+            background: white;
+            padding: 32px;
+            border: 2px solid #8c1007;
+            border-radius: 12px;
+        }
+
+        .download-box-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8c1007;
+            margin-bottom: 24px;
+        }
+
+        .download-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .download-note {
+            text-align: center;
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 24px;
+        }
+
+        /* ===========================================
+   FORMS
+   =========================================== */
+        .form-section-title {
+            color: #8c1007;
+            font-size: 1.5rem;
+            margin: 40px 0 24px;
+        }
+
+        .form-section-title:first-child {
+            margin-top: 0;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #374151;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #8c1007;
+            box-shadow: 0 0 0 3px rgba(140, 16, 7, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .form-grid>* {
+            flex: 1 1 250px;
+            max-width: calc(33.33% - 24px);
+            /* optional: keeps balance on large screens */
+        }
+
+
+        /* ===========================================
+   ACCORDION (FAQ)
+   =========================================== */
+        .accordion {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background: #f9fafb;
+        }
+
+        .accordion-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #8c1007;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+
+        .accordion-body {
+            padding: 0 24px 20px;
+            color: #4b5563;
+            line-height: 1.8;
+        }
+
+        /* ===========================================
+   CONTACT SECTION
+   =========================================== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-card-icon {
+            width: 48px;
+            height: 48px;
+            background: #8c1007;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+        }
+
+        .contact-card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #8c1007;
+            margin-bottom: 8px;
+        }
+
+        .contact-card-details {
+            color: #4b5563;
+            margin-bottom: 4px;
+        }
+
+        .alert {
+            padding: 32px;
+            background: white;
+            border-left: 4px solid #8c1007;
+            border-radius: 8px;
+            margin-top: 48px;
+        }
+
+        .alert-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8c1007;
+            margin-bottom: 16px;
+        }
+
+        .alert-text {
+            color: #4b5563;
+            line-height: 1.8;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        }
+
+        .toast.show {
+            display: block;
+        }
+
+        .toast-title {
+            font-weight: 600;
+            color: #8c1007;
+            margin-bottom: 4px;
+        }
+
+        .toast-message {
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-description {
+                font-size: 1.125rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .prospectus-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .prospectus-price {
+                position: static;
+                margin-top: 16px;
+                width: fit-content;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .hero-title {
+                font-size: 2.8rem !important;
+                line-height: 1.1;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .form-input,
+            .form-select,
+            .form-textarea {
+                font-size: 16px !important;
+                padding: 14px 12px !important;
+                border: 2px solid #8c1007 !important;
+                border-radius: 10px !important;
+            }
+
+            .form-label {
+                font-size: 0.95rem !important;
+                font-weight: 600;
+                color: #8c1007 !important;
+                margin-bottom: 8px;
+            }
+
+            .form-input::placeholder,
+            .form-select::placeholder {
+                color: #8c1007 !important;
+                opacity: 0.8;
+            }
+
+            .form-grid>* {
+                flex: 1 1 100% !important;
+                max-width: 100% !important;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 120px 24px 100px;
+            overflow: hidden;
+            min-height: 600px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .college-badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 4rem;
+            font-weight: 800 !important;
+            color: white;
+            margin-top: 50px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+        .hero p {
+            font-size: 1.375rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 48px;
+            font-weight: 500;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .my-color {
+            text-decoration: none;
+            color: white;
+        }
+
+        .my-color:hover {
+            color: #6b0d05;
+        }
+
+        .mybtn:hover {
+            background-color: white;
+        }
+         .dropdown-menu {
+            color: #8C1007;
+            overflow: hidden !important;
+        }
+
+        .dropdown-item {
+            color: #8C1007;
+        }
+
+        .dropdown-item:hover {
+            background-color: #8C1007;
+            color: white;
+            overflow: hidden !important;
+        }
+
+        /* APPLY BUTTON */
+        .apply-btn {
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #8c1007, #b01414);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 6px 18px rgba(140, 16, 7, 0.3);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(140, 16, 7, 0.4);
+            background: linear-gradient(135deg, #9a1108, #c41a1a);
+
+        }
+
+        .apply-btn i {
+            font-size: 1.1rem;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+   
+    <!-- ========================================
+         HERO SECTION
+         Main banner with college name and CTA buttons
+    ========================================= -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <div class="college-badge">
+                <i class="fas fa-university"></i>
+            </div>
+            <h1 class="fade-in">S.G.G.S. Khalsa College Addimision</h1>
+            <p class="fade-in-delay">Excellence in Education Since 1991 • Empowering Minds, Building Futures</p>
+            <div class="stats-bar fade-in-delay-2">
+                <div class="stat-item">
+                    <div class="stat-number">1600+</div>
+                    <div class="stat-label">Addimision per year</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">600+</div>
+                    <div class="stat-label">PG Addimision per year</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Labs</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">World-Class</div>
+                    <div class="stat-label">Infrastructure</div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ========================================
+         ELIGIBILITY CRITERIA SECTION
+         Shows admission requirements in cards
+    ========================================= -->
+    <section id="eligibility" class="section section-gray">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <h2 class="section-title">Eligibility Criteria</h2>
+                <p class="section-description">
+                    Ensure you meet all the requirements before applying. Our transparent admission process
+                    ensures every deserving student gets a fair opportunity.
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="card-grid">
+                <!-- Card 1: Academic Requirements -->
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3 class="card-title">Academic Requirements</h3>
+                    <p class="card-description">
+                        Passed 10+2 or equivalent examination from a recognized board with minimum required percentage
+                        in relevant subjects.
+                    </p>
+                    <ul class="card-list">
+                        <li>For BA/B.Sc/B.Com: 10+2 with 45% aggregate</li>
+                        <li>For BCA: 10+2 with Mathematics and 50% aggregate</li>
+                        <li>For M.Sc: Bachelor degree with 50% marks in relevant subject</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Document Verification -->
+                <div class="card">
+                    <div class="card-icon">📋</div>
+                    <h3 class="card-title">Document Verification</h3>
+                    <p class="card-description">
+                        All candidates must submit original documents for verification during the admission process.
+                    </p>
+                    <ul class="card-list">
+                        <li>Matriculation certificate (Date of Birth proof)</li>
+                        <li>Character certificate from previous institution</li>
+                        <li>Detailed marks card and provisional certificate</li>
+                        <li>Category certificate (if applicable)</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Entrance Requirements -->
+                <div class="card">
+                    <div class="card-icon">🏆</div>
+                    <h3 class="card-title">Entrance Requirements</h3>
+                    <p class="card-description">
+                        Certain courses require entrance test qualification as per university guidelines.
+                    </p>
+                    <ul class="card-list">
+                        <li>M.Sc Physics and Chemistry: OCET entrance test</li>
+                        <li>Minimum qualifying marks in entrance exam</li>
+                        <li>Valid entrance test scorecard required</li>
+                        <li>Merit-based selection process</li>
+                    </ul>
+                </div>
+
+                <!-- Important Note Alert Box -->
+                <div class="alert">
+                    <h4 class="alert-title">Important Note</h4>
+                    <p class="alert-text">
+                        All admissions are subject to verification and approval by Panjab University, Chandigarh.
+                        The college reserves the right to refuse or terminate any admission without assigning reasons.
+                        Students admitted on wrong information will face immediate cancellation of admission and
+                        disciplinary action.
+                    </p>
+                </div>
+            </div>
+    </section>
+
+    <!-- ========================================
+         HOW TO APPLY SECTION
+         Step-by-step application process
+    ========================================= -->
+    <section id="how-to-apply" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How to Apply</h2>
+                <p class="section-description">
+                    Follow these simple steps to complete your admission process.
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline">
+                <!-- Step 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p class="timeline-step">STEP 01</p>
+                        <h3 class="timeline-title">Get Prospectus & Form</h3>
+                        <p class="timeline-description">
+                            Purchase the college prospectus and admission form from the college office for Rs. 400/-.
+                        </p>
+                        <div class="timeline-meta">
+                            <div class="timeline-meta-item">
+                                <h4>Timeline</h4>
+                                <p>Available from admission announcement</p>
+                            </div>
+                            <div class="timeline-meta-item">
+                                <h4>Action</h4>
+                                <p>Visit college office or download online</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p class="timeline-step">STEP 02</p>
+                        <h3 class="timeline-title">Document Preparation</h3>
+                        <p class="timeline-description">
+                            Gather all required documents including mark sheets, certificates, photographs.
+                        </p>
+                        <div class="timeline-meta">
+                            <div class="timeline-meta-item">
+                                <h4>Timeline</h4>
+                                <p>Before form submission</p>
+                            </div>
+                            <div class="timeline-meta-item">
+                                <h4>Action</h4>
+                                <p>Prepare complete document set</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p class="timeline-step">STEP 03</p>
+                        <h3 class="timeline-title">Form Submission & Payment</h3>
+                        <p class="timeline-description">
+                            Submit completed application form along with all required documents and payment.
+                        </p>
+                        <div class="timeline-meta">
+                            <div class="timeline-meta-item">
+                                <h4>Timeline</h4>
+                                <p>As per admission schedule</p>
+                            </div>
+                            <div class="timeline-meta-item">
+                                <h4>Action</h4>
+                                <p>Submit at college office with payment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p class="timeline-step">STEP 04</p>
+                        <h3 class="timeline-title">Verification & Approval</h3>
+                        <p class="timeline-description">
+                            Appear in person with parent/guardian before the Principal for final approval.
+                        </p>
+                        <div class="timeline-meta">
+                            <div class="timeline-meta-item">
+                                <h4>Timeline</h4>
+                                <p>After form approval</p>
+                            </div>
+                            <div class="timeline-meta-item">
+                                <h4>Action</h4>
+                                <p>Complete admission process</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PROSPECTUS DOWNLOAD SECTION
+         Download options for college prospectus
+    ========================================= -->
+    <section id="prospectus" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Download Prospectus</h2>
+                <p class="section-description">
+                    Get complete information about our institution, courses, and facilities.
+                </p>
+            </div>
+
+            <div class="prospectus-grid">
+                <!-- Image Side -->
+                <div class="prospectus-image">
+                    <img src="https://images.unsplash.com/photo-1574660430686-b2a255cfce68?w=800&h=600&fit=crop"
+                        alt="College prospectus">
+                    <div class="prospectus-price">
+                        <div class="price-amount">₹400</div>
+                        <div class="price-label">Prospectus Fee</div>
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div>
+                    <!-- Features List -->
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-icon">📖</div>
+                            <div>
+                                <h3 class="feature-title">Complete Course Details</h3>
+                                <p class="feature-description">Comprehensive information about all programs offered</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">💰</div>
+                            <div>
+                                <h3 class="feature-title">Fee Structure</h3>
+                                <p class="feature-description">Detailed breakdown of tuition and other fees</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">ℹ️</div>
+                            <div>
+                                <h3 class="feature-title">Admission Guidelines</h3>
+                                <p class="feature-description">Step-by-step admission process and important dates</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Download Box -->
+                    <div class="download-box">
+                        <h3 class="download-box-title">Download Options</h3>
+                        <div class="download-buttons">
+                            <button class="btn btn-primary mybtn" style="width: 100%;"
+                                onclick="handleDownload('Full Prospectus (PDF)')"><a href="Prospect-2025.pdf"
+                                    class="my-color">
+                                    ⬇️ Download Full Prospectus (PDF)</a>
+                            </button>
+                            <button class="btn btn-secondary"
+                                style="width: 100%; border: 2px solid #8c1007; color: #8c1007;"
+                                onclick="handleDownload('Quick Guide (PDF)')">
+                                ⬇️ Download Quick Guide (PDF)
+                            </button>
+                        </div>
+                        <p class="download-note">
+                            You can also collect a printed copy from the college office for ₹400/-
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         APPLICATION FORM SECTION
+         Online admission application form
+    ========================================= -->
+    <section id="application-form" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Online Application Form</h2>
+                <p class="section-description">
+                    Start your admission process by filling out our online application form.
+                </p>
+            </div>
+
+            <div class="card" style="max-width: 1000px; margin: 0 auto;">
+                <form id="applicationForm" onsubmit="handleFormSubmit(event)">
+                    <!-- Personal Information -->
+                    <h3 class="form-section-title">Personal Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="fullName">Full Name *</label>
+                            <input type="String" id="fullName" class="form-input" placeholder="Enter your full name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address *</label>
+                            <input type="String" id="email" class="form-input" placeholder="your.email@example.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone Number *</label>
+                            <input type="Number" id="phone" class="form-input" placeholder="10-digit mobile number"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="dob">Date of Birth *</label>
+                            <input type="date" id="dob" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="gender">Gender *</label>
+                            <select id="gender" class="form-select" required type="String">
+                                <option value="">Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="category">Category *</label>
+                            <select id="category" class="form-select" type="String" required>
+                                <option value="">Select category</option>
+                                <option value="general">General</option>
+                                <option value="sc">SC</option>
+                                <option value="st">ST</option>
+                                <option value="obc">OBC</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Family Information -->
+                    <h3 class="form-section-title">Family Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="fatherName">Father's Name *</label>
+                            <input type="String" id="fatherName" class="form-input" placeholder="Enter father's name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="motherName">Mother's Name *</label>
+                            <input type="String" id="motherName" class="form-input" placeholder="Enter mother's name"
+                                required>
+                        </div>
+                    </div>
+
+                    <!-- Academic Information -->
+                    <h3 class="form-section-title">Academic Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="previousSchool">Previous School/College *</label>
+                            <input type="String" id="previousSchool" class="form-input" placeholder="Name of institution"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="course">Course Applying For *</label>
+                            <select id="course" class="form-select" required type="String">
+                                <option value="">Select course</option>
+                                <option value="ba">B.A. (Bachelor of Arts)</option>
+                                <option value="bsc">B.Sc. (Bachelor of Science)</option>
+                                <option value="bcom">B.Com. (Bachelor of Commerce)</option>
+                                <option value="bca">BCA</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div style="text-align: center; margin-top: 40px;">
+                        <button type="submit" class="btn btn-primary" style="padding: 16px 48px;">
+                            Submit Application
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FAQ SECTION
+         Frequently asked questions with accordion
+    ========================================= -->
+    <section id="faq" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">
+                    Find answers to the most common questions about our admission process.
+                </p>
+            </div>
+
+            <div class="accordion">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-title">What is the admission procedure?</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Purchase the prospectus for Rs. 400/-, fill the form, submit documents, and appear before
+                            the Principal with your parent/guardian for approval.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-title">What documents are required?</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Matriculation certificate, character certificate, marks cards, photographs, category
+                            certificate (if applicable), and migration certificate (if from another university).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-title">Can I get admission with a compartment?</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Yes, if you have a compartment in only one subject with at least 20% marks and meet
+                            aggregate requirements. Must clear before first-year result.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- External JavaScript -->
+    <script src="./JS/admission-page-script.js"></script>
+
+</body>
+<script>
+  const applicationform =document.getElementById("applicationForm") 
+  applicationform.addEventListener("submit",Submitapplication);
+
+
+function Submitapplication(e)
+{
+    e.preventDefault();
+    const fullName = document.getElementById("fullName").value;
+    const dob = document.getElementById("dob").value;
+    const gender = document.getElementById("gender").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const category = document.getElementById("category").value;
+    const fatherName = document.getElementById("fatherName").value;
+    const motherName = document.getElementById("motherName").value;
+    const previousSchool = document.getElementById("previousSchool").value;
+    const course = document.getElementById("course").value;
+    fetch("http://localhost:4005/users",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+            fullName,
+            dob,
+            gender,
+            email,
+            phone,
+            category,
+            fatherName,
+            motherName,
+            previousSchool,
+            course
+        })
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        console.log("data stored",data);
+         alert("Data stored successfully");
+    })
+    .catch(err=>console.error(err));
+}
+</script>
+</html>

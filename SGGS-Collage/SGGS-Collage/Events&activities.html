@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Events & Activities - SGGS Khalsa College Mahilpur</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+  <style>
+    :root {
+      --primary: #8c1007;
+      --primary-dark: #6b0d05;
+      --accent: #b51610;
+    }
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+    overflow-x: hidden !important;
+}
+
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+/* Hero Section */
+        .hero {
+            position: relative;
+            padding: 120px 24px 100px;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .college-badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.375rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 48px;
+            font-weight: 500;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        /* Section Tag */
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+ /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .fade-in-delay {
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        .fade-in-delay-2 {
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+
+    .section-title {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #1a1a1a;
+      text-align: center;
+      margin: 100px 0 60px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 120px;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 3px;
+    }
+
+    .event-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(140, 16, 7, 0.15);
+      margin-bottom: 100px;
+      transition: all 0.4s ease;
+    }
+
+    .event-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 60px rgba(140, 16, 7, 0.25);
+    }
+
+    /* FULL HEIGHT CAROUSEL - NO WHITE SPACE EVER */
+    .event-row {
+      --carousel-height: 75vh;
+    }
+
+    @media (max-width: 992px) {
+      .event-row {
+        --carousel-height: 55vh;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .event-row {
+        --carousel-height: 45vh;
+      }
+    }
+
+    .event-carousel,
+    .event-text {
+      height: var(--carousel-height) !important;
+    }
+
+    .event-carousel .carousel-inner,
+    .event-carousel .carousel-item,
+    .event-carousel .carousel-item img {
+      height: 100% !important;
+      width: 100% !important;
+    }
+
+    .event-carousel img {
+      object-fit: cover !important;
+      object-position: center !important;
+      display: block;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(140, 16, 7, 0.9);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      backdrop-filter: blur(10px);
+    }
+
+    .event-text {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem;
+      text-align: center;
+    }
+
+    .event-text h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    .event-text p,
+    .event-text small {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    @media (max-width: 992px) {
+      .header h1 {
+        font-size: 2.8rem;
+      }
+
+      .header p {
+        font-size: 1.2rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .event-text h2 {
+        font-size: 1.9rem;
+      }
+
+      .event-text p,
+      .event-text small {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .header h1 {
+        font-size: 2.3rem;
+      }
+
+      .header p {
+        font-size: 1.1rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .event-text h2 {
+        font-size: 1.6rem;
+      }
+
+      .event-text p,
+      .event-text small {
+        font-size: 0.95rem;
+      }
+
+      .event-text {
+        padding: 2rem 1.5rem !important;
+      }
+    }
+
+    /* Gallery Styles */
+    .simple-box,
+    .img-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      background: #000;
+    }
+
+    .simple-box {
+      aspect-ratio: 4/3;
+    }
+
+    .simple-box img,
+    .img-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .simple-box:hover img,
+    .img-card:hover img {
+      transform: scale(1.15);
+    }
+
+    .simple-box:hover,
+    .img-card:hover {
+      transform: scale(1.04);
+    }
+
+    /* YOUR ORIGINAL TILTED GALLERY STYLE */
+    .img-card {
+      margin-bottom: 28px;
+    }
+
+    .col-lg-4:nth-child(3n+1) .img-card {
+      transform: rotate(-6deg);
+    }
+
+    .col-lg-4:nth-child(3n+2) .img-card {
+      transform: rotate(6deg);
+    }
+
+    .col-lg-4:nth-child(3n+3) .img-card {
+      transform: rotate(-3deg);
+    }
+
+    @media (max-width: 576px) {
+      .img-card {
+        transform: rotate(0deg) !important;
+      }
+    }
+
+    .box-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(140, 16, 7, 0) 0%, rgba(140, 16, 7, 0.85) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      opacity: 0;
+      transition: opacity 0.45s ease;
+    }
+
+    .simple-box:hover .box-overlay,
+    .img-card:hover .box-overlay {
+      opacity: 1;
+    }
+
+    .box-overlay i {
+      font-size: 2.6rem;
+      color: #fff;
+      transform: translateY(20px);
+      transition: transform 0.5s ease;
+    }
+
+    .box-overlay span {
+      background: rgba(255, 255, 255, 0.96);
+      color: var(--primary);
+      padding: 14px 36px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      transform: translateY(20px);
+      transition: transform 0.5s ease;
+    }
+
+    .simple-box:hover .box-overlay i,
+    .simple-box:hover .box-overlay span,
+    .img-card:hover .box-overlay i,
+    .img-card:hover .box-overlay span {
+      transform: translateY(0);
+    }
+
+    .ncc-img {
+      border: 6px solid var(--primary);
+      box-shadow: 0 15px 40px rgba(140, 16, 7, 0.3);
+      border-radius: 16px;
+      object-fit: cover;
+      height: 400px;
+      width: 100%;
+    }
+
+    .footer {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+      color: white;
+      padding: 64px 24px 24px;
+      margin-top: 120px;
+    }
+
+    .footer-content {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-section h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-section h3 i {
+      color: #8c1007;
+    }
+
+    .footer-section p {
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    @media (max-width: 576px) {
+  .event-text h2 { font-size: 1.5rem !important; }
+  .event-text small { font-size: 0.9rem !important; }
+}
+  </style>
+</head>
+
+<body>
+   <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <div class="college-badge">
+                <i class="fas fa-university"></i>
+            </div>
+            <h1 class="fade-in">SGGS Khalsa College College Events & Activities</h1>
+            <p class="fade-in-delay">Celebrating Excellence • Creativity • Achievement</p>
+            <div class="stats-bar fade-in-delay-2">
+                <div class="stat-item">
+                    <div class="stat-number">90+</div>
+                    <div class="stat-label">Classrooms</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">45,000+</div>
+                    <div class="stat-label">Books</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Labs</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">World-Class</div>
+                    <div class="stat-label">Infrastructure</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+  <div class="container">
+    <div style="margin-top: 80px;"></div>
+
+    <!-- 1. Annual Convocation 2024 -->
+    <div class="row event-card event-row g-0">
+      <div class="col-lg-8 p-0">
+        <div id="carouselOne" class="carousel slide event-carousel" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img src="./images/Annual-Convocation-2024 (1).jpg"
+                class="d-block w-100" alt="Convocation"></div>
+            <div class="carousel-item"><img src="./images/Annual-Convocation-2024 (1).jpg" class="d-block w-100" alt="Convocation"></div>
+            <div class="carousel-item"><img src="./images/anual 33.jpg" class="d-block w-100" alt="Convocation"></div>
+            <div class="carousel-item"><img src="./images/anual 44.jpg" class="d-block w-100" alt="Convocation"></div>
+            <div class="carousel-item"><img src="./images/anual 55.jpg" class="d-block w-100" alt="Convocation"></div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselOne" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselOne" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-4 event-text">
+        <div>
+          <h2>Annual Convocation 2024</h2>
+          <p class="lead">A proud day where our 2023–24 batch received their degrees.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Prize Distribution -->
+    <div class="row event-card event-row flex-row-reverse g-0">
+      <div class="col-lg-8 p-0">
+        <div id="carouselTwo" class="carousel slide event-carousel" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img src="./images/s1.jpeg" class="d-block w-100" alt="Prize"></div>
+            <div class="carousel-item"><img src="./images/s2.jpeg" class="d-block w-100" alt="Prize"></div>
+            <div class="carousel-item"><img src="./images/s3.jpeg" class="d-block w-100" alt="Prize"></div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselTwo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselTwo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-4 event-text">
+        <div>
+          <h2>Annual Prize Distribution<br><small>Session 2022-23</small></h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Farewell -->
+    <h2 class="section-title">The Farewell of M.Sc Final Year Students<br><small
+        style="font-weight:500; opacity:0.8;">Department of Physics and Chemistry</small></h2>
+    <div class="row g-4 mb-5">
+      <div class="col-md-4"><a href="./images/f1.jpg" class="glightbox">
+          <div class="simple-box"><img src="./images/f1.jpg" alt="">
+            <div class="box-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+          </div>
+        </a></div>
+      <div class="col-md-4"><a href="./images/f2.jpg" class="glightbox">
+          <div class="simple-box"><img src="./images/f2.jpg" alt="">
+            <div class="box-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+          </div>
+        </a></div>
+      <div class="col-md-4"><a href="./images/f3.jpg" class="glightbox">
+          <div class="simple-box"><img src="./images/f3.jpg" alt="">
+            <div class="box-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+          </div>
+        </a></div>
+    </div>
+
+    <!-- 4. GigaGrid 2024 -->
+    <div class="row event-card event-row g-0">
+      <div class="col-lg-8 p-0">
+        <div id="carouselThreeA" class="carousel slide event-carousel" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img src="./images/e1.jpg" class="d-block w-100" alt="GigaGrid"></div>
+            <div class="carousel-item"><img src="./images/e2.jpg" class="d-block w-100" alt="GigaGrid"></div>
+            <div class="carousel-item"><img src="./images/e3.jpg" class="d-block w-100" alt="GigaGrid"></div>
+            <div class="carousel-item"><img src="./images/e4.jpg" class="d-block w-100" alt="GigaGrid"></div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselThreeA" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselThreeA" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-4 event-text">
+        <div>
+          <h2>Technical Event GigaGrid-2024<br><small>Dept. of Computer Science & IT</small></h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. ICSSR Seminar -->
+    <div class="row event-card event-row flex-row-reverse g-0">
+      <div class="col-lg-8 p-0">
+        <div id="carouselThreeB" class="carousel slide event-carousel" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img src="./images/es1.jpeg" class="d-block w-100" alt="Seminar"></div>
+            <div class="carousel-item"><img src="./images/es2.jpeg" class="d-block w-100" alt="Seminar"></div>
+            <div class="carousel-item"><img src="./images/es3.jpeg" class="d-block w-100" alt="Seminar"></div>
+            <div class="carousel-item"><img src="./images/es4.jpeg" class="d-block w-100" alt="Seminar"></div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselThreeB" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselThreeB" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-4 event-text">
+        <div class="px-4">
+          <h2>ICSSR Sponsored National Seminar</h2>
+          <small style="font-size:1rem; line-height:1.6;">
+            <strong>75 Years of India’s Independence:<br>Achievements and Challenges</strong><br>29 April 2023
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Extension Lecture -->
+    <h2 class="section-title">Extension Lecture by Prof. R.C. Sobti<br><small
+        style="font-weight:500; opacity:0.8;">Professor (Emeritus), Panjab University, Chandigarh</small></h2>
+    <div class="row g-4 mb-5">
+      <div class="col-6 col-md-3"><a href="./images/g1.jpg" class="glightbox">
+          <div class="simple-box"><img src="./images/g1.jpg" alt="">
+            <div class="box-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+          </div>
+        </a></div>
+      <div class="col-6 col-md-3"><a href="./images/g2.jpg" class="glightbox">
+          <div class="simple-box"><img src="./images/g2.jpg" alt="">
+            <div class="box-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+          </div>
+        </a></div>
+      <div class="col-6 col-md-3"><a href="./images/g3.jpg" class="glightbox">
+          <div class="simple-box"><img src="./images/g3.jpg" alt="">
+            <div class="box-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+          </div>
+        </a></div>
+      <div class="col-6 col-md-3"><a href="./images/g4.jpg" class="glightbox">
+          <div class="simple-box"><img src="./images/g4.jpg" alt="">
+            <div class="box-overlay"><i class="fas fa-search-plus"></i><span>View Image</span></div>
+          </div>
+        </a></div>
+    </div>
+
+    <!-- NCC -->
+    <h2 class="section-title">NCC Cadet Ekamjot Selected for Republic Day Parade, Delhi 2024</h2>
+    <div class="row justify-content-center g-5 mb-5">
+      <div class="col-md-5"><a href="./images/ncc1.jpg" class="glightbox"><img src="./images/ncc1.jpg" class="ncc-img w-100"
+            alt="NCC"></a></div>
+      <div class="col-md-5"><a href="./images/ncc-600x400.jpg" class="glightbox"><img src="./images/ncc-600x400.jpg" class="ncc-img w-100"
+            alt="NCC"></a></div>
+    </div>
+
+    <!-- Events Gallery - YOUR ORIGINAL TILTED STYLE -->
+    <h2 class="section-title">Events Gallery</h2>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="img-card"><img src="./images/mg1.jpg" alt="">
+          <div class="box-overlay"><i class="fas fa-heart"></i><span>Farewell Moment 1</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="img-card"><img src="./images/mg2.jpg" alt="">
+          <div class="box-overlay"><i class="fas fa-heart"></i><span>Farewell Moment 2</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="img-card"><img src="./images/mg7.jpg" alt="">
+          <div class="box-overlay"><i class="fas fa-microphone-alt"></i><span>Stage Performance</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="img-card"><img src="./images/mg4.jpg" alt="">
+          <div class="box-overlay"><i class="fas fa-users"></i><span>Group Workshop</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="img-card"><img src="./images/mg5.jpg" alt="">
+          <div class="box-overlay"><i class="fas fa-hands-helping"></i><span>Hands-on Session</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="img-card"><img src="./images/mg6.jpg" alt="">
+          <div class="box-overlay"><i class="fas fa-user-friends"></i><span>Live Audience</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="img-card"><img src="./images/mg3.jpg" alt="">
+          <div class="box-overlay"><i class="fas fa-image"></i><span>Exhibit Display 1</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="img-card"><img src="./images/mg8.jpg" alt="">
+          <div class="box-overlay"><i class="fas fa-images"></i><span>Exhibit Display 2</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="img-card"><img src="./images/mg9.jpg" alt="">
+          <div class="box-overlay"><i class="fas fa-user-group"></i><span>Group Exhibit</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="img-card"><img src="./images/mg11.jpg" alt="">
+          <div class="box-overlay"><i class="fas fa-award"></i><span>Ceremony Moment</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="img-card"><img src="./images/mg10.jpg" alt="">
+          <div class="box-overlay"><i class="fas fa-palette"></i><span>Art Exhibition</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="img-card"><img src="./images/mg12.jpg" alt="">
+          <div class="box-overlay"><i class="fas fa-trophy"></i><span>Grand Ceremony</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><i class="fas fa-university"></i> SGGS Khalsa College</h3>
+          <p>Mahilpur, Punjab, India</p>
+          <p>Excellence in Education Since 1991</p>
+        </div>
+        <div class="footer-section">
+          <h3><i class="fas fa-phone"></i> Contact</h3>
+          <p>Phone: 01884-292036</p>
+          <p>Phone: +91 1884 245236</p>
+        </div>
+        <div class="footer-section">
+          <h3><i class="fas fa-map-marker-alt"></i> Visit Us</h3>
+          <p>Shri Guru Gobind Singh Khalsa College</p>
+          <p>Mahilpur, Hoshiarpur District</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 SGGS Khalsa College, Mahilpur. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    GLightbox({ selector: '.glightbox', touchNavigation: true, loop: true });
+  </script>
+</body>
+
+</html>

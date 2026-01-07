@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BA / BA (Hons.) | Course Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- BOOTSTRAP CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- BOOTSTRAP JS (for toggle + dropdown)  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+    overflow-x: hidden !important;
+}
+
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+/* Hero Section */
+        .hero {
+            position: relative;
+            padding: 120px 24px 100px;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .college-badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.375rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 48px;
+            font-weight: 500;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        /* Section Tag */
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+
+@media (max-width: 380px) {
+  .program-hero h1 { 
+    font-size: 2.4rem !important; 
+    line-height: 1.1; 
+  }
+  .program-hero p { 
+    font-size: 1rem !important; 
+  }
+  .career-grid { 
+    grid-template-columns: 1fr !important; 
+  }
+}
+
+/* PERFECT LEFT-ALIGNED BULLETS — EXACTLY UNDER THE TEXT */
+.highlight-points,
+.outcomes-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 1.5rem 0 !important;
+    text-align: left !important;
+}
+
+.highlight-points li,
+.outcomes-list li {
+    position: relative;
+    padding-left: 2.2rem !important;
+    margin-bottom: 0.9rem !important;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Red Checkmark — perfectly aligned under the text */
+.highlight-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #8c1007;
+    font-weight: bold;
+    font-size: 1.4rem;
+    width: 1.8rem;
+    text-align: center;
+}
+
+/* Red Arrow for Outcomes */
+.outcomes-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #8c1007;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Force left align on small phones too */
+@media (max-width: 576px) {
+    .highlight-points,
+    .outcomes-list,
+    .desc-text,
+    .section-card {
+        text-align: left !important;
+    }
+}
+
+/* ================================================== */
+/* --- HERO SECTION MEDIA QUERIES --- */
+/* ================================================== */
+
+/* 1. Desktop / Large Tablet Adjustments (max-width: 1200px) */
+@media (max-width: 1200px) {
+    /* Adjust container padding if necessary, but focusing on hero content */
+    .hero-content {
+        padding: 0 1.5rem; /* Ensure content is contained within padding */
+    }
+}
+
+/* 2. Tablet / Landscape Mobile Adjustments (max-width: 992px) */
+@media (max-width: 992px) {
+    .program-hero {
+        padding: 100px 24px 80px; /* Reduced vertical padding */
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem; /* Slightly smaller heading */
+    }
+
+    .hero p {
+        font-size: 1.25rem; /* Slightly smaller lead text */
+        margin-bottom: 40px;
+    }
+}
+
+/* 3. Portrait Tablet / Mobile Adjustments (max-width: 768px) */
+@media (max-width: 768px) {
+    .program-hero {
+        padding: 80px 16px 60px;
+        min-height: 450px;
+    }
+
+    .college-badge {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        /* Use clamp for fluid sizing between 2.5rem and 3rem */
+        font-size: clamp(2.5rem, 8vw, 3rem); 
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    /* Stats Bar Adjustments for stacking */
+    .stats-bar {
+        padding: 24px 20px;
+        gap: 20px; /* Reduced space between stats */
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* 4. Small Mobile Adjustments (max-width: 576px) */
+@media (max-width: 576px) {
+    /* Stack the stats bar items vertically to prevent overflow */
+    .stats-bar {
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 12px;
+        padding: 20px 15px;
+        margin: 0 10px; /* Minor horizontal margin to prevent touching screen edges */
+    }
+
+    .stat-item {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator when stacked */
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-divider {
+        display: none; /* Hide vertical divider when stacking */
+    }
+    
+    /* Ensure the existing small mobile adjustment is incorporated */
+    .program-hero h1 { 
+        font-size: 2.2rem !important; 
+    }
+}
+  </style>
+</head>
+
+<body>
+   
+
+
+
+    
+    <!-- Hero Section -->
+    <section class="program-hero">
+      <div class="program-hero-overlay"></div>
+      <div class="program-hero-content">
+        <div class="college-badge"><i class="fas fa-book-open" style="font-size: 50px;"></i></div>
+        <h1>BA / BA (Hons.)</h1>
+        <p>3 Years | 6 Semesters | NEP-2020 Based Curriculum</p>
+        <div class="stats-bar fade-in-delay-2">
+    <div class="stat-item">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Courses & <br>Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Undergraduate <br>Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Postgraduate <br> Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Diploma & <br> Add-On Courses</div>
+    </div>
+</div>
+      </div>
+    </section>
+  <div class="container">
+
+    <!-- Description -->
+    <div class="section-card">
+      <h2 class="desc-title">Why Choose BA / BA (Hons.) at SGGS Khalsa College Mahilpur?</h2>
+      <p class="desc-text"><b>BA / BA (Hons.)</b> equips students with analytical, research, and communication skills in
+        subjects like <b>History, Political Science, Literature</b>. The program emphasizes critical thinking, cultural
+        awareness, and practical knowledge through projects and assignments.</p>
+      <ul class="highlight-points">
+        <li>Comprehensive curriculum covering Humanities & Social Sciences</li>
+        <li>Research Projects & Practical Assignments</li>
+        <li>Skill development in communication and analysis</li>
+        <li>Opportunities for higher studies & competitive exams</li>
+      </ul>
+    </div>
+
+    <!-- Summary Section -->
+    <div class="section-card">
+      <div class="bsc-summary-section">
+        <div class="bsc-summary-content">
+          <h2>BA / BA (Hons.) – Overview</h2>
+          <p>The 3-year undergraduate program (6 semesters) focuses on <b>Humanities and Social Sciences</b> disciplines,
+            developing critical thinking, research, and academic skills. It prepares students for careers in education,
+            civil services, research, and cultural organizations.</p>
+          <h3>Career Opportunities</h3>
+          <p>Graduates can pursue roles in <b>Teaching, Research, Journalism, Civil Services, Cultural Organizations</b>,
+            or higher studies like M.A., M.Phil, Ph.D., or competitive exams.</p>
+        </div>
+        <div class="bsc-summary-image" >
+          <img src="./images/course.jpg" height="300px" alt="BA / BA (Hons.)">
+        </div>
+      </div>
+    </div>
+<div class="section-card">
+  <div class="card-title">BA / BA (Hons.) – Syllabus</div>
+
+  <!-- Semester 1 -->
+  <div class="semester-card">
+    <h4>Semester 1</h4>
+    <ul>
+      <li>History: Ancient Civilizations</li>
+      <li>Political Science: Introduction to Political Theory</li>
+      <li>English Literature: Foundations of Literature</li>
+    </ul>
+  </div>
+
+  <!-- Semester 2 -->
+  <div class="semester-card">
+    <h4>Semester 2</h4>
+    <ul>
+      <li>History: Medieval India</li>
+      <li>Political Science: Indian Constitution</li>
+      <li>English Literature: Poetry and Prose</li>
+    </ul>
+  </div>
+
+  <!-- Semester 3 -->
+  <div class="semester-card">
+    <h4>Semester 3</h4>
+    <ul>
+      <li>History: Modern India</li>
+      <li>Political Science: Comparative Politics</li>
+      <li>English Literature: Drama and Fiction</li>
+    </ul>
+  </div>
+
+  <!-- Semester 4 -->
+  <div class="semester-card">
+    <h4>Semester 4</h4>
+    <ul>
+      <li>History: World History</li>
+      <li>Political Science: International Relations</li>
+      <li>English Literature: Literary Criticism</li>
+    </ul>
+  </div>
+
+  <!-- Semester 5 -->
+  <div class="semester-card">
+    <h4>Semester 5</h4>
+    <ul>
+      <li>History: Contemporary India</li>
+      <li>Political Science: Public Administration</li>
+      <li>English Literature: Modern Literature</li>
+    </ul>
+  </div>
+
+  <!-- Semester 6 -->
+  <div class="semester-card">
+    <h4>Semester 6</h4>
+    <ul>
+      <li>History: Research Project</li>
+      <li>Political Science: Research Project</li>
+      <li>English Literature: Dissertation / Project Work</li>
+    </ul>
+  </div>
+</div>
+    <!-- Program Outcomes -->
+    <div class="section-card">
+      <div class="card-title">Program Outcomes</div>
+      <ul class="outcomes-list">
+        <li>In-depth knowledge of chosen subjects</li>
+        <li>Enhanced research and analytical skills</li>
+        <li>Effective communication and writing skills</li>
+        <li>Preparation for higher studies and professional careers</li>
+      </ul>
+    </div>
+
+    <!-- Career Opportunities -->
+    <div class="section-card">
+      <div class="card-title">Career Opportunities</div>
+      <div class="career-grid">
+        <div class="career-box">Teacher / Lecturer</div>
+        <div class="career-box">Research Analyst</div>
+        <div class="career-box">Journalist / Content Writer</div>
+        <div class="career-box">Civil Services / Government Jobs</div>
+        <div class="career-box">Cultural & Social Organizations</div>
+        <div class="career-box">Higher Studies – M.A., M.Phil, Ph.D.</div>
+      </div>
+    </div>
+
+    <!-- Faculty Section -->
+    <div class="section-card">
+      <div class="card-title">Faculty</div>
+      <div class="faculty-wrapper">
+        <div class="faculty-card">
+          <h4>Dr. Harpreet Kaur</h4>
+          <p>Professor & Head, Department of History</p>
+        </div>
+        <div class="faculty-card">
+          <h4>Dr. Rakesh Sharma</h4>
+          <p>Assistant Professor, Department of Political Science</p>
+        </div>
+        <div class="faculty-card">
+          <h4>Dr. Simranjit Kaur</h4>
+          <p>Assistant Professor, Department of English Literature</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apply Now -->
+    <div style="text-align: center; margin-top: 25px;">
+      <a href="#" class="btn btn-danger apply-btn">Apply Now</a>
+    </div>
+
+  </div>
+
+  <script>
+    // Accordion Script
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach(acc => {
+      acc.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

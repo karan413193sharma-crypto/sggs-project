@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>News Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      background: #f5f6fa;
+      margin: 0;
+      padding: 30px;
+    }
+
+    .news-wrapper {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .news-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .news-content {
+      padding: 30px;
+    }
+
+    .news-title {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 15px;
+      color: #8c1007;
+    }
+
+    .news-date {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .news-description {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 20px;
+      background: #8c1007;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background: red;
+    }
+
+    .error {
+      text-align: center;
+      color: red;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="news-wrapper" id="newsWrapper">
+    <p style="text-align:center">Loading news...</p>
+  </div>
+
+  <script>
+const params = new URLSearchParams(window.location.search);
+const newsId = params.get("id");
+
+async function loadNewsDetails() {
+  if (!newsId) {
+    document.getElementById("newsWrapper").innerHTML =
+      "<p class='error'>No news selected</p>";
+    return;
+  }
+
+  try {
+    const res = await fetch(`http://localhost:4005/news/${newsId}`);
+    if (!res.ok) throw new Error("News not found");
+
+    const news = await res.json(); // single object now
+
+    document.getElementById("newsWrapper").innerHTML = `
+      <img class="news-image" src="http://localhost:4005${news.image}" />
+      <div class="news-content">
+        <div class="news-title">${news.title}</div>
+        <div class="news-date">${new Date(news.createdAt).toDateString()}</div>
+        <div class="news-description">${news.description}</div>
+        <a href="index.html" class="back-btn">← Back</a>
+      </div>
+    `;
+
+  } catch (err) {
+    console.error(err);
+    document.getElementById("newsWrapper").innerHTML =
+      "<p class='error'>Failed to load news</p>";
+  }
+}
+
+loadNewsDetails();
+</script>
+
+</body>
+</html>

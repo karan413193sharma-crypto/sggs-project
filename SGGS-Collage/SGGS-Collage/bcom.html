@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Com | Course Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="./css/style.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- BOOTSTRAP CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- BOOTSTRAP JS (for toggle + dropdown)  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+   <style>
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+    overflow-x: hidden !important;
+}
+
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+/* Hero Section */
+        .hero {
+            position: relative;
+            padding: 120px 24px 100px;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 30%, #8c1007 60%, #6b0d05 100%);
+            opacity: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 40%);
+        }
+
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .college-badge {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.375rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 48px;
+            font-weight: 500;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 32px 48px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        /* Section Tag */
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #8c1007 0%, #b51610 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+
+/* Section Cards */
+.section-card {
+    background: #fff;
+    border: 2px solid #eee;
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 35px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+.section-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #8C1007, #B51610);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+}
+
+.section-card:hover::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.section-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(140, 16, 7, 0.35);
+    box-shadow: 0 12px 32px rgba(140, 16, 7, 0.22);
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #8C1007;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+}
+
+.table thead tr {
+    background: #8C1007 !important;
+    color: #fff !important;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.table td,
+.table th {
+    padding: 14px;
+    text-align: center;
+    border: 1px solid #f5c2c2;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #fde7e7;
+}
+
+.table tbody tr:hover {
+    background: #f9caca;
+    transition: .2s ease;
+}
+
+/* Accordion */
+.accordion {
+    background-color: #fde7e7;
+    color: #8C1007;
+    cursor: pointer;
+    padding: 14px 18px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #8C1007;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.accordion:hover {
+    background-color: #8C1007;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(140, 16, 7, 0.25);
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #fff;
+    overflow: hidden;
+    border-left: 3px solid #8C1007;
+    border-radius: 0 0 10px 10px;
+}
+
+.panel ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding: 10px 0;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Faculty Cards */
+.faculty-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.faculty-card {
+    width: 300px;
+    background: #ffffff;
+    border: 2px solid #eee;
+    border-radius: 16px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.35s ease;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.faculty-card h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #8C1007;
+    font-weight: 700;
+}
+
+.faculty-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+.faculty-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(140, 16, 7, 0.35);
+    box-shadow: 0 10px 30px rgba(140, 16, 7, 0.20);
+}
+
+/* Apply Now */
+.apply-btn {
+    display: inline-block;
+    background: #8C1007;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 16px 35px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 6px 20px rgba(140, 16, 7, 0.3);
+}
+
+.apply-btn:hover {
+    background: #B51610;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(181, 22, 16, 0.35);
+}
+
+/* B.Com Overview / Summary Section */
+.bcom-summary-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 40px 25px;
+    border-radius: 20px;
+    border: 2px solid #eee;
+    position: relative;
+    overflow: hidden;
+    transition: 0.35s ease;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.bcom-summary-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #8C1007, #B51610);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+}
+
+.bcom-summary-section:hover::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.bcom-summary-section:hover {
+    transform: translateY(-6px);
+    border-color: rgba(140, 16, 7, 0.35);
+    box-shadow: 0 12px 32px rgba(140, 16, 7, 0.18);
+}
+
+.bcom-summary-content {
+    flex: 1 1 500px;
+    padding-right: 20px;
+}
+
+.bcom-summary-content h2 {
+    color: #8C1007;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.bcom-summary-content h3 {
+    color: #B51610;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.bcom-summary-content p,
+.bcom-summary-content ul {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.bcom-summary-content ul {
+    padding-left: 20px;
+}
+
+.bcom-summary-content ul li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.bcom-summary-content ul li::before {
+    content: "Checkmark";
+    color: #8C1007;
+    margin-right: 8px;
+}
+
+.bcom-summary-image {
+    flex: 1 1 300px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    cursor: pointer;
+    height: 100%;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.bcom-summary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bcom-summary-image:hover img {
+    transform: scale(1.15);
+}
+
+.bcom-summary-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(140, 16, 7, 0) 0%, rgba(140, 16, 7, 0.85) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.bcom-summary-image:hover::after {
+    opacity: 1;
+}
+
+.bcom-summary-image i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2.2rem;
+    color: #fff;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    transition: 0.35s ease-in-out;
+}
+
+.bcom-summary-image:hover i {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* B.Com Duration & Eligibility Section */
+.duration-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #fde7e7;
+    padding: 50px 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+    min-height: 50vh;
+    position: relative;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+.duration-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #8C1007, #B51610);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+}
+
+.duration-section:hover::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.duration-section:hover {
+    transform: translateY(-6px);
+    border-color: rgba(140, 16, 7, 0.35);
+    box-shadow: 0 12px 32px rgba(140, 16, 7, 0.18);
+}
+
+.duration-content {
+    flex: 1 1 500px;
+    padding-right: 25px;
+}
+
+.duration-content h2 {
+    font-size: 32px;
+    color: #8C1007;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.duration-content p {
+    font-size: 17.5px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.duration-details {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.detail-box {
+    background: #fff;
+    border-radius: 16px;
+    border: 2px solid #eee;
+    padding: 24px;
+    flex: 1 1 200px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+.detail-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #8C1007, #B51610);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+}
+
+.detail-box:hover::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.detail-box:hover {
+    background: #B51610;
+    color: #fff;
+    transform: translateY(-6px);
+    border-color: rgba(140, 16, 7, 0.35);
+    box-shadow: 0 10px 32px rgba(181, 22, 16, 0.28);
+}
+
+.detail-box:hover h3,
+.detail-box:hover p {
+    color: #fff !important;
+}
+
+/* Media Queries & Bullet Fixes (unchanged) */
+@media(max-width:900px) {
+    .bcom-summary-section, .duration-section { flex-direction: column; text-align: center; }
+    .bcom-summary-content { padding-right: 0; margin-bottom: 20px; }
+    .duration-content { padding-right: 0; margin-bottom: 25px; }
+    .duration-details { flex-direction: column; gap: 15px; }
+}
+    
+/* PERFECT LEFT-ALIGNED BULLETS — EXACTLY UNDER THE TEXT */
+.highlight-points,
+.outcomes-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 1.5rem 0 !important;
+    text-align: left !important;
+}
+
+.highlight-points li,
+.outcomes-list li {
+    position: relative;
+    padding-left: 2.2rem !important;
+    margin-bottom: 0.9rem !important;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Red Checkmark — perfectly aligned under the text */
+.highlight-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #8c1007;
+    font-weight: bold;
+    font-size: 1.4rem;
+    width: 1.8rem;
+    text-align: center;
+}
+
+/* Red Arrow for Outcomes */
+.outcomes-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #8c1007;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+/* FINAL FIX – Perfect left-aligned red checkmarks in "Why Choose B.Com?" (Overview section) */
+.bcom-summary-content ul {
+    list-style: none !important;
+    padding-left: 0 !important;     /* kills the 20px gap */
+    margin: 1.5rem 0 !important;
+    text-align: left !important;
+}
+
+.bcom-summary-content ul li {
+    position: relative;
+    padding-left: 2.6rem !important;   /* only space needed for the checkmark */
+    margin-bottom: 0.9rem !important;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.bcom-summary-content ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #8C1007;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Extra safety – force everything left on mobile too */
+@media (max-width: 768px) {
+    .bcom-summary-content,
+    .bcom-summary-content ul,
+    .bcom-summary-content ul li {
+        text-align: left !important;
+        padding-left: 0 !important;
+    }
+    .bcom-summary-content ul li {
+        padding-left: 2.6rem !important;
+    }
+    .detail-box {
+    background: #fff;
+    border-radius: 16px;
+    border: 2px solid #eee;
+    padding: 5px;
+    flex: 1 1 200px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+}
+
+/* Force left align on small phones too */
+@media (max-width: 576px) {
+    .highlight-points,
+    .outcomes-list,
+    .desc-text,
+    .section-card {
+        text-align: left !important;
+    }
+}
+/* .career-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+.career-box {
+    background: #fde7e7;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+.career-box:hover {
+    background: #8C1007;
+    color: #fff;
+    border-color: #8C1007;
+} */
+@media (max-width: 480px) {
+    .bcom-summary-content ul li {
+        padding-left: 2rem !important;
+    }
+    .bcom-summary-content ul li::before {
+        font-size: 1.3rem !important;
+        left: 2px !important;
+    }
+}
+
+/* ================================================== */
+/* --- HERO SECTION MEDIA QUERIES --- */
+/* ================================================== */
+
+/* 1. Desktop / Large Tablet Adjustments (max-width: 1200px) */
+@media (max-width: 1200px) {
+    /* Adjust container padding if necessary, but focusing on hero content */
+    .hero-content {
+        padding: 0 1.5rem; /* Ensure content is contained within padding */
+    }
+}
+
+/* 2. Tablet / Landscape Mobile Adjustments (max-width: 992px) */
+@media (max-width: 992px) {
+    .program-hero {
+        padding: 100px 24px 80px; /* Reduced vertical padding */
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem; /* Slightly smaller heading */
+    }
+
+    .hero p {
+        font-size: 1.25rem; /* Slightly smaller lead text */
+        margin-bottom: 40px;
+    }
+}
+
+/* 3. Portrait Tablet / Mobile Adjustments (max-width: 768px) */
+@media (max-width: 768px) {
+    .program-hero {
+        padding: 80px 16px 60px;
+        min-height: 450px;
+    }
+
+    .college-badge {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        /* Use clamp for fluid sizing between 2.5rem and 3rem */
+        font-size: clamp(2.5rem, 8vw, 3rem); 
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    /* Stats Bar Adjustments for stacking */
+    .stats-bar {
+        padding: 24px 20px;
+        gap: 20px; /* Reduced space between stats */
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* 4. Small Mobile Adjustments (max-width: 576px) */
+@media (max-width: 576px) {
+    /* Stack the stats bar items vertically to prevent overflow */
+    .stats-bar {
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 12px;
+        padding: 20px 15px;
+        margin: 0 10px; /* Minor horizontal margin to prevent touching screen edges */
+    }
+
+    .stat-item {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator when stacked */
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-divider {
+        display: none; /* Hide vertical divider when stacking */
+    }
+    
+    /* Ensure the existing small mobile adjustment is incorporated */
+    .program-hero h1 { 
+        font-size: 2.2rem !important; 
+    }
+}
+
+</style>
+
+
+</head>
+
+<body>
+  
+      <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles"></div>
+    <div class="hero-content">
+        <div class="college-badge">
+            <i class="fas fa-university"></i>
+        </div>
+        <h1 class="fade-in">B.Com</h1>
+        <p class="fade-in-delay">3 Years | 6 Semesters | NEP-2020 Based Curriculum</p>
+       <div class="stats-bar fade-in-delay-2">
+    <div class="stat-item">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Courses & <br>Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Undergraduate <br>Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Postgraduate <br> Programs</div>
+    </div>
+
+    <div class="stat-divider"></div>
+
+    <div class="stat-item">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Diploma & <br> Add-On Courses</div>
+    </div>
+</div>
+    </div>
+</section>
+    <div class="container">
+
+        <!-- Description -->
+        <div class="section-card">
+            <h2 class="desc-title">Why Choose B.Com at SGGS Khalsa College Mahilpur?</h2>
+            <p class="desc-text"><b>B.Com at SGGS Khalsa College Mahilpur</b> is a top commerce degree program in
+                Punjab, offering strong foundations in accounting, finance, business, and economics. Students gain
+                practical exposure, research experience, and career-ready skills.</p>
+            <ul class="highlight-points">
+                <li>Strong Commerce Curriculum</li>
+                <li>Hands-on Accounting & Finance Labs</li>
+                <li>Internship & Industry Exposure</li>
+                <li>Research & Project Work</li>
+                <li>Experienced Faculty Support</li>
+                <li>Higher Studies & Career Opportunities</li>
+            </ul>
+        </div>
+
+        <!-- Overview Section -->
+        <div class="bcom-summary-section">
+            <div class="bcom-summary-content">
+                <h2>B.Com – Overview</h2>
+                <p><strong>B.Com</strong> is a 3-year undergraduate program (6 semesters) designed for students
+                    interested in <strong>Accounting, Economics, Business Studies</strong> and <strong>Finance</strong>.
+                </p>
+                <h3>Why Choose B.Com?</h3>
+                <ul>
+                    <li>Hands-on exposure to accounting, finance, and business software</li>
+                    <li>Develop analytical and business decision-making skills</li>
+                    <li>Opportunities for research projects, internships, and competitive exams</li>
+                    <li>Prepares for higher studies like M.Com, MBA, CA, CS, ICWA</li>
+                </ul>
+                <h3>Career Opportunities</h3>
+                <p>Graduates can work as Accountants, Business Analysts, Tax Consultants, Auditors, Bank Officers,
+                    Entrepreneurs, or pursue higher studies.</p>
+            </div>
+            <div class="bcom-summary-image">
+                 <img src="./images/course.jpg" height="300px" alt="B.Com Course Image">
+                <i class="bi bi-zoom-in"></i>
+            </div>
+        </div>
+
+        <!-- Admission -->
+        <div class="section-card">
+            <div class="card-title">Admission</div>
+            <p class="desc-text">Admissions for B.Com are open! Eligible students (10+2 with Commerce/Maths/Economics,
+                min 35% marks) can apply online.</p>
+        </div>
+
+        <!-- Duration & Eligibility -->
+        <div class="duration-section">
+            <div class="duration-content">
+                <h2>Course Duration & Eligibility</h2>
+                <p>The B.Com program is a 3-year undergraduate course divided into 6 semesters.</p>
+                <div class="duration-details">
+                    <div class="detail-box">
+                        <h3>Duration</h3>
+                        <p>3 Years (6 Semesters)</p>
+                    </div>
+                    <div class="detail-box">
+                        <h3>Eligibility</h3>
+                        <p>10+2 with Commerce/Maths/Economics, minimum 35% marks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Program Outcomes -->
+        <div class="section-card">
+            <div class="card-title">Program Outcomes</div>
+            <ul class="outcomes-list">
+                <li>Develop strong accounting, finance, and business skills</li>
+                <li>Hands-on exposure to business tools and projects</li>
+                <li>Ability to analyze financial data and make informed decisions</li>
+                <li>Preparation for internships, research, and competitive exams</li>
+                <li>Build leadership, communication, and teamwork skills</li>
+            </ul>
+        </div>
+
+        <!-- Career Opportunities -->
+        <div class="section-card">
+            <div class="card-title">Career Opportunities</div>
+            <div class="career-grid">
+                <div class="career-box">Accountant</div>
+                <div class="career-box">Business Analyst</div>
+                <div class="career-box">Auditor</div>
+                <div class="career-box">Tax Consultant</div>
+                <div class="career-box">Bank Officer</div>
+                <div class="career-box">Entrepreneur</div>
+                <div class="career-box">Financial Analyst</div>
+                <div class="career-box">Higher Studies: M.Com, MBA, CA, CS, ICWA</div>
+            </div>
+        </div>
+
+        <!-- Semester Tables -->
+        <div class="section-card">
+            <div class="card-title">First Year</div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Semester</th>
+                        <th>Subjects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>First Semester</td>
+                        <td>Financial Accounting, Business Economics, Business Law, Punjabi-I</td>
+                    </tr>
+                    <tr>
+                        <td>Second Semester</td>
+                        <td>Corporate Accounting, Business Statistics, Business Management, Punjabi-II</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section-card">
+            <div class="card-title">Second Year</div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Semester</th>
+                        <th>Subjects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Third Semester</td>
+                        <td>Cost Accounting, Income Tax, Financial Management, English</td>
+                    </tr>
+                    <tr>
+                        <td>Fourth Semester</td>
+                        <td>Advanced Accounting, Auditing, Marketing Management, English</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section-card">
+            <div class="card-title">Third Year</div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Semester</th>
+                        <th>Subjects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fifth Semester</td>
+                        <td>Corporate Tax, Business Law, E-Commerce</td>
+                    </tr>
+                    <tr>
+                        <td>Sixth Semester</td>
+                        <td>Project Work, Strategic Management, Electives</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Syllabus Accordion -->
+        <div class="section-card">
+            <div class="card-title">B.Com – Detailed Syllabus</div>
+            <button class="accordion">First Year – Semester I</button>
+            <div class="panel">
+                <ul>
+                    <li>Financial Accounting</li>
+                    <li>Business Economics</li>
+                    <li>Business Law</li>
+                    <li>Punjabi-I</li>
+                </ul>
+            </div>
+            <button class="accordion">First Year – Semester II</button>
+            <div class="panel">
+                <ul>
+                    <li>Corporate Accounting</li>
+                    <li>Business Statistics</li>
+                    <li>Business Management</li>
+                    <li>Punjabi-II</li>
+                </ul>
+            </div>
+            <button class="accordion">Second Year – Semester III & IV</button>
+            <div class="panel">
+                <ul>
+                    <li>Cost Accounting</li>
+                    <li>Income Tax</li>
+                    <li>Financial Management</li>
+                    <li>Auditing & Marketing</li>
+                </ul>
+            </div>
+            <button class="accordion">Third Year – Semester V & VI</button>
+            <div class="panel">
+                <ul>
+                    <li>Corporate Tax</li>
+                    <li>Business Law</li>
+                    <li>E-Commerce & Project Work</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Faculty Section -->
+        <section class="faculty-section py-5" style="background: #f0f8ff;">
+            <div class="container">
+                <h2 class="text-center mb-4" style="font-size: 32px; color:#B51610; font-weight:700;">Commerce
+                    Department Faculty</h2>
+                <div class="faculty-wrapper">
+                    <div class="faculty-card">
+                        <h4>Dr. Rakesh Sharma</h4>
+                        <p>M.Com, Ph.D.</p>
+                        <p>Email: rakesh@example.com<br>Phone: 98765-43210</p>
+                    </div>
+                    <div class="faculty-card">
+                        <h4>Mrs. Anjali Mehta</h4>
+                        <p>M.Com, CS, NET</p>
+                        <p>Email: anjali@example.com<br>Phone: 98765-43211</p>
+                    </div>
+                    <div class="faculty-card">
+                        <h4>Mr. Sanjay Kapoor</h4>
+                        <p>M.Com, ICWA</p>
+                        <p>Email: sanjay@example.com<br>Phone: 98765-43212</p>
+                    </div>
+                    <div class="faculty-card">
+                        <h4>Ms. Priya Singh</h4>
+                        <p>M.Com, MBA</p>
+                        <p>Email: priya@example.com<br>Phone: 98765-43213</p>
+                    </div>
+                    <div class="faculty-card">
+                        <h4>Mr. Ajay Kumar</h4>
+                        <p>M.Com, B.Ed.</p>
+                        <p>Email: ajay@example.com<br>Phone: 98765-43214</p>
+                    </div>
+                    <div class="faculty-card">
+                        <h4>Ms. Neha Sharma</h4>
+                        <p>M.Com, CS</p>
+                        <p>Email: neha@example.com<br>Phone: 98765-43215</p>
+                    </div>
+                    <div class="faculty-card">
+                        <h4>Mr. Vinay</h4>
+                        <p>M.Com</p>
+                        <p>Email: vinay@example.com<br>Phone: 98765-43216</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Apply Now Button -->
+        <div style="text-align: center; margin: 50px 0;">
+            <a href="apply.html" class="apply-btn">Apply Now</a>
+        </div>
+
+    </div> <!-- End container -->
+
+    <!-- Accordion Script -->
+    <script>
+        const accordions = document.querySelectorAll(".accordion");
+        accordions.forEach((acc) => {
+            acc.addEventListener("click", function () {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
