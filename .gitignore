@@ -1,6 +1,7 @@
 # Node.js
 node_modules/
 .env
+uploads/
 
 # Logs
 npm-debug.log*
